@@ -7,13 +7,13 @@ using UnityEngine.UI;
 
 
 
-public class StartScript : MonoBehaviour {
+public class StartUI : MonoBehaviour {
 
 	/*Important things to clarify
 	1)Anchor everything in UI - so all objects are responsive to resolution changes
 	2)bottom to top ordering in UI: bottom game objects will overylay game objects above it (same hierarchy)*/
 
-
+	//Panels
 	public GameObject startPanel;
 	public GameObject mainMenuPanel;
 
