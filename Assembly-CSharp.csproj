@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scenes\hacking game scenes\CameraController.cs" />
+     <Compile Include="Assets\scenes\hacking game scenes\PlayerController.cs" />
      <Compile Include="Assets\scripts\SceneManagement.cs" />
      <Compile Include="Assets\scripts\camp scripts\CampUI.cs" />
      <Compile Include="Assets\scripts\start scripts\StartUI.cs" />
