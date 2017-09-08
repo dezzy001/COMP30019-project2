@@ -1,7 +1,8 @@
 # COMP30019-project2
 
-Tips:
-- bottom to top ordering: gameObjects at the bottom will overlay gameObjects at the top (given same parent)
+Good Tutorials:
+Audio: https://www.youtube.com/watch?v=6OT43pvUyfY
+
 
 References: <br>
 Nier story etc...: https://www.reddit.com/r/nier/comments/63dikg/nierautomata_resource_materials/
