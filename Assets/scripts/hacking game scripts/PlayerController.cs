@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour {
 
 		Vector3 velocity = new Vector3 (0.0f,0.0f,0.0f);
 
-		/* Only makes sense to make player move forwards (use mouse to control left and right movements)
+		/* Only makes sense to make player move forwards and backwards (use mouse to control left and right movements)
 		 * 
 		if (Input.GetKey(KeyCode.LeftArrow)){
 			velocity += new Vector3(-1.0f,0.0f,0.0f);
@@ -117,14 +117,15 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.RightArrow)){
 			velocity += new Vector3(1.0f,0.0f,0.0f);
 		}
-		if (Input.GetKey(KeyCode.DownArrow)){
-			velocity += new Vector3(0.0f,0.0f,-1.0f) ;
-		}
+
 
 		*/
 
-		if (Input.GetKey(KeyCode.UpArrow)){
+		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)){
 			velocity += new Vector3(0.0f,0.0f,1.0f) ;
+		}
+		if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)){
+			velocity += new Vector3(0.0f,0.0f,-1.0f) ;
 		}
 
 
