@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour {
 	public float PROJECTILE_COOLDOWN = 0.5f;// default max cooldown
 	private float projectileCooldownCount;// count for the cooldown
 
+
+	private Vector3 mousePosition;
+
 	void Start(){
 
 		projectileCooldownCount = PROJECTILE_COOLDOWN; //init cooldown count
@@ -23,11 +26,16 @@ public class PlayerController : MonoBehaviour {
 
 		Vector3 keyDirection = getKeyPress ();
 
-
 		this.transform.Translate(keyDirection * speed * Time.deltaTime);
 
+		//lerp could be smoother?
+		//transform.position = Vector3.Lerp(transform.position, transform.position+keyDirection, speed * Time.deltaTime);
 
-		if (Input.GetKey(KeyCode.Space) && projectileCooldownCount <= 0){//use GetKeyDown instead if you dont want the player to be able to hold the space bar
+
+
+		//should put this in a method later ...
+
+		if (Input.GetMouseButton(0) && projectileCooldownCount <= 0){//use GetKeyDown instead if you dont want the player to be able to hold the space bar
             GameObject projectile = Instantiate<GameObject>(projectilePrefab);
             projectile.transform.position = this.gameObject.transform.position;
 			projectileCooldownCount = PROJECTILE_COOLDOWN;
