@@ -2,7 +2,7 @@
 
 Good Tutorials: <br>
 Audio: https://www.youtube.com/watch?v=6OT43pvUyfY
-
+Adding glow: http://answers.unity3d.com/questions/914945/what-replaces-the-glow-effect-in-unity-5.html
 
 References: <br>
 Nier story etc...: https://www.reddit.com/r/nier/comments/63dikg/nierautomata_resource_materials/
