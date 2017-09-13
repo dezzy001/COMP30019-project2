@@ -51,8 +51,12 @@
      <Compile Include="Assets\scripts\hacking game scripts\CameraController.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\DestroyIfOffscreen.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\DestroyWhenParticlesFinished.cs" />
+     <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\Enemy1Controller.cs" />
+     <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\Enemy2Controller.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\EnemyController.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\EnemyProjectileController.cs" />
+     <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\EnemySpawner.cs" />
+     <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\SeekingEnemyProjectile.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\StrongEnemyProjectile.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\WeakEnemyProjectile.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\HealthManager.cs" />

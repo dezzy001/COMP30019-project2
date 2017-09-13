@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour {
 	//rigid body of the player
 	private Rigidbody playerRigidBody;
 
+	//ground game object - need the boundaries of the map
+	public GameObject ground;
+	float groundSizeX;
+	float groundSizeZ; 
+
 	void Start(){
 
 		this.gameObject.transform.position = new Vector3 (0,1,0);
@@ -37,29 +42,33 @@ public class PlayerController : MonoBehaviour {
 		//assign the players rigid body to this variable
 		playerRigidBody = GetComponent<Rigidbody>();
 
+		//ground boundaries
+		Renderer groundSizeRenderer = ground.GetComponent<Renderer>();
+		Vector3 groundSize = groundSizeRenderer.bounds.size;
+
+		//divided by 2 for maths purposes (origin of ground is at 0,0 and largeset x is groundSize.x/2)
+		groundSizeX = groundSize.x/2;
+		groundSizeZ = groundSize.z/2;
+
+
+
 	}
 
 	// Update is called once per frame
 	void Update () {
 
 
+		//stop the player from going out of bounds
+		transform.position = new Vector3 (
+			Mathf.Clamp(transform.position.x,-groundSizeX,groundSizeX),
+			transform.position.y,
+			Mathf.Clamp(transform.position.z,-groundSizeZ,groundSizeZ)
+		);
 
-		//2 different ways of player movement (1 and 2 currently do not consider which way the player is facing)
-
-		/*
-		//### 1
-		Vector3 keyDirection = getKeyPress ();
-		this.transform.Translate(keyDirection * speed * Time.deltaTime);
-
-		//### 2
-		lerp could be smoother?
-		transform.position = Vector3.Lerp(transform.position, transform.position+keyDirection, speed * Time.deltaTime);
-
-		*/
-
-		//###3 - controls are North south east west based, rather than direction of player
-		Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0.0f , Input.GetAxis("Vertical"));
-		transform.position += move * speed * Time.deltaTime;
+	
+		//move the player with key presses
+		Vector3 move = getKeyPress ();
+		this.transform.position = Vector3.Lerp(transform.position, transform.position + move, speed * Time.deltaTime);
 
 		//followed this tutorial to make player face mouse, based on camera rays: https://www.youtube.com/watch?v=lkDGk3TjsIE
 		Ray cameraRay = mainCamera.ScreenPointToRay (Input.mousePosition);
@@ -86,9 +95,10 @@ public class PlayerController : MonoBehaviour {
 				projectile.transform.position = this.gameObject.transform.position;
 
 				//make projectile face the same direction as player
-				Vector3 playerDir = new Vector3 (0.0f, this.gameObject.transform.rotation.eulerAngles.y-90,0.0f);
+				Vector3 playerDir = new Vector3 (0.0f, this.gameObject.transform.rotation.eulerAngles.y-90 ,0.0f);
 				projectile.transform.eulerAngles = playerDir ;
 
+				//Debug.Log (playerDir);
 
 				//reset cooldown after you shoot 
 				projectileCooldownCount = PROJECTILE_COOLDOWN;
@@ -117,18 +127,18 @@ public class PlayerController : MonoBehaviour {
 
 
 
-	/*
+
 	private Vector3 getKeyPress(){
 
 
 		Vector3 velocity = new Vector3 (0.0f,0.0f,0.0f);
 
 
-		if (Input.GetKey(KeyCode.LeftArrow)){
+		if (Input.GetKey(KeyCode.A) ||  Input.GetKey(KeyCode.LeftArrow)){
 			velocity += new Vector3(-1.0f,0.0f,0.0f);
 		}
 
-		if (Input.GetKey(KeyCode.RightArrow)){
+		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)){
 			velocity += new Vector3(1.0f,0.0f,0.0f);
 		}
 			
@@ -146,6 +156,6 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-	*/
+
 
 }

@@ -1,14 +1,33 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\hacking game scripts\Player Script\ProjectileController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\hacking game scripts\Enemy Script\EnemySpawner.cs">
     <Files>
-      <File FileName="Assets\scripts\hacking game scripts\Enemy Script\EnemyController.cs" Line="24" Column="35" />
-      <File FileName="Assets\scripts\hacking game scripts\Enemy Script\EnemyProjectileController.cs" Line="9" Column="2" />
-      <File FileName="Assets\scripts\hacking game scripts\Enemy Script\StrongEnemyProjectile.cs" Line="8" Column="2" />
-      <File FileName="Assets\scripts\hacking game scripts\Enemy Script\WeakEnemyProjectile.cs" Line="14" Column="32" />
-      <File FileName="Assets\scripts\hacking game scripts\Player Script\PlayerController.cs" Line="105" Column="3" />
-      <File FileName="Assets\scripts\hacking game scripts\Player Script\ProjectileController.cs" Line="29" Column="3" />
+      <File FileName="Assets\scripts\hacking game scripts\Enemy Script\Enemy2Controller.cs" Line="10" Column="2" />
+      <File FileName="Assets\scripts\hacking game scripts\Enemy Script\EnemySpawner.cs" Line="35" Column="28" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="COMP30019-project2" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="scripts" expanded="True">
+                <Node name="hacking game scripts" expanded="True">
+                  <Node name="Enemy Script" expanded="True">
+                    <Node name="EnemySpawner.cs" selected="True" />
+                  </Node>
+                  <Node name="Player Script" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="COMP30019-project2" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
