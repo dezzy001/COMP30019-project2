@@ -1,10 +1,10 @@
 # COMP30019-project2
 
 Good Tutorials: <br>
-Audio: https://www.youtube.com/watch?v=6OT43pvUyfY
-Adding glow: http://answers.unity3d.com/questions/914945/what-replaces-the-glow-effect-in-unity-5.html
+Audio: https://www.youtube.com/watch?v=6OT43pvUyfY <br>
+Adding glow: http://answers.unity3d.com/questions/914945/what-replaces-the-glow-effect-in-unity-5.html <br>
 
-3D modelling software: https://www.youtube.com/watch?v=r1BRTNqCJ1A
+3D modelling software: https://www.youtube.com/watch?v=r1BRTNqCJ1A <br>
 
 References: <br>
 Nier story etc...: https://www.reddit.com/r/nier/comments/63dikg/nierautomata_resource_materials/
