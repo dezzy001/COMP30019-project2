@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\hacking game scripts\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\hacking game scripts\Player Script\ProjectileController.cs">
     <Files>
-      <File FileName="Assets\scripts\hacking game scripts\PlayerController.cs" Line="56" Column="3" />
-      <File FileName="Assets\scripts\hacking game scripts\ProjectileController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\hacking game scripts\DestroyWhenParticlesFinished.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\hacking game scripts\DestroyIfOffscreen.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\hacking game scripts\CameraController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\hacking game scripts\EnemyController.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\hacking game scripts\Enemy Script\EnemyController.cs" Line="24" Column="35" />
+      <File FileName="Assets\scripts\hacking game scripts\Enemy Script\EnemyProjectileController.cs" Line="9" Column="2" />
+      <File FileName="Assets\scripts\hacking game scripts\Enemy Script\StrongEnemyProjectile.cs" Line="8" Column="2" />
+      <File FileName="Assets\scripts\hacking game scripts\Enemy Script\WeakEnemyProjectile.cs" Line="14" Column="32" />
+      <File FileName="Assets\scripts\hacking game scripts\Player Script\PlayerController.cs" Line="105" Column="3" />
+      <File FileName="Assets\scripts\hacking game scripts\Player Script\ProjectileController.cs" Line="29" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

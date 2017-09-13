@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+/*A camera script which follows the player (similar to roll a ball camera script)
+*/
 public class CameraController : MonoBehaviour {
+
+
 
 	public GameObject player;
 
