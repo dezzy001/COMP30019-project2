@@ -43,13 +43,16 @@ public class PlayerController : MonoBehaviour {
 		//2 different ways of player movement (1 and 2 currently do not consider which way the player is facing)
 
 		//### 1
-		Vector3 keyDirection = getKeyPress ();
-		this.transform.Translate(keyDirection * speed * Time.deltaTime);
+		//Vector3 keyDirection = getKeyPress ();
+		//this.transform.Translate(keyDirection * speed * Time.deltaTime);
 
 		//### 2
 		//lerp could be smoother?
 		//transform.position = Vector3.Lerp(transform.position, transform.position+keyDirection, speed * Time.deltaTime);
 
+		//###3 - controls are North south east west based, rather than direction of player
+		Vector3 move = new Vector3(Input.GetAxis("Horizontal"),0.0f , Input.GetAxis("Vertical"));
+		transform.position += move * speed * Time.deltaTime;
 
 		//followed this tutorial to make player face mouse, based on camera: https://www.youtube.com/watch?v=lkDGk3TjsIE
 		Ray cameraRay = mainCamera.ScreenPointToRay (Input.mousePosition);
@@ -108,8 +111,7 @@ public class PlayerController : MonoBehaviour {
 
 		Vector3 velocity = new Vector3 (0.0f,0.0f,0.0f);
 
-		/* Only makes sense to make player move forwards and backwards (use mouse to control left and right movements)
-		 * 
+
 		if (Input.GetKey(KeyCode.LeftArrow)){
 			velocity += new Vector3(-1.0f,0.0f,0.0f);
 		}
@@ -117,9 +119,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.RightArrow)){
 			velocity += new Vector3(1.0f,0.0f,0.0f);
 		}
-
-
-		*/
+			
 
 		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)){
 			velocity += new Vector3(0.0f,0.0f,1.0f) ;
