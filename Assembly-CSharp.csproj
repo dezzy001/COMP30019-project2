@@ -46,7 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\HideCursor.cs" />
      <Compile Include="Assets\scripts\SceneManagement.cs" />
+     <Compile Include="Assets\scripts\ShowCursor.cs" />
      <Compile Include="Assets\scripts\camp scripts\CampUI.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\CameraController.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\DestroyIfOffscreen.cs" />

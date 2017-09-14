@@ -45,28 +45,31 @@ public class EnemySpawner : MonoBehaviour {
 					enemy.transform.parent = this.transform;
 					enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
 
+					//need to move this enemys y position up a little 
+					enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x,0.15f,enemy.transform.localPosition.y) ;
+
 				}else{
 					if (chooseRandEnemy < 4) {
 						GameObject enemy = GameObject.Instantiate<GameObject> (enemy1_prefab);
 						enemy.transform.parent = this.transform;
 						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
 
+						//need to move this enemys y position up a little 
+						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x,1.0f,enemy.transform.localPosition.y) ;
+
+
 					} else {
 						GameObject enemy = GameObject.Instantiate<GameObject> (enemy2_prefab);
 						enemy.transform.parent = this.transform;
 						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
 
+
+						//need to move this enemys y position up a little 
+						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x,0.25f,enemy.transform.localPosition.y) ;
 					}	
 
 				}
-
-
-
-
-
-
-
-
+					
 			}
 		}
 

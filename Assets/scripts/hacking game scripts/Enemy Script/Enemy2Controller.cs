@@ -34,7 +34,7 @@ public class Enemy2Controller : MonoBehaviour {
 		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
 
 		// Make enemy material darker based on its health
-		renderer.material.color = Color.blue * ((float)healthManager.GetHealth() / 100.0f);
+		renderer.material.color = Color.grey * ((float)healthManager.GetHealth() / 100.0f);
 
 		//should put this in a method later ...
 		if (projectileCooldownCount <= 0){

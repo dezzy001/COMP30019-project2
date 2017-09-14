@@ -13,6 +13,9 @@ public class Enemy1Controller : MonoBehaviour {
 	public float PROJECTILE_COOLDOWN = 1.5f;// default max cooldown
 	private float projectileCooldownCount;// count for the cooldown
 
+	private float ROTATE_90DEG = 90;
+	public float DIST_FROM_PLAYER = 6.5f;
+
 	//velocity of the enemys who can move
 	public Vector3 velocity = new Vector3(5,0,0);
 
@@ -24,6 +27,9 @@ public class Enemy1Controller : MonoBehaviour {
 		player = GameObject.Find("Player");
 
 		projectileCooldownCount = PROJECTILE_COOLDOWN; //init cooldown count
+
+		//make sure enemy is rotated to proper position (default is facing upwards)
+		this.transform.eulerAngles = new Vector3 (ROTATE_90DEG,0,0);
 	}
 
 	// Update is called once per frame
@@ -33,18 +39,26 @@ public class Enemy1Controller : MonoBehaviour {
 
 		//make enemy face the same direction as player
 		this.transform.LookAt (player.transform);
-		//need the line of code below, for some reason we need to rotate by -90 
-		this.transform.eulerAngles = new Vector3 (0,this.transform.rotation.eulerAngles.y-90,0);
+		//need the line of code below: -90 Is because facing front in unitys perspective is x axis, we want it to be the z (i.e north)
+		this.transform.eulerAngles = new Vector3 (ROTATE_90DEG,this.transform.rotation.eulerAngles.y-90,0);
 
-		this.transform.Translate(velocity * Time.deltaTime);
+
+		//if distance from player is relatively close, then stop moving
+		float distanceFromPlayer = Vector3.Distance(this.transform.position , player.transform.position);
+
+		if(distanceFromPlayer > DIST_FROM_PLAYER){
+			this.transform.Translate(velocity * Time.deltaTime);
+
+		}
+
 
 
 
 		HealthManager healthManager = this.gameObject.GetComponent<HealthManager>();
-		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
+		//MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
 
 		// Make enemy material darker based on its health
-		renderer.material.color = Color.red * ((float)healthManager.GetHealth() / 100.0f);
+		//renderer.material.color = Color.red * ((float)healthManager.GetHealth() / 100.0f);
 
 		//should put this in a method later ...
 		if (projectileCooldownCount <= 0){
