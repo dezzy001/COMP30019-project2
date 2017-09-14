@@ -53,6 +53,7 @@
      <Compile Include="Assets\scripts\hacking game scripts\DestroyWhenParticlesFinished.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\Enemy1Controller.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\Enemy2Controller.cs" />
+     <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\EnemyBoss1Controller.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\EnemyController.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\EnemyProjectileController.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\EnemySpawner.cs" />

@@ -95,6 +95,7 @@ public class PlayerController : MonoBehaviour {
 				projectile.transform.position = this.gameObject.transform.position;
 
 				//make projectile face the same direction as player
+				//need the line of code below (y-90), since unity defines x (pointing right) axis as "facing forwards", but we want north to be "facing forwards"
 				Vector3 playerDir = new Vector3 (0.0f, this.gameObject.transform.rotation.eulerAngles.y-90 ,0.0f);
 				projectile.transform.eulerAngles = playerDir ;
 

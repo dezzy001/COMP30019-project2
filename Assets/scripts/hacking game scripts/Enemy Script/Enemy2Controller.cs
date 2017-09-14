@@ -41,12 +41,12 @@ public class Enemy2Controller : MonoBehaviour {
 
 			GameObject projectile = Instantiate<GameObject>(projectilePrefab);
 
-			//projectile will have the same position as player
+			//projectile will have the same position as enemy
 			projectile.transform.position = this.gameObject.transform.position;
 
 			//make projectile face the same direction as player----- or can do Random.Range(0,360)
 			projectile.transform.LookAt (player.transform);
-			//need the line of code below, for some reason we need to rotate by -90 
+			//need the line of code below (y-90), since unity defines x (pointing right) axis as "facing forwards", but we want north to be "facing forwards"
 			projectile.transform.eulerAngles = new Vector3 (0,projectile.transform.rotation.eulerAngles.y-90,0);
 
 

@@ -51,7 +51,7 @@ public class Enemy1Controller : MonoBehaviour {
 
 			GameObject projectile = Instantiate<GameObject>(projectilePrefab);
 
-			//projectile will have the same position as player
+			//projectile will have the same position as enemy
 			projectile.transform.position = this.gameObject.transform.position;
 
 			//make projectile face the same direction as player----- or can do Random.Range(0,360)
