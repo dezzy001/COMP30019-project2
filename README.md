@@ -9,6 +9,9 @@ Adding glow: http://answers.unity3d.com/questions/914945/what-replaces-the-glow-
 References: <br>
 Nier story etc...: https://www.reddit.com/r/nier/comments/63dikg/nierautomata_resource_materials/
 
+Nier sound assets:<br>
+core sounds: https://drive.google.com/drive/folders/0Bxz6TQ9R9H8ydXpraFZHajdnRWM <br>
+all sounds: https://mega.nz//#!GVJCTbTR!BXCIUkkwu7INniWTH3brkklw7JrozkRGyvxC9LFLxZE
 
 Nier related:
 NieR:Automata Hacking Challenge Mode (All 48 Stages Cleared!):
