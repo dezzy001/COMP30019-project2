@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour {
     public float speed = 10.0f; // Default speed sensitivity
     public GameObject projectilePrefab;
 
+	private HealthManager healthManager;
+	private GameObject playerBodyLeft;
+	private GameObject playerBodyRight;
 
 	//cooldown variables
 	public float PROJECTILE_COOLDOWN = 0.08f;// default max cooldown
@@ -21,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody playerRigidBody;
 
 	//ground game object - need the boundaries of the map
-	public GameObject ground;
+	private GameObject ground;
 	float groundSizeX;
 	float groundSizeZ; 
 
@@ -49,6 +52,7 @@ public class PlayerController : MonoBehaviour {
 
 
 		//ground boundaries
+		GameObject ground = GameObject.Find("Ground");
 		Renderer groundSizeRenderer = ground.GetComponent<Renderer>();
 		Vector3 groundSize = groundSizeRenderer.bounds.size;
 
@@ -56,7 +60,11 @@ public class PlayerController : MonoBehaviour {
 		groundSizeX = groundSize.x/2;
 		groundSizeZ = groundSize.z/2;
 
-
+		//handle the health of the player here
+		healthManager = this.gameObject.GetComponent<HealthManager>();
+		//find the left and right body
+		playerBodyLeft = GameObject.Find("playerleft");
+		playerBodyRight = GameObject.Find("playerright");
 
 	}
 
@@ -128,9 +136,19 @@ public class PlayerController : MonoBehaviour {
 
 
 
+		//player health animations here----
+		//destory left body part
+		if(this.healthManager.GetHealth() < 70){
+			
+			playerBodyLeft.SetActive (false);
 
-		//handle the health of the player here
-		HealthManager healthManager = this.gameObject.GetComponent<HealthManager>();
+		} 
+
+		//destory right body part
+		if(this.healthManager.GetHealth() < 40){
+			playerBodyRight.SetActive (false);
+		}
+
 
     }
 
