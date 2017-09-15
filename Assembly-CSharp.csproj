@@ -49,6 +49,7 @@
      <Compile Include="Assets\scripts\HideCursor.cs" />
      <Compile Include="Assets\scripts\SceneManagement.cs" />
      <Compile Include="Assets\scripts\ShowCursor.cs" />
+     <Compile Include="Assets\scripts\SwitchToPanel.cs" />
      <Compile Include="Assets\scripts\camp scripts\CampUI.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\CameraController.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\DestroyIfOffscreen.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\StrongEnemyProjectile.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Enemy Script\WeakEnemyProjectile.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\HealthManager.cs" />
+     <Compile Include="Assets\scripts\hacking game scripts\PauseScript.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Player Script\PlayerController.cs" />
      <Compile Include="Assets\scripts\hacking game scripts\Player Script\ProjectileController.cs" />
      <Compile Include="Assets\scripts\start scripts\StartUI.cs" />

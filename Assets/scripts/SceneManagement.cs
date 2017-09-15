@@ -41,7 +41,7 @@ public class SceneManagement : MonoBehaviour {
 		//open up the loading panel
 		loadingPanel.SetActive (true);
 		//the scenes are so simple... they load in a split second, make it wait x secs to demonstrate loading page
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (1);
 
 		//preloads the next scene, while still in the current scene
 		AsyncOperation operation = SceneManager.LoadSceneAsync (sceneName);
