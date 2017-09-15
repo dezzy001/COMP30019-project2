@@ -11,9 +11,7 @@ public class PlayerController : MonoBehaviour {
 	public float PROJECTILE_COOLDOWN = 0.5f;// default max cooldown
 	private float projectileCooldownCount;// count for the cooldown
 
-	//used for player movement
-	//private Vector3 moveInput;
-	//private Vector3 moveVelocity;
+	private float PROJECTILE_OFFSET;
 
 	//used for player direction, always facing mouse
 	private Camera mainCamera;
@@ -31,7 +29,13 @@ public class PlayerController : MonoBehaviour {
 
 		this.gameObject.transform.position = new Vector3 (0,1,0);
 
+		//projectile variables
 		projectileCooldownCount = PROJECTILE_COOLDOWN; //init cooldown count
+
+		//offset for the projectile position relative to player
+		Renderer playerRend = this.GetComponent<Renderer>();
+		Vector3 playerSize = playerRend.bounds.size;
+		PROJECTILE_OFFSET = playerSize.z;
 
 		//apply a colour to the material of the mesh renderer component
 		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
@@ -41,6 +45,7 @@ public class PlayerController : MonoBehaviour {
 		mainCamera = FindObjectOfType<Camera> ();
 		//assign the players rigid body to this variable
 		playerRigidBody = GetComponent<Rigidbody>();
+
 
 		//ground boundaries
 		Renderer groundSizeRenderer = ground.GetComponent<Renderer>();
@@ -75,7 +80,7 @@ public class PlayerController : MonoBehaviour {
 		Plane groundPlane = new Plane (Vector3.up, Vector3.zero);
 		float rayLength;
 
-		if(groundPlane.Raycast(cameraRay, out rayLength)){
+		if(groundPlane.Raycast(cameraRay, out rayLength) &&  Time.timeScale == 1){
 
 			Vector3 pointToLook = cameraRay.GetPoint (rayLength);
 			Debug.DrawLine (cameraRay.origin, pointToLook,Color.blue);
@@ -91,8 +96,11 @@ public class PlayerController : MonoBehaviour {
 			if (Input.GetMouseButton(0) && projectileCooldownCount <= 0){
 				GameObject projectile = Instantiate<GameObject>(projectilePrefab);
 
+				//offset the position of the projectile in front of the player (rather then inside)
+				Vector3 spawnPos = this.transform.position + this.transform.forward * PROJECTILE_OFFSET;
+
 				//projectile will have the same position as player
-				projectile.transform.position = this.gameObject.transform.position;
+				projectile.transform.position = spawnPos;
 
 				//make projectile face the same direction as player
 				//need the line of code below (y-90), since unity defines x (pointing right) axis as "facing forwards", but we want north to be "facing forwards"
