@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		
 	
 		generateEnemy ();
 
@@ -37,24 +37,7 @@ public class EnemySpawner : MonoBehaviour {
 	//generate enemys in a row and column
 	private void generateEnemy(){
 
-		//get the xyz for each enemy , so we can make it spawn on the ground
-
-		/*
-		//get the xyz values of this object
-		//Renderer enemy1Rend = enemy1_prefab.GetComponent<Renderer>();
-		Vector3 enemy1Size = Vector3.zero; //enemy1Rend.bounds.size;
-
-		//get the xyz values of this object
-		Renderer enemy2Rend = enemy2_prefab.GetComponent<Renderer>();
-
-		Vector3 enemy2Size = enemy2Rend.bounds.size;
-
-
-		//get the xyz values of this object
-		Renderer enemyBoss1Rend = enemyBoss1_prefab.GetComponent<Renderer>();
-		Vector3 enemyBoss1Size = enemyBoss1Rend.bounds.size;
-		*/
-
+		//get the xyz, in each if statement, i.e for each enemy , so we can make it spawn on the ground
 
 		for(int row = 0; row < enemyRows ;row++){
 			for(int col = 0; col < enemyCols ; col++){
@@ -77,7 +60,7 @@ public class EnemySpawner : MonoBehaviour {
 					enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
 
 					//need to move this enemys y position up a little 
-					enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemyBoss1Size.y/2 ,enemy.transform.localPosition.y) ;
+					enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemyBoss1Size.y/2 ,enemy.transform.localPosition.z) ;
 
 				}else{
 					if (chooseRandEnemy < 4) {
@@ -90,7 +73,7 @@ public class EnemySpawner : MonoBehaviour {
 						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
 
 						//need to move this enemys y position up a little 
-						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemy1Size.y/2 ,enemy.transform.localPosition.y);
+						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemy1Size.y/2 ,enemy.transform.localPosition.z);
 
 
 					} else {
@@ -104,13 +87,15 @@ public class EnemySpawner : MonoBehaviour {
 
 
 						//need to move this enemys y position up a little 
-						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemy2Size.y/2 ,enemy.transform.localPosition.y);
+						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemy2Size.y/2 ,enemy.transform.localPosition.z);
 					}	
 
 				}
 					
 			}
 		}
+
+
 
 	}
 }

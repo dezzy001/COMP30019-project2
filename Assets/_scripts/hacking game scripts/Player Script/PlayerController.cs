@@ -28,9 +28,7 @@ public class PlayerController : MonoBehaviour {
 	void Start(){
 
 		//get the xyz values of this object
-		Vector3 playerSize = this.GetComponent<BoxCollider>().bounds.size;
-
-
+		Vector3 playerSize = this.GetComponent<Collider>().bounds.size;
 
 		//projectile variables
 		projectileCooldownCount = PROJECTILE_COOLDOWN; //init cooldown count
