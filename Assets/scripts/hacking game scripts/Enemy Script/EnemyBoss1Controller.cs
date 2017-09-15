@@ -70,13 +70,13 @@ public class EnemyBoss1Controller : MonoBehaviour {
 			}
 
 			GameObject projectile1 = Instantiate<GameObject>(projectilePrefab);
-
 			GameObject projectile2 = Instantiate<GameObject>(projectilePrefab);
-
 			GameObject projectile3 = Instantiate<GameObject>(projectilePrefab);
-
 			GameObject projectile4 = Instantiate<GameObject>(projectilePrefab);
 
+			//size of projectiles - want to stick the projectile to the ground
+			Vector3 projectileSize = projectile1.GetComponent<Collider>().bounds.size;
+			float stickToGroundHeight = projectileSize.y / 2;
 
 			/*
 			projectile1.transform.parent = this.transform;
@@ -86,10 +86,10 @@ public class EnemyBoss1Controller : MonoBehaviour {
 			*/
 
 			//projectile will have the same position as enemy
-			projectile1.transform.position = this.gameObject.transform.position;
-			projectile2.transform.position= this.gameObject.transform.position;
-			projectile3.transform.position = this.gameObject.transform.position;
-			projectile4.transform.position = this.gameObject.transform.position;
+			projectile1.transform.position = new Vector3(this.transform.position.x, stickToGroundHeight , this.transform.position.z);
+			projectile2.transform.position= new Vector3(this.transform.position.x, stickToGroundHeight , this.transform.position.z);
+			projectile3.transform.position = new Vector3(this.transform.position.x, stickToGroundHeight , this.transform.position.z);
+			projectile4.transform.position = new Vector3(this.transform.position.x, stickToGroundHeight , this.transform.position.z);
 
 
 			//have 4 spirals coming out of the boss

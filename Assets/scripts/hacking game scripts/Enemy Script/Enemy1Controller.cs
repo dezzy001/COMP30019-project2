@@ -39,19 +39,16 @@ public class Enemy1Controller : MonoBehaviour {
 
 		//make enemy face the same direction as player
 		this.transform.LookAt (player.transform);
-		//need the line of code below: -90 Is because facing front in unitys perspective is x axis, we want it to be the z (i.e north)
-		this.transform.eulerAngles = new Vector3 (ROTATE_90DEG,this.transform.rotation.eulerAngles.y-90,0);
 
+		//need the line of code below: -90 Is because facing front in unitys perspective is x axis, we want it to be the z (i.e north)
+		this.transform.eulerAngles = new Vector3 (ROTATE_90DEG, this.transform.rotation.eulerAngles.y-90 ,0);
 
 		//if distance from player is relatively close, then stop moving
 		float distanceFromPlayer = Vector3.Distance(this.transform.position , player.transform.position);
 
 		if(distanceFromPlayer > DIST_FROM_PLAYER){
 			this.transform.Translate(velocity * Time.deltaTime);
-
 		}
-
-
 
 
 		HealthManager healthManager = this.gameObject.GetComponent<HealthManager>();
@@ -65,8 +62,12 @@ public class Enemy1Controller : MonoBehaviour {
 
 			GameObject projectile = Instantiate<GameObject>(projectilePrefab);
 
+			//size of projectiles - want to stick the projectile to the ground
+			Vector3 projectileSize = projectile.GetComponent<Collider>().bounds.size;
+			float stickToGroundHeight = projectileSize.y / 2;
+
 			//projectile will have the same position as enemy
-			projectile.transform.position = this.gameObject.transform.position;
+			projectile.transform.position = new Vector3(this.transform.position.x, stickToGroundHeight , this.transform.position.z);
 
 			//make projectile face the same direction as player----- or can do Random.Range(0,360)
 			projectile.transform.LookAt (player.transform);

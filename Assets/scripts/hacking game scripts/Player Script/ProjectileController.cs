@@ -14,6 +14,7 @@ public class ProjectileController : MonoBehaviour {
 		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
 		renderer.material.color = Color.yellow;
 		*/
+
 	}
 
     // Update is called once per frame

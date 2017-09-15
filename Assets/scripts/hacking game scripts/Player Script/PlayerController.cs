@@ -27,15 +27,21 @@ public class PlayerController : MonoBehaviour {
 
 	void Start(){
 
-		this.gameObject.transform.position = new Vector3 (0,1,0);
+		//get the xyz values of this object
+		Renderer playerRend = this.GetComponent<Renderer>();
+		Vector3 playerSize = playerRend.bounds.size;
+
 
 		//projectile variables
 		projectileCooldownCount = PROJECTILE_COOLDOWN; //init cooldown count
+		PROJECTILE_OFFSET = playerSize.z;//offset for the projectile position relative to player
 
-		//offset for the projectile position relative to player
-		Renderer playerRend = this.GetComponent<Renderer>();
-		Vector3 playerSize = playerRend.bounds.size;
-		PROJECTILE_OFFSET = playerSize.z;
+		//keep the player on the ground
+		this.gameObject.transform.position = new Vector3 (0,playerSize.y/2,0);
+
+
+
+
 
 		//apply a colour to the material of the mesh renderer component
 		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
@@ -59,6 +65,10 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
+
+	public Vector3 movement ;
+
+
 	// Update is called once per frame
 	void Update () {
 
@@ -70,10 +80,15 @@ public class PlayerController : MonoBehaviour {
 			Mathf.Clamp(transform.position.z,-groundSizeZ,groundSizeZ)
 		);
 
-	
+
+
 		//move the player with key presses
 		Vector3 move = getKeyPress ();
 		this.transform.position = Vector3.Lerp(transform.position, transform.position + move, speed * Time.deltaTime);
+
+
+
+		
 
 		//followed this tutorial to make player face mouse, based on camera rays: https://www.youtube.com/watch?v=lkDGk3TjsIE
 		Ray cameraRay = mainCamera.ScreenPointToRay (Input.mousePosition);

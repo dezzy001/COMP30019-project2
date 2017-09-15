@@ -41,8 +41,12 @@ public class Enemy2Controller : MonoBehaviour {
 
 			GameObject projectile = Instantiate<GameObject>(projectilePrefab);
 
+			//size of projectiles - want to stick the projectile to the ground
+			Vector3 projectileSize = projectile.GetComponent<Collider>().bounds.size;
+			float stickToGroundHeight = projectileSize.y / 2;
+
 			//projectile will have the same position as enemy
-			projectile.transform.position = this.gameObject.transform.position;
+			projectile.transform.position = new Vector3(this.transform.position.x, stickToGroundHeight , this.transform.position.z);
 
 			//make projectile face the same direction as player----- or can do Random.Range(0,360)
 			projectile.transform.LookAt (player.transform);

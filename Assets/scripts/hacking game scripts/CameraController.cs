@@ -27,6 +27,7 @@ public class CameraController : MonoBehaviour {
 	void LateUpdate () {
 		if(player != null){
 			transform.position = player.transform.position + offset;
+			//this.transform.position = Vector3.Lerp(transform.position,player.transform.position + offset, player.GetComponent<PlayerController>().speed * Time.deltaTime);
 		}
 
 	}
