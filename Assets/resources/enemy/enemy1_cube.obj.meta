@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 5caefe7cc54a29943b5b7d219219b23e
-timeCreated: 1505357123
+guid: fb8cc8c59b5f81f4e93a7d717849520a
+timeCreated: 1505469811
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -13,7 +13,7 @@ ModelImporter:
     3300000: <STL_BINARY>
     4300000: <STL_BINARY>
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:

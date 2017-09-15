@@ -26,6 +26,7 @@ public class Enemy1Controller : MonoBehaviour {
 		//assign the player here
 		player = GameObject.Find("Player");
 
+
 		projectileCooldownCount = PROJECTILE_COOLDOWN; //init cooldown count
 
 		//make sure enemy is rotated to proper position (default is facing upwards)

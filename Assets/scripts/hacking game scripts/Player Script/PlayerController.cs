@@ -28,8 +28,9 @@ public class PlayerController : MonoBehaviour {
 	void Start(){
 
 		//get the xyz values of this object
-		Renderer playerRend = this.GetComponent<Renderer>();
-		Vector3 playerSize = playerRend.bounds.size;
+		Vector3 playerSize = this.GetComponent<Collider>().bounds.size;
+
+		Debug.Log (this.GetComponent<Collider>().bounds.size);
 
 
 		//projectile variables
@@ -37,15 +38,12 @@ public class PlayerController : MonoBehaviour {
 		PROJECTILE_OFFSET = playerSize.z;//offset for the projectile position relative to player
 
 		//keep the player on the ground
-		this.gameObject.transform.position = new Vector3 (0,playerSize.y/2,0);
-
-
-
+		this.gameObject.transform.position = new Vector3 (0,playerSize.y,0);
 
 
 		//apply a colour to the material of the mesh renderer component
-		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
-		renderer.material.color = Color.white;
+		//MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
+		//renderer.material.color = Color.white;
 
 		//assign the main camera to this variable
 		mainCamera = FindObjectOfType<Camera> ();
@@ -66,11 +64,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
 
-	public Vector3 movement ;
-
 
 	// Update is called once per frame
 	void Update () {
+
+
 
 
 		//stop the player from going out of bounds
@@ -87,9 +85,6 @@ public class PlayerController : MonoBehaviour {
 		this.transform.position = Vector3.Lerp(transform.position, transform.position + move, speed * Time.deltaTime);
 
 
-
-		
-
 		//followed this tutorial to make player face mouse, based on camera rays: https://www.youtube.com/watch?v=lkDGk3TjsIE
 		Ray cameraRay = mainCamera.ScreenPointToRay (Input.mousePosition);
 		Plane groundPlane = new Plane (Vector3.up, Vector3.zero);
@@ -100,7 +95,7 @@ public class PlayerController : MonoBehaviour {
 			Vector3 pointToLook = cameraRay.GetPoint (rayLength);
 			Debug.DrawLine (cameraRay.origin, pointToLook,Color.blue);
 
-			Vector3 pointToLookXZfixed = new Vector3 (pointToLook.x, transform.position.y, pointToLook.z);
+			Vector3 pointToLookXZfixed = new Vector3 (pointToLook.x , transform.position.y, pointToLook.z);
 
 			transform.LookAt (pointToLookXZfixed);
 
@@ -118,8 +113,8 @@ public class PlayerController : MonoBehaviour {
 				projectile.transform.position = spawnPos;
 
 				//make projectile face the same direction as player
-				//need the line of code below (y-90), since unity defines x (pointing right) axis as "facing forwards", but we want north to be "facing forwards"
-				Vector3 playerDir = new Vector3 (0.0f, this.gameObject.transform.rotation.eulerAngles.y-90 ,0.0f);
+				//need the line of code below (y-90)
+				Vector3 playerDir = new Vector3 (0.0f, this.gameObject.transform.rotation.eulerAngles.y ,0.0f);
 				projectile.transform.eulerAngles = playerDir ;
 
 				//Debug.Log (playerDir);
@@ -140,12 +135,6 @@ public class PlayerController : MonoBehaviour {
 
 		//handle the health of the player here
 		HealthManager healthManager = this.gameObject.GetComponent<HealthManager>();
-		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
-
-		// Make enemy material darker based on its health
-		renderer.material.color = Color.white * ((float)healthManager.GetHealth() / 100.0f);
-
-
 
     }
 
