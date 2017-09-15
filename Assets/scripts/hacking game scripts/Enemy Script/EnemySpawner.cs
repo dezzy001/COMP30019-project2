@@ -85,12 +85,13 @@ public class EnemySpawner : MonoBehaviour {
 
 						//size of enemy1_prefab
 						Vector3 enemy1Size = enemy.GetComponent<BoxCollider>().bounds.size;
+						Debug.Log (enemy1Size);
 
 						enemy.transform.parent = this.transform;
 						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
 
 						//need to move this enemys y position up a little 
-						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemy1Size.y ,enemy.transform.localPosition.y);
+						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemy1Size.y/2 ,enemy.transform.localPosition.y);
 
 
 					} else {

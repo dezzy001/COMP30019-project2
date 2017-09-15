@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
 
 
 	//cooldown variables
-	public float PROJECTILE_COOLDOWN = 0.5f;// default max cooldown
+	public float PROJECTILE_COOLDOWN = 0.08f;// default max cooldown
 	private float projectileCooldownCount;// count for the cooldown
 
 	private float PROJECTILE_OFFSET;
@@ -28,9 +28,9 @@ public class PlayerController : MonoBehaviour {
 	void Start(){
 
 		//get the xyz values of this object
-		Vector3 playerSize = this.GetComponent<Collider>().bounds.size;
+		Vector3 playerSize = this.GetComponent<BoxCollider>().bounds.size;
 
-		Debug.Log (this.GetComponent<Collider>().bounds.size);
+		Debug.Log (this.GetComponent<BoxCollider>().bounds.size);
 
 
 		//projectile variables
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour {
 		PROJECTILE_OFFSET = playerSize.z;//offset for the projectile position relative to player
 
 		//keep the player on the ground
-		this.gameObject.transform.position = new Vector3 (0,playerSize.y,0);
+		this.gameObject.transform.position = new Vector3 (0,playerSize.y/2,0);
 
 
 		//apply a colour to the material of the mesh renderer component
@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour {
 
 				//make projectile face the same direction as player
 				//need the line of code below (y-90)
-				Vector3 playerDir = new Vector3 (0.0f, this.gameObject.transform.rotation.eulerAngles.y ,0.0f);
+				Vector3 playerDir = new Vector3 (0.0f, this.gameObject.transform.rotation.eulerAngles.y-90 ,0.0f);
 				projectile.transform.eulerAngles = playerDir ;
 
 				//Debug.Log (playerDir);
