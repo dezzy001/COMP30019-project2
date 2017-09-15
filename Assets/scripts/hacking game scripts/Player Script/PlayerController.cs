@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour {
 		//get the xyz values of this object
 		Vector3 playerSize = this.GetComponent<BoxCollider>().bounds.size;
 
-		Debug.Log (this.GetComponent<BoxCollider>().bounds.size);
 
 
 		//projectile variables
@@ -113,11 +112,10 @@ public class PlayerController : MonoBehaviour {
 				projectile.transform.position = spawnPos;
 
 				//make projectile face the same direction as player
-				//need the line of code below (y-90)
+				//need the line of code below (y-90) unitys definition of facing forward is x axis, so need to subtract by 90 to make z axis be "facing forward"
 				Vector3 playerDir = new Vector3 (0.0f, this.gameObject.transform.rotation.eulerAngles.y-90 ,0.0f);
 				projectile.transform.eulerAngles = playerDir ;
 
-				//Debug.Log (playerDir);
 
 				//reset cooldown after you shoot 
 				projectileCooldownCount = PROJECTILE_COOLDOWN;

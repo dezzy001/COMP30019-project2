@@ -85,7 +85,6 @@ public class EnemySpawner : MonoBehaviour {
 
 						//size of enemy1_prefab
 						Vector3 enemy1Size = enemy.GetComponent<BoxCollider>().bounds.size;
-						Debug.Log (enemy1Size);
 
 						enemy.transform.parent = this.transform;
 						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
