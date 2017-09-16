@@ -73,16 +73,12 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-
-
 		//stop the player from going out of bounds
 		transform.position = new Vector3 (
 			Mathf.Clamp(transform.position.x,-groundSizeX,groundSizeX),
 			transform.position.y,
 			Mathf.Clamp(transform.position.z,-groundSizeZ,groundSizeZ)
 		);
-
 
 
 		//move the player with key presses

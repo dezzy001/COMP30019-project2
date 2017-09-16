@@ -74,7 +74,6 @@ public class Level1 : MonoBehaviour {
 
 			}
 
-
 		}
 
 	}
@@ -131,7 +130,6 @@ public class Level1 : MonoBehaviour {
 
 						enemy.transform.parent = this.transform;
 						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
-
 
 						//need to move this enemys y position up a little 
 						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemy2Size.y/2 ,enemy.transform.localPosition.z);

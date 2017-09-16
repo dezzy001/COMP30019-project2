@@ -13,7 +13,6 @@ public class Enemy1Controller : MonoBehaviour {
 	public float PROJECTILE_COOLDOWN = 1.5f;// default max cooldown
 	private float projectileCooldownCount;// count for the cooldown
 
-	private float ROTATE_90DEG = 90;
 	public float DIST_FROM_PLAYER = 6.5f;
 
 	//velocity of the enemys who can move
@@ -26,11 +25,12 @@ public class Enemy1Controller : MonoBehaviour {
 		//assign the player here
 		player = GameObject.Find("Player");
 
-
 		projectileCooldownCount = PROJECTILE_COOLDOWN; //init cooldown count
 
 		//make sure enemy is rotated to proper position (default is facing upwards)
-		this.transform.eulerAngles = new Vector3 (ROTATE_90DEG,0,0);
+		this.transform.eulerAngles = new Vector3 (0,0,0);
+
+		HealthManager healthManager = this.gameObject.GetComponent<HealthManager>();
 	}
 
 	// Update is called once per frame
@@ -42,7 +42,7 @@ public class Enemy1Controller : MonoBehaviour {
 		this.transform.LookAt (player.transform);
 
 		//need the line of code below: -90 Is because facing front in unitys perspective is x axis, we want it to be the z (i.e north)
-		this.transform.eulerAngles = new Vector3 (ROTATE_90DEG, this.transform.rotation.eulerAngles.y-90 ,0);
+		this.transform.eulerAngles = new Vector3 (0, this.transform.rotation.eulerAngles.y-90 ,0);
 
 		//if distance from player is relatively close, then stop moving
 		float distanceFromPlayer = Vector3.Distance(this.transform.position , player.transform.position);
@@ -52,7 +52,7 @@ public class Enemy1Controller : MonoBehaviour {
 		}
 
 
-		HealthManager healthManager = this.gameObject.GetComponent<HealthManager>();
+
 		//MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
 
 		// Make enemy material darker based on its health
