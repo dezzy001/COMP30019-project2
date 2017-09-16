@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_scripts\HideCursor.cs" />
+     <Compile Include="Assets\_scripts\QuitApplication.cs" />
      <Compile Include="Assets\_scripts\SceneManagement.cs" />
      <Compile Include="Assets\_scripts\ShowCursor.cs" />
      <Compile Include="Assets\_scripts\SwitchToPanel.cs" />
      <Compile Include="Assets\_scripts\camp scripts\CampUI.cs" />
+     <Compile Include="Assets\_scripts\camp scripts\QuitPanel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\CameraController.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\DestroyIfOffscreen.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\DestroyWhenParticlesFinished.cs" />
