@@ -8,6 +8,7 @@ public class ProjectileController : MonoBehaviour {
 	public int damageAmount = 25; // default player projectile damage
 
     public string tagToDamage = "Enemy";
+	public string tagUntouchableEnemys = "EnemyUntouchable";
 
 	void Start(){
 		/*
@@ -37,7 +38,15 @@ public class ProjectileController : MonoBehaviour {
 			// Destroy self
             Destroy(this.gameObject);
 
-
         }
+
+		//cannot damage these enemys
+		if(col.gameObject.tag == tagUntouchableEnemys){
+
+			// Destroy self
+			Destroy(this.gameObject);
+
+		}
+
     }
 }

@@ -64,7 +64,16 @@ public class Level1 : MonoBehaviour {
 				StartCoroutine (showHackingPanel());
 
 
+			}else if(transform.childCount == 1){
+				 //turn off the sheild for boss if only it is the only one left
+
+				GameObject enemyBoss1 = GameObject.Find ("EnemyBoss1(Clone)");
+				ParticleSystem enemyBoss1Particle = enemyBoss1.GetComponentInChildren<ParticleSystem>() ;
+				enemyBoss1Particle.Stop ();
+				enemyBoss1.tag = "Enemy";
+
 			}
+
 
 		}
 
