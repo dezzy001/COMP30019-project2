@@ -3,6 +3,7 @@
 Good Tutorials: <br>
 Audio: https://www.youtube.com/watch?v=6OT43pvUyfY <br>
 Adding glow: http://answers.unity3d.com/questions/914945/what-replaces-the-glow-effect-in-unity-5.html <br>
+Particle Systems: https://www.youtube.com/watch?v=rR_bm8f8rVE  <br>
 
 3D modelling software: https://www.youtube.com/watch?v=r1BRTNqCJ1A <br>
 
