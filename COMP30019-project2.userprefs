@@ -4,10 +4,12 @@
     <Files>
       <File FileName="Assets\_scripts\hacking game scripts\PauseScript.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\SceneManagement.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\TutorialLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\Level1.cs" Line="74" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\TutorialLevel.cs" Line="37" Column="22" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\Level1.cs" Line="42" Column="35" />
       <File FileName="Assets\_scripts\hacking game scripts\levels\EnemySpawner.cs" Line="1" Column="1" />
       <File FileName="Assets\_scripts\hacking game scripts\levels\TutorialScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\Enemy Script\EnemyBoss1Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\HealthManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

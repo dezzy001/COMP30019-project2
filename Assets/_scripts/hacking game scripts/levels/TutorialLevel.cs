@@ -35,6 +35,7 @@ public class TutorialLevel : MonoBehaviour {
 		hackingCompletePanel.SetActive(false);
 
 		//ground boundaries
+		ground = GameObject.Find("Ground");
 		Renderer groundSizeRenderer = ground.GetComponent<Renderer>();
 		Vector3 groundSize = groundSizeRenderer.bounds.size;
 
