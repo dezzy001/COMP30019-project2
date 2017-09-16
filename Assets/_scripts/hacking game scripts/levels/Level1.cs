@@ -12,8 +12,8 @@ public class Level1 : MonoBehaviour {
 
 
 	//number of enemys 
-	public int enemyRows = 3;
-	public int enemyCols = 3;
+	public int enemyRows = 2;
+	public int enemyCols = 2;
 	public float enemySpacing;
 
 
@@ -46,9 +46,10 @@ public class Level1 : MonoBehaviour {
 		//divided by 2 for maths purposes (origin of ground is at 0,0 and largeset x is groundSize.x/2)
 		groundSizeX = groundSize.x/2;
 		groundSizeZ = groundSize.z/2;
+		Debug.Log (groundSizeX);
 
 		//make the offset of the spawn from the bottom left corner of the map
-		this.transform.position = new Vector3 (-groundSizeX + groundSizeX/5,0,-groundSizeZ + groundSizeX/5);
+		this.transform.position = new Vector3 (-groundSizeX,0,-groundSizeZ);
 
 		//generate the spacing based on the map size
 		enemySpacing = groundSizeX*3/4;
@@ -83,62 +84,45 @@ public class Level1 : MonoBehaviour {
 
 		gameStarted = true;
 
-		//get the xyz, in each if statement, i.e for each enemy , so we can make it spawn on the ground
 
-		for(int row = 0; row < enemyRows ;row++){
-			for(int col = 0; col < enemyCols ; col++){
+		GameObject enemy = GameObject.Instantiate<GameObject> (enemyBoss1_prefab);
 
+		//size of enemyBoss1_prefab
+		Vector3 enemyBoss1Size = enemy.GetComponent<SphereCollider>().bounds.size;
 
+		enemy.transform.parent = this.transform;
+		enemy.transform.localPosition = new Vector3 (groundSizeX*1.5f,0,groundSizeZ*1.5f);
 
-				int chooseRandEnemy = Random.Range(1,5) ;
-				if(row == 1 && col == 1){
-
-					//dont want something spawning at the middle (given row = col = 3)
-					continue;
-
-				}else if(row == 2 && col == 2){
-					GameObject enemy = GameObject.Instantiate<GameObject> (enemyBoss1_prefab);
-
-					//size of enemyBoss1_prefab
-					Vector3 enemyBoss1Size = enemy.GetComponent<SphereCollider>().bounds.size;
-
-					enemy.transform.parent = this.transform;
-					enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
-
-					//need to move this enemys y position up a little 
-					enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemyBoss1Size.y/2 ,enemy.transform.localPosition.z) ;
-
-				}else{
-					if (chooseRandEnemy < 4) {
-						GameObject enemy = GameObject.Instantiate<GameObject> (enemy1_prefab);
-
-						//size of enemy1_prefab
-						Vector3 enemy1Size = enemy.GetComponent<BoxCollider>().bounds.size;
-
-						enemy.transform.parent = this.transform;
-						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
-
-						//need to move this enemys y position up a little 
-						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemy1Size.y/2 ,enemy.transform.localPosition.z);
+		//need to move this enemys y position up a little 
+		enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemyBoss1Size.y/2 ,enemy.transform.localPosition.z) ;
 
 
-					} else {
-						GameObject enemy = GameObject.Instantiate<GameObject> (enemy2_prefab);
+		GameObject enemyA = GameObject.Instantiate<GameObject> (enemy1_prefab);
 
-						//size of enemy2_prefab
-						Vector3 enemy2Size = enemy.GetComponent<CapsuleCollider>().bounds.size;
+		//size of enemy1_prefab
+		Vector3 enemy1Size = enemyA.GetComponent<Collider>().bounds.size;
 
-						enemy.transform.parent = this.transform;
-						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
+		enemyA.transform.parent = this.transform;
+		enemyA.transform.localPosition = new Vector3 (groundSizeX*2-groundSizeX/10,0,0) ;
 
-						//need to move this enemys y position up a little 
-						enemy.transform.localPosition = new Vector3 (enemy.transform.localPosition.x, enemy2Size.y/2 ,enemy.transform.localPosition.z);
-					}	
+		//need to move this enemys y position up a little 
+		enemyA.transform.localPosition = new Vector3 (enemyA.transform.localPosition.x, enemy1Size.y/2 ,enemyA.transform.localPosition.z);
 
-				}
 
-			}
-		}
+
+		GameObject enemyB = GameObject.Instantiate<GameObject> (enemy1_prefab);
+
+		//size of enemy2_prefab
+		Vector3 enemy2Size = enemyB.GetComponent<Collider>().bounds.size;
+
+		enemyB.transform.parent = this.transform;
+		enemyB.transform.localPosition = new Vector3 (groundSizeX/10,0,0) ;
+
+		//need to move this enemys y position up a little 
+		enemyB.transform.localPosition = new Vector3 (enemyB.transform.localPosition.x, enemy2Size.y/2 ,enemyB.transform.localPosition.z);
+
+
+
 
 	}
 

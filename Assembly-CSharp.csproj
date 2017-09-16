@@ -70,9 +70,9 @@
      <Compile Include="Assets\_scripts\hacking game scripts\Player Script\ProjectileController.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\EnemySpawner.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\Level1.cs" />
-     <Compile Include="Assets\_scripts\hacking game scripts\levels\ShowCompleteGame.cs" />
-     <Compile Include="Assets\_scripts\hacking game scripts\levels\TutorialLevel.cs" />
-     <Compile Include="Assets\_scripts\hacking game scripts\levels\TutorialScript.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\Level2.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialLevel.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialScript.cs" />
      <Compile Include="Assets\_scripts\start scripts\StartUI.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
