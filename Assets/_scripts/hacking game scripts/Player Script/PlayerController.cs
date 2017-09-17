@@ -80,8 +80,8 @@ public class PlayerController : MonoBehaviour {
 		//handle the health of the player here
 		healthManager = this.gameObject.GetComponent<HealthManager>();
 		//find the left and right body
-		playerBodyLeft = GameObject.Find("playerleft");
-		playerBodyRight = GameObject.Find("playerright");
+		playerBodyLeft = GameObject.Find("Player/Player Spawn Particle System/playerleft");
+		playerBodyRight = GameObject.Find("Player/Player Spawn Particle System/playerright");
 
 	}
 

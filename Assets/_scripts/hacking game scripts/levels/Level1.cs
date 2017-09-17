@@ -66,12 +66,12 @@ public class Level1 : MonoBehaviour {
 
 
 			}else if(transform.childCount == 1){
-				 //turn off the sheild for boss if only it is the only one left
+				//turn off the sheild for boss if only it is the only one left
 
-				GameObject enemyBoss1 = GameObject.Find ("EnemyBoss1(Clone)");
-				ParticleSystem enemyBoss1Particle = enemyBoss1.GetComponentInChildren<ParticleSystem>() ;
+				GameObject enemyBoss1BodyPart = GameObject.Find ("EnemyBoss1(Clone)/EnemyBoss1 BodyPart");
+				ParticleSystem enemyBoss1Particle = enemyBoss1BodyPart.GetComponentInChildren<ParticleSystem>() ;
 				enemyBoss1Particle.Stop ();
-				enemyBoss1.tag = "Enemy";
+				GameObject.Find ("EnemyBoss1(Clone)").tag = "Enemy";
 
 			}
 

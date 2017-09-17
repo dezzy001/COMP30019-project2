@@ -7,37 +7,58 @@ public class SpawnAnimation : MonoBehaviour {
 
 	public ParticleSystem spawnParticleSystem;
 
+	//disable all these components until animation has collided with ground
 	private Component[] bodyParts;
+	private Component[] currentScripts;
 
-	void Awake () {
+	public string spawnAnimationFileNameWithoutSpaces = "SpawnAnimation";
+
+
+
+	// Use this for initialization
+	void Start () {
+
+
+		//this.gameObject.SetActive (false);
+		spawnParticleSystem = GetComponentInChildren<ParticleSystem> ();
 
 		bodyParts = GetComponentsInChildren<Transform>();
 
+		//turn off all the body parts
 		foreach(Transform body in bodyParts){
 			if (body.CompareTag ("Body")) {
 				body.gameObject.SetActive (false);
 			}
 		}
 
-	}
+		//deactivae all the scrpits in the current object
 
-	// Use this for initialization
-	void Start () {
-		//this.gameObject.SetActive (false);
-		spawnParticleSystem = GetComponentInChildren<ParticleSystem> ();
+		currentScripts = gameObject.GetComponents<MonoBehaviour>();
+		foreach(MonoBehaviour script in currentScripts){
 
-		print (spawnParticleSystem);
+			if (script.GetType ().Name != spawnAnimationFileNameWithoutSpaces) {
+				script.enabled = false;
+			} 
 
+		}
 	}
 
 
 	void OnParticleCollision(){
-		print ("ok...");
 
+		/*VERY IMPORTANT - REMEMBER TO TURN OFF ISTRIGGER IN YOUR OBJECT - spent countless hours debugging this*/
+
+		//activate all the body parts when animations occur
 		foreach(Transform body in bodyParts){
 			if(body.CompareTag("Body")){
 				body.gameObject.SetActive (true);
 			}
+		}
+
+
+		//activae all the scrpits in the current object
+		foreach(MonoBehaviour script in currentScripts){
+			script.enabled = true;
 		}
 
 	}

@@ -12,9 +12,12 @@ public class TutorialCubeScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		HealthManager healthManager = this.gameObject.GetComponent<HealthManager>();
-		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
+		MeshRenderer renderer = this.gameObject.GetComponentInChildren<MeshRenderer>();
 
 		// Make enemy material darker based on its health
-		renderer.material.color = Color.grey * ((float)healthManager.GetHealth() / 100.0f);
+		if(renderer != null){
+			renderer.material.color = Color.white * ((float)healthManager.GetHealth() / 100.0f);
+
+		}
 	}
 }
