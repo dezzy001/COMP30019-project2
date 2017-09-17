@@ -46,7 +46,7 @@ public class Level1 : MonoBehaviour {
 		//divided by 2 for maths purposes (origin of ground is at 0,0 and largeset x is groundSize.x/2)
 		groundSizeX = groundSize.x/2;
 		groundSizeZ = groundSize.z/2;
-		Debug.Log (groundSizeX);
+
 
 		//make the offset of the spawn from the bottom left corner of the map
 		this.transform.position = new Vector3 (-groundSizeX,0,-groundSizeZ);

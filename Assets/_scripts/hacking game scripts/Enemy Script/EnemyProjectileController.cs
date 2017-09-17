@@ -9,18 +9,34 @@ public class EnemyProjectileController : MonoBehaviour {
 
 	public string tagToDamage = "Player";
 
+	//ground game object - need the boundaries of the map
+	public GameObject ground;
+	float groundSizeX;
+	float groundSizeZ; 
+
 
 	void Start(){
-		/*
-		MeshRenderer renderer = this.gameObject.GetComponent<MeshRenderer>();
-		renderer.material.color = Color.yellow;
-		*/
+		//ground boundaries
+		ground = GameObject.Find("Ground");
+		Renderer groundSizeRenderer = ground.GetComponent<Renderer>();
+		Vector3 groundSize = groundSizeRenderer.bounds.size;
+
+		//divided by 2 for maths purposes (origin of ground is at 0,0 and largeset x is groundSize.x/2)
+		groundSizeX = groundSize.x/2;
+		groundSizeZ = groundSize.z/2;
 
 	}
 
 	// Update is called once per frame
 	void Update () {
 		this.transform.Translate(velocity * Time.deltaTime);
+
+		if(this.transform.position.x > groundSizeX || this.transform.position.x < -groundSizeX 
+			|| this.transform.position.z > groundSizeZ || this.transform.position.z < -groundSizeZ){
+
+			Destroy(this.gameObject);
+
+		}
 
 	}
 
