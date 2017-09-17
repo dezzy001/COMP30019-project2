@@ -204,7 +204,7 @@ public class TutorialScript : MonoBehaviour {
 	private void movePanelToBottom(GameObject panel){
 
 		if(panel.transform.position.y > 0){
-			panel.transform.position = new Vector3(panel.transform.position.x,panel.transform.position.y-Time.deltaTime*200,panel.transform.position.z);
+			panel.transform.position = new Vector3(panel.transform.position.x,panel.transform.position.y-Time.deltaTime*500,panel.transform.position.z);
 		}
 
 
