@@ -36,40 +36,40 @@ https://www.youtube.com/watch?v=jT2jOeFo5HQ
 /* ---------- Additional Notes on stuff to implement: ----------------- */
 
 Shop?
-    * currency?
-    * upgrade movement speed ... etc (do this before levels)
-    * show cursor in easy mode
-    * chips system like Nier (upgrades can be on/off)
-        * mainly upgrading the stats
-    * slow mo for 5 sec (for everything, player slow as well)
+* currency?
+* upgrade movement speed ... etc (do this before levels)
+* show cursor in easy mode
+* chips system like Nier (upgrades can be on/off)
+  * mainly upgrading the stats
+* slow mo for 5 sec (for everything, player slow as well)
 
-    * come up with more ideas
+* come up with more ideas
 
 Levels?
-    * maybe 10 normal levels, then 1 boss level
-    * make larger and more interesting levels
+* maybe 10 normal levels, then 1 boss level
+* make larger and more interesting levels
 
 UI and animations
-    * blur?
-    * spawn effect (lightning/laser from above)
-    * trail effect for Player and Seeking Projectile
-    * enemy death effect (particle system)
-    * when bullet hits enemy (glow + sound)
+* blur?
+* spawn effect (lightning/laser from above)
+* trail effect for Player and Seeking Projectile
+* enemy death effect (particle system)
+* when bullet hits enemy (glow + sound)
 
 Story?
-    * visual novel style
-    * dialogue with choices (binary or more)
-        * if player chooses one specific route 
-            then enemy would be stronger and harder to beat
-        * or if player chooses another route
-            easier enemy + in game currency
+* visual novel style
+* dialogue with choices (binary or more)
+* if player chooses one specific route 
+   then enemy would be stronger and harder to beat
+* or if player chooses another route
+   easier enemy + in game currency
 
 Collision (must)
-    * Steven watch tutorial
-    * Make everything collide properly
-        * enemy and players
-        * if player hits any enemy object, have IV cool down
-            ~ can upgrade IV cool down by a little bit
+* Steven watch tutorial
+* Make everything collide properly
+* enemy and players
+* if player hits any enemy object, have IV cool down
+   ~ can upgrade IV cool down by a little bit
 
 How to save player data?
-    * Save data + info management
+* Save data + info management
