@@ -21,7 +21,14 @@ public class PlayerController : MonoBehaviour {
 	private Vector3 mousePosition;
 
 	//rigid body of the player
-	private Rigidbody playerRigidBody;
+	//private Rigidbody playerRigidBody;
+
+	//character controller for the player
+	private CharacterController controller;
+	private Vector3 moveDirection = Vector3.zero;
+	public float jumpSpeed = 8.0f;
+	public float gravity = 20.0f;
+
 
 	//ground game object - need the boundaries of the map
 	private GameObject ground;
@@ -53,8 +60,12 @@ public class PlayerController : MonoBehaviour {
 
 		//assign the main camera to this variable
 		mainCamera = FindObjectOfType<Camera> ();
+
 		//assign the players rigid body to this variable
-		playerRigidBody = GetComponent<Rigidbody>();
+		//playerRigidBody = GetComponent<Rigidbody>();
+
+		// assign the character controller
+		controller = GetComponent<CharacterController> ();
 
 
 		//ground boundaries
@@ -89,10 +100,16 @@ public class PlayerController : MonoBehaviour {
 		//move the player with key presses
 		Vector3 move;
 		if(allowKeypressMovement == true){
-			move = getKeyPress ();
+			//move = getKeyPress ();
+
+			// try move the player with the character controller methods
+			moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
+			moveDirection *= speed;
+			moveDirection.y -= gravity * Time.deltaTime;
+			controller.Move (moveDirection * Time.deltaTime);
 		}
 
-		this.transform.position = Vector3.Lerp(transform.position, transform.position + move, speed * Time.deltaTime);
+		//this.transform.position = Vector3.Lerp(transform.position, transform.position + move, speed * Time.deltaTime);
 
 
 		//followed this tutorial to make player face mouse, based on camera rays: https://www.youtube.com/watch?v=lkDGk3TjsIE
