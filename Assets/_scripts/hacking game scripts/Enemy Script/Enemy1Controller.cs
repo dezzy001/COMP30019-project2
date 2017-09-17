@@ -30,7 +30,6 @@ public class Enemy1Controller : MonoBehaviour {
 		//make sure enemy is rotated to proper position (default is facing upwards)
 		this.transform.eulerAngles = new Vector3 (0,0,0);
 
-		HealthManager healthManager = this.gameObject.GetComponent<HealthManager>();
 	}
 
 	// Update is called once per frame

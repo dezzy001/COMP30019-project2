@@ -26,8 +26,7 @@ public class ProjectileController : MonoBehaviour {
 	}
 
     // Handle collisions
-    void OnTriggerEnter(Collider col)
-    {
+    void OnTriggerEnter(Collider col){
 
         if (col.gameObject.tag == tagToDamage){
 			

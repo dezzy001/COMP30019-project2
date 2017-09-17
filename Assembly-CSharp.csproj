@@ -51,6 +51,7 @@
      <Compile Include="Assets\_scripts\SceneManagement.cs" />
      <Compile Include="Assets\_scripts\ShowCursor.cs" />
      <Compile Include="Assets\_scripts\SwitchToPanel.cs" />
+     <Compile Include="Assets\_scripts\ToggleTime.cs" />
      <Compile Include="Assets\_scripts\camp scripts\CampUI.cs" />
      <Compile Include="Assets\_scripts\camp scripts\QuitPanel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\CameraController.cs" />
@@ -71,6 +72,8 @@
      <Compile Include="Assets\_scripts\hacking game scripts\levels\EnemySpawner.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\Level1.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\Level2.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\MoveHereScript.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialCubeScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialLevel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialScript.cs" />
      <Compile Include="Assets\_scripts\start scripts\StartUI.cs" />

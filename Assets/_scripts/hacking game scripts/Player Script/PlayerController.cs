@@ -28,6 +28,12 @@ public class PlayerController : MonoBehaviour {
 	float groundSizeX;
 	float groundSizeZ; 
 
+
+	//player controller - can disable any player movements you do not want  
+	public bool allowMouseRotation = true; //rotation
+	public bool allowMouseLeftClick = true; //shooting
+	public bool allowKeypressMovement = true; //moving
+
 	void Start(){
 
 		//get the xyz values of this object
@@ -80,9 +86,12 @@ public class PlayerController : MonoBehaviour {
 			Mathf.Clamp(transform.position.z,-groundSizeZ,groundSizeZ)
 		);
 
-
 		//move the player with key presses
-		Vector3 move = getKeyPress ();
+		Vector3 move;
+		if(allowKeypressMovement == true){
+			move = getKeyPress ();
+		}
+
 		this.transform.position = Vector3.Lerp(transform.position, transform.position + move, speed * Time.deltaTime);
 
 
@@ -91,6 +100,7 @@ public class PlayerController : MonoBehaviour {
 		Plane groundPlane = new Plane (Vector3.up, Vector3.zero);
 		float rayLength;
 
+		//if not paused
 		if(groundPlane.Raycast(cameraRay, out rayLength) &&  Time.timeScale == 1){
 
 			Vector3 pointToLook = cameraRay.GetPoint (rayLength);
@@ -98,13 +108,18 @@ public class PlayerController : MonoBehaviour {
 
 			Vector3 pointToLookXZfixed = new Vector3 (pointToLook.x , transform.position.y, pointToLook.z);
 
-			transform.LookAt (pointToLookXZfixed);
+			if(allowMouseRotation == true){
+				transform.LookAt (pointToLookXZfixed);
+			}
+
+
+
 
 
 
 			//should put this in a method later ...
 
-			if (Input.GetMouseButton(0) && projectileCooldownCount <= 0){
+			if (Input.GetMouseButton(0) && projectileCooldownCount <= 0 && allowMouseLeftClick == true){
 				GameObject projectile = Instantiate<GameObject>(projectilePrefab);
 
 				//offset the position of the projectile in front of the player (rather then inside)
@@ -124,6 +139,7 @@ public class PlayerController : MonoBehaviour {
 
 			}
 				
+			//decrement the cooldown
 			if(projectileCooldownCount>0){
 				projectileCooldownCount -= Time.deltaTime;
 			}
