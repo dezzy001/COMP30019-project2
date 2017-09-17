@@ -33,7 +33,7 @@ https://www.youtube.com/watch?v=jT2jOeFo5HQ
 * Untag the player to make it invinsible during cooldown period.
 
 
-/* ---------- Additional Notes on stuff to implement: ----------------- */
+/* ----------------- Additional Notes on stuff to implement: ----------------- */
 
 Shop?
 * currency?
