@@ -59,17 +59,15 @@ https://www.youtube.com/watch?v=jT2jOeFo5HQ
 ### Story?
 * visual novel style
 * dialogue with choices (binary or more)
-* if player chooses one specific route 
-   then enemy would be stronger and harder to beat
-* or if player chooses another route
-   easier enemy + in game currency
+* if player chooses one specific route, then enemy would be stronger and harder to beat
+* or if player chooses another route, easier enemy + in game currency
 
 ### Collision (must)
 * Steven watch tutorial
 * Make everything collide properly
 * enemy and players
 * if player hits any enemy object, have IV cool down
-   ~ can upgrade IV cool down by a little bit
+   * ~ can upgrade IV cool down by a little bit
 
 ### How to save player data?
 * Save data + info management
