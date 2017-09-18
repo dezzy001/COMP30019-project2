@@ -1,20 +1,22 @@
 # COMP30019-project2
 
-Good Tutorials: <br>
-Audio: https://www.youtube.com/watch?v=6OT43pvUyfY <br>
-Adding glow: http://answers.unity3d.com/questions/914945/what-replaces-the-glow-effect-in-unity-5.html <br>
-Particle Systems: https://www.youtube.com/watch?v=rR_bm8f8rVE  <br>
+## Good Tutorials: 
+
+* Audio: https://www.youtube.com/watch?v=6OT43pvUyfY
+* Adding glow: http://answers.unity3d.com/questions/914945/what-replaces-the-glow-effect-in-unity-5.html 
+* Particle Systems: https://www.youtube.com/watch?v=rR_bm8f8rVE  
+* Saving player data: https://www.youtube.com/watch?v=sWWZZByVvlU
 
 3D modelling software: https://www.youtube.com/watch?v=r1BRTNqCJ1A <br>
 
-References: <br>
+## References: 
 Nier story etc...: https://www.reddit.com/r/nier/comments/63dikg/nierautomata_resource_materials/
 
-Nier sound assets:<br>
+## Nier sound assets:
 core sounds: https://drive.google.com/drive/folders/0Bxz6TQ9R9H8ydXpraFZHajdnRWM <br>
 all sounds: https://mega.nz//#!GVJCTbTR!BXCIUkkwu7INniWTH3brkklw7JrozkRGyvxC9LFLxZE
 
-Nier related:
+## Nier related:
 NieR:Automata Hacking Challenge Mode (All 48 Stages Cleared!):
 https://www.youtube.com/watch?v=jT2jOeFo5HQ
 
