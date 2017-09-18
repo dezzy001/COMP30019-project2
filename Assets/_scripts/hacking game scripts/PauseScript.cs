@@ -11,10 +11,28 @@ public class PauseScript : MonoBehaviour {
 
 	private bool leavingGame = false;
 
+	//to get the blur script
+	private Component[] cameraScripts;
+	private MonoBehaviour blurScript;
+	private string blurScriptFileName = "BlurOptimized";
+
 	void Start(){
 		//add all the panels in the scene here
 		allHackingGamePanels.Add (pausePanel);
 		pausePanel.SetActive (false);//dont want pause panel to show
+
+		cameraScripts = GameObject.Find ("Main Camera").GetComponents<MonoBehaviour>();
+
+
+		foreach(MonoBehaviour blur in cameraScripts){
+
+			if (blur.GetType ().Name == blurScriptFileName) {
+				blurScript = blur;
+				blurScript.enabled = false;
+			} 
+
+		}
+
 
 	}
 
@@ -28,7 +46,11 @@ public class PauseScript : MonoBehaviour {
 				
 				Time.timeScale = 0;
 
+				blurScript.enabled = true;
+
 				clickToPanel (pausePanel);
+
+
 
 				//turn mouse on
 				Cursor.visible = true;
@@ -40,6 +62,7 @@ public class PauseScript : MonoBehaviour {
 
 				Time.timeScale = 1;
 
+				blurScript.enabled = false;
 				//turn mouse off
 				Cursor.visible = false;
 
