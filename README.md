@@ -6,8 +6,7 @@
 * Adding glow: http://answers.unity3d.com/questions/914945/what-replaces-the-glow-effect-in-unity-5.html 
 * Particle Systems: https://www.youtube.com/watch?v=rR_bm8f8rVE  
 * Saving player data: https://www.youtube.com/watch?v=sWWZZByVvlU
-
-3D modelling software: https://www.youtube.com/watch?v=r1BRTNqCJ1A <br>
+* 3D modelling software: https://www.youtube.com/watch?v=r1BRTNqCJ1A <br>
 
 ## References: 
 Nier story etc...: https://www.reddit.com/r/nier/comments/63dikg/nierautomata_resource_materials/
