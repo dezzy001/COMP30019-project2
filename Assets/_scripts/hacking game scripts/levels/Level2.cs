@@ -34,7 +34,7 @@ public class Level2 : MonoBehaviour {
 	float groundSizeZ; 
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
 		hackingCompletePanel.SetActive(false);
 
