@@ -24,10 +24,7 @@ https://www.youtube.com/watch?v=jT2jOeFo5HQ
 
 ## Question for Tutor
 
-* How to do collision?
-* Do we need to have two collider (one isTrigger, and the other is not)?
 * Copyrights? (Music, and other relevant assests)
-* Best way to handle player movement? (feels choppy)
 
 ## Additional Notes from Derek
 
@@ -68,7 +65,7 @@ https://www.youtube.com/watch?v=jT2jOeFo5HQ
 * Make everything collide properly
 * enemy and players
 * if player hits any enemy object, have IV cool down
-   * ~ can upgrade IV cool down by a little bit
+   * ~ can upgrade invulnerability cool down by a little bit
 
 ### How to save player data?
 * Save data + info management
