@@ -1,5 +1,8 @@
 # COMP30019-project2
 
+## Top Todo Items:
+* Add hacking complete blur!
+
 ## Good Tutorials: 
 
 * Audio: https://www.youtube.com/watch?v=6OT43pvUyfY
