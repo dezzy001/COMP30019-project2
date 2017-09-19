@@ -36,8 +36,7 @@ https://www.youtube.com/watch?v=jT2jOeFo5HQ
 * currency?
 * upgrade movement speed ... etc (do this before levels)
 * show cursor in easy mode
-* chips system like Nier (upgrades can be on/off)
-  * mainly upgrading the stats
+* chips system like Nier (upgrades can be on/off) - mainly upgrading the stats
 * slow mo for 5 sec (for everything, player slow as well)
 
 * come up with more ideas
