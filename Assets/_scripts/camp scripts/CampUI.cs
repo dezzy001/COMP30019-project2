@@ -14,7 +14,7 @@ public class CampUI : MonoBehaviour {
 	//array list for the panels , I used array list so you can generalise some functions
 	public ArrayList allCampPanels = new ArrayList();
 
-	public SwitchToPanel switchToPanelScript;
+	//public SwitchToPanel switchToPanelScript;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +25,7 @@ public class CampUI : MonoBehaviour {
 		allCampPanels.Add(shopPanel);
 
 		//always want campPanel to be on
-		switchToPanelScript.activatePanel(campPanel, allCampPanels);
+		SwitchToPanel.activatePanel(campPanel, allCampPanels);
 
 	}
 
@@ -36,7 +36,7 @@ public class CampUI : MonoBehaviour {
 	* parameter to switch to the specified panel. Always keeps the camp panel active*/
 
 	public void clickToPanel(GameObject panel){
-		switchToPanelScript.activatePanel(panel, allCampPanels);
+		SwitchToPanel.activatePanel(panel, allCampPanels);
 		//we always want camp Panel to be active
 		campPanel.SetActive (true);
 

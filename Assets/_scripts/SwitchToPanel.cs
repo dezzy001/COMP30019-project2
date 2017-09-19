@@ -21,7 +21,7 @@ public class SwitchToPanel : MonoBehaviour {
 
 	 */
 
-	public void activatePanel(GameObject panel, ArrayList allPanels){
+	public static void activatePanel(GameObject panel, ArrayList allPanels){
 		
 		bool foundAPanel = false;
 
@@ -43,7 +43,7 @@ public class SwitchToPanel : MonoBehaviour {
 
 
 
-	public void closeAllPanels(ArrayList allPanels){
+	public static void closeAllPanels(ArrayList allPanels){
 
 		foreach(GameObject p in allPanels){
 			p.SetActive (false);

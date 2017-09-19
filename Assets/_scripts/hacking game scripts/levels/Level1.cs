@@ -88,7 +88,7 @@ public class Level1 : MonoBehaviour {
 		GameObject enemy = GameObject.Instantiate<GameObject> (enemyBoss1_prefab);
 
 		//size of enemyBoss1_prefab
-		Vector3 enemyBoss1Size = enemy.GetComponent<SphereCollider>().bounds.size;
+		Vector3 enemyBoss1Size = enemy.GetComponent<Collider>().bounds.size;
 
 		enemy.transform.parent = this.transform;
 		enemy.transform.localPosition = new Vector3 (groundSizeX*1.5f,0,groundSizeZ*1.5f);

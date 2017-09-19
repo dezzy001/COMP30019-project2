@@ -6,7 +6,9 @@ public class MoveHereScript : MonoBehaviour {
 
 	private string playerTag = "Player";
 
-	public float DESTROY_WAIT = 0.01f;
+	public float DESTROY_WAIT = 0.05f;
+
+
 
 	//on trigger for move to area
 	// Handle collisions

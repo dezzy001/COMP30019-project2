@@ -28,8 +28,10 @@ public class TutorialScript : MonoBehaviour {
 	private bool spawnCubeOnce = true;//ensure tutorial only spawns cube tutorial only once
 	private bool spawnMoveToOnce = true;//ensure tutorial only spawns move to tutorial only once
 
-
+	//constants
 	public float SPAWN_CUBES_WAIT = 1.5f;
+	public float DELAY_B4_NEXT_TUT = 0.35f;
+
 
 	//prefabs
 	public GameObject tutorialCube_prefab;
@@ -44,7 +46,7 @@ public class TutorialScript : MonoBehaviour {
 	private GameObject tutorialCubes;
 	private GameObject moveHere;
 
-	public SwitchToPanel switchToPanelScript;
+	//public SwitchToPanel switchToPanelScript;
 
 	private ArrayList allTutorialPanels = new ArrayList();
 
@@ -73,11 +75,19 @@ public class TutorialScript : MonoBehaviour {
 	void Update () {
 
 
+		//tutorial 3--------------------------
+		//allow mouse rotation at third tutorial panel
+		if(tutorial3.activeSelf == true){
+			player.allowMouseRotation = true;
+		}
+
+
+
 		//tutorial 3A--------------------
 		//when player finnishes cube tutorial, then pull up next tutorial panel
 		if(tutorialCubes!=null && tutorialCubes.transform.childCount == 0 && !finnishedTutorialCubes){
 			//close the all panel first
-			switchToPanelScript.closeAllPanels (this.allTutorialPanels);
+			SwitchToPanel.closeAllPanels (this.allTutorialPanels);
 			//go to tutorial 4
 			clickToPanel (tutorial4);
 
@@ -89,7 +99,15 @@ public class TutorialScript : MonoBehaviour {
 			movePanelToBottom (tutorial3a);
 		}
 
-	
+
+
+		//tutorial 5 ---------------------------------- 
+		// allow movement at 5th tutorial panel
+		if(tutorial5.activeSelf == true ){
+			player.allowKeypressMovement = true;
+		}
+
+
 		//tutorial 5a---------------------------
 		//if the move here was activated and player stepped on it,then go to next tutorial
 
@@ -105,7 +123,7 @@ public class TutorialScript : MonoBehaviour {
 				GetComponent<TutorialLevel> ().generateEnemy();
 
 				//close the all panel first
-				switchToPanelScript.closeAllPanels (this.allTutorialPanels);
+				SwitchToPanel.closeAllPanels (this.allTutorialPanels);
 				//go to tutorial 6
 				clickToPanel (tutorial6);
 
@@ -142,7 +160,7 @@ public class TutorialScript : MonoBehaviour {
 			StartCoroutine (spawnTutorialCubes());
 
 			//close the all panel first
-			switchToPanelScript.closeAllPanels (this.allTutorialPanels);
+			SwitchToPanel.closeAllPanels (this.allTutorialPanels);
 
 			//open tutorial 3a
 			clickToPanel(tutorial3a);
@@ -166,6 +184,9 @@ public class TutorialScript : MonoBehaviour {
 
 	}
 
+
+
+	/*
 	//MOVE TO GLOWING AREA 
 	public void clickToSpawnMoveToArea(){
 
@@ -173,7 +194,7 @@ public class TutorialScript : MonoBehaviour {
 			StartCoroutine (spawnMoveToArea());
 
 			//close the all panel first
-			switchToPanelScript.closeAllPanels (this.allTutorialPanels);
+			SwitchToPanel.closeAllPanels (this.allTutorialPanels);
 
 			//open tutorial 5a
 			clickToPanel(tutorial5a);
@@ -183,6 +204,8 @@ public class TutorialScript : MonoBehaviour {
 
 
 	}
+
+
 
 	IEnumerator spawnMoveToArea(){
 
@@ -196,6 +219,7 @@ public class TutorialScript : MonoBehaviour {
 		}
 
 	}
+	*/
 
 
 
@@ -228,19 +252,10 @@ public class TutorialScript : MonoBehaviour {
 			
 			firstTime = false;
 
-			yield return new WaitForSeconds (0.3f);
+			yield return new WaitForSeconds (DELAY_B4_NEXT_TUT);
 
-			switchToPanelScript.activatePanel (panel,this.allTutorialPanels);
-
-			//allow mouse rotation at third tutorial panel
-			if(panel == tutorial3){
-				player.allowMouseRotation = true;
-			}
-
-			// allow movement at 5th tutorial panel
-			if(panel == tutorial5){
-				player.allowKeypressMovement = true;
-			}
+			SwitchToPanel.activatePanel (panel,this.allTutorialPanels);
+		
 
 			firstTime = true;
 		}
@@ -251,7 +266,7 @@ public class TutorialScript : MonoBehaviour {
 	/*this is used when player exists the game, want to close all panels, and not allow player to "pause" during the load*/
 	public void closeAllPanels(){
 		
-		switchToPanelScript.closeAllPanels (this.allTutorialPanels);
+		SwitchToPanel.closeAllPanels (this.allTutorialPanels);
 
 	}
 
