@@ -2,6 +2,7 @@
 
 ## Top Todo Items:
 * Add hacking complete blur!
+* When solution comes out for tutorial, upgrade Health Manager Script!
 
 ## Good Tutorials: 
 
