@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_scripts\ChangeCursor.cs" />
+     <Compile Include="Assets\_scripts\ClickSound.cs" />
      <Compile Include="Assets\_scripts\HideCursor.cs" />
      <Compile Include="Assets\_scripts\QuitApplication.cs" />
      <Compile Include="Assets\_scripts\SceneManagement.cs" />

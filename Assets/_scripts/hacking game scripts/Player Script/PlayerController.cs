@@ -41,6 +41,11 @@ public class PlayerController : MonoBehaviour {
 	public bool allowMouseLeftClick = true; //shooting
 	public bool allowKeypressMovement = true; //moving
 
+	public ParticleSystem damangeRing;
+
+	private bool gotHit1 = false;
+	private bool gotHit2 = false;
+
 	void Start(){
 
 		//get the xyz values of this object
@@ -167,14 +172,19 @@ public class PlayerController : MonoBehaviour {
 
 		//player health animations here----
 		//destory left body part
-		if(this.healthManager.GetHealth() < 70){
-			
+		if(this.healthManager.GetHealth() < 70 && (gotHit1 == false)){
+			damangeRing.Play ();
+			gotHit1 = true;
+
 			playerBodyLeft.SetActive (false);
 
 		} 
 
 		//destory right body part
-		if(this.healthManager.GetHealth() < 40){
+		if(this.healthManager.GetHealth() < 40 && (gotHit2 == false)){
+			damangeRing.Play ();
+			gotHit2 = true;
+
 			playerBodyRight.SetActive (false);
 		}
 

@@ -17,17 +17,26 @@ public class StartUI : MonoBehaviour {
 	public GameObject startPanel;
 	public GameObject mainMenuPanel;
 
+	public AudioSource audioSource;
+	public AudioClip[] audioClip;
+
 	// Use this for initialization
 	void Start () {
+
+		audioSource = GetComponent<AudioSource> ();
 
 		//set all panels to false, other than the start Panel to true
 		//do not show
 		mainMenuPanel.SetActive (false);
 		//show
 		startPanel.SetActive (true);
+
 	}
 
 	public void clickToMainMenu(){
+
+		audioSource.PlayOneShot (audioClip [0], 0.8f);
+
 		startPanel.SetActive (false);
 		mainMenuPanel.SetActive (true);
 	}
@@ -36,4 +45,6 @@ public class StartUI : MonoBehaviour {
 	void Update () {
 		
 	}
+
+
 }

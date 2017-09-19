@@ -40,13 +40,15 @@ public class PauseScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetKeyDown(KeyCode.Escape )  && !leavingGame) { //&& !leavingGame
+		if(Input.GetKeyDown(KeyCode.Escape) && !leavingGame) { //&& !leavingGame
+
+			print ("escaping");
 
 			if(Time.timeScale == 1){
 				
 				Time.timeScale = 0;
 
-				blurScript.enabled = true;
+
 
 				clickToPanel (pausePanel);
 
@@ -58,11 +60,10 @@ public class PauseScript : MonoBehaviour {
 
 			}else{
 				
-				pausePanel.SetActive (false);
+				continueButton ();
 
-				Time.timeScale = 1;
 
-				blurScript.enabled = false;
+
 				//turn mouse off
 				Cursor.visible = false;
 
@@ -77,7 +78,11 @@ public class PauseScript : MonoBehaviour {
 
 
 	public void clickToPanel(GameObject panel){
+
+		blurScript.enabled = true;
 		switchToPanelScript.activatePanel (panel,this.allHackingGamePanels);
+
+
 	}
 
 	/*this is used when player exists the game, want to close all panels, and not allow player to "pause" during the load*/
@@ -86,6 +91,14 @@ public class PauseScript : MonoBehaviour {
 
 		Time.timeScale = 1;
 		leavingGame = true;
+	}
+
+	public void continueButton(){
+		switchToPanelScript.closeAllPanels (this.allHackingGamePanels);
+		Time.timeScale = 1;
+
+		blurScript.enabled = false;
+
 	}
 
 

@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 69736164}
   - component: {fileID: 69736163}
   - component: {fileID: 69736162}
+  - component: {fileID: 69736165}
   m_Layer: 5
   m_Name: Main Menu Button
   m_TagString: Untagged
@@ -358,6 +359,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 69736160}
+--- !u!114 &69736165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 69736160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e56b740b87b4a2cac37efc6d3b8a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: d0796eaa279324eafba05b7e10a8dad3, type: 3}
 --- !u!114 &78816120 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114108022240390446, guid: 5125b2c2718aacc48805307f653ad9bc,
@@ -817,6 +830,7 @@ GameObject:
   - component: {fileID: 239272780}
   - component: {fileID: 239272779}
   - component: {fileID: 239272778}
+  - component: {fileID: 239272781}
   m_Layer: 5
   m_Name: Vending Machine Button
   m_TagString: Untagged
@@ -928,6 +942,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 239272776}
+--- !u!114 &239272781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 239272776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e56b740b87b4a2cac37efc6d3b8a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: d0796eaa279324eafba05b7e10a8dad3, type: 3}
 --- !u!1 &342008247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1515,7 @@ GameObject:
   - component: {fileID: 621332041}
   - component: {fileID: 621332040}
   - component: {fileID: 621332039}
+  - component: {fileID: 621332042}
   m_Layer: 5
   m_Name: Shop Button
   m_TagString: Untagged
@@ -1600,6 +1627,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 621332037}
+--- !u!114 &621332042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 621332037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e56b740b87b4a2cac37efc6d3b8a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: d0796eaa279324eafba05b7e10a8dad3, type: 3}
 --- !u!1 &755088040
 GameObject:
   m_ObjectHideFlags: 0
