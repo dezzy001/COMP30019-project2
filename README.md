@@ -4,6 +4,16 @@
 * Add hacking complete blur!
 * When solution comes out for tutorial, upgrade Health Manager Script!
 
+## Data types to save:
+### Item
+
+### Currency
+
+### Maps
+
+
+
+
 ## Good Tutorials: 
 
 * Audio: https://www.youtube.com/watch?v=6OT43pvUyfY
