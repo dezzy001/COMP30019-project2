@@ -685,11 +685,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 79082197}
-        m_MethodName: clickToSpawnTutorialCubes
-        m_Mode: 1
+        m_MethodName: clickToPanel
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1028053541}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2918,6 +2918,7 @@ GameObject:
   - component: {fileID: 1028053545}
   - component: {fileID: 1028053544}
   - component: {fileID: 1028053543}
+  - component: {fileID: 1028053546}
   m_Layer: 5
   m_Name: Tutorial Panel 3A - cube spawn
   m_TagString: Untagged
@@ -2982,18 +2983,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1028053544}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 79082197}
-        m_MethodName: clickToSpawnTutorialCubes
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1028053544
@@ -3029,6 +3019,22 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1028053541}
+--- !u!114 &1028053546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1028053541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d662fc286c539ac48ac43ad71119cec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ground: {fileID: 1260792427}
+  cube_prefab: {fileID: 1338097163111982, guid: 3f4fe26998f1e41469768f2e505fb0ac,
+    type: 2}
+  nextPanel: {fileID: 93216982}
+  DELAY_B4_NEXT_TUT: 0.35
 --- !u!1 &1088047874
 GameObject:
   m_ObjectHideFlags: 0
