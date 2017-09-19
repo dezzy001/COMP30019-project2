@@ -1,5 +1,8 @@
 # COMP30019-project2
 
+## Top Todo Items:
+* Add hacking complete blur!
+
 ## Good Tutorials: 
 
 * Audio: https://www.youtube.com/watch?v=6OT43pvUyfY
@@ -19,7 +22,6 @@ all sounds: https://mega.nz//#!GVJCTbTR!BXCIUkkwu7INniWTH3brkklw7JrozkRGyvxC9LFL
 NieR:Automata Hacking Challenge Mode (All 48 Stages Cleared!):
 https://www.youtube.com/watch?v=jT2jOeFo5HQ
 
-![rough game plan](https://user-images.githubusercontent.com/23565753/30105781-f55da60c-933c-11e7-8a7d-7c6df8f4af2b.png)
 
 
 ## Question for Tutor
@@ -37,8 +39,7 @@ https://www.youtube.com/watch?v=jT2jOeFo5HQ
 * currency?
 * upgrade movement speed ... etc (do this before levels)
 * show cursor in easy mode
-* chips system like Nier (upgrades can be on/off)
-  * mainly upgrading the stats
+* chips system like Nier (upgrades can be on/off) - mainly upgrading the stats
 * slow mo for 5 sec (for everything, player slow as well)
 
 * come up with more ideas
@@ -48,11 +49,12 @@ https://www.youtube.com/watch?v=jT2jOeFo5HQ
 * make larger and more interesting levels
 
 ### UI and animations
-* blur?
-* spawn effect (lightning/laser from above)
+* ~~blur?~~ (done, pause menu now has blur)
+* ~~spawn effect (lightning/laser from above)~~ (done)
 * trail effect for Player and Seeking Projectile
-* enemy death effect (particle system)
-* when bullet hits enemy (glow + sound)
+* ~~enemy death effect (particle system)~~ (done)
+* ~~when bullet hits enemy make sound~~ (done)
+* when bullet hits enemy make glow effect 
 
 ### Story?
 * visual novel style
@@ -68,4 +70,7 @@ https://www.youtube.com/watch?v=jT2jOeFo5HQ
    * ~ can upgrade invulnerability cool down by a little bit
 
 ### How to save player data?
-* Save data + info management
+* Save data + info management (work in progress)
+
+## Original Game Concept
+![rough game plan](https://user-images.githubusercontent.com/23565753/30105781-f55da60c-933c-11e7-8a7d-7c6df8f4af2b.png)
