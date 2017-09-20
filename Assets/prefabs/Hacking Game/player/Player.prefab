@@ -280,7 +280,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1208440756384486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.4, y: 0.398, z: 0}
+  m_LocalPosition: {x: 0, y: 0.398, z: 0}
   m_LocalScale: {x: 0.3, y: 1.4, z: 0.3}
   m_Children:
   - {fileID: 4966431160179212}
@@ -713,6 +713,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1412403091356734, guid: f2d855963a2ba164b80f0cc7e856be34,
     type: 2}
   PROJECTILE_COOLDOWN: 0.08
+  INVINCIBILITY_COOLDOWN: 0.5
   jumpSpeed: 8
   gravity: 20
   allowMouseRotation: 1

@@ -68,6 +68,7 @@
      <Compile Include="Assets\_scripts\hacking game scripts\Enemy Script\StrongEnemyProjectile.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Enemy Script\WeakEnemyProjectile.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\EnemyHeightScript.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\HackingCompletePanel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HealthManager.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\PauseScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Player Script\PlayerController.cs" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\_scripts\hacking game scripts\levels\EnemySpawner.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\Level1.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\Level2.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\MoveArrowScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\MoveHereScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\TutorialSwitchPanelScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialCubeSpawnScript.cs" />

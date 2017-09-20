@@ -1,17 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\Player Script\ProjectileController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\HackingCompletePanel.cs">
     <Files>
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialMoveScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialMoveToAreaScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialPauseScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\TutorialSwitchPanelScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialCubeSpawnScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialSpawnEnemyScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\ToggleTime.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\PauseScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\Player Script\ProjectileController.cs" Line="9" Column="2" />
+      <File FileName="Assets\_scripts\hacking game scripts\Player Script\PlayerController.cs" Line="210" Column="5" />
+      <File FileName="Assets\_scripts\hacking game scripts\PauseScript.cs" Line="61" Column="11" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialPauseScript.cs" Line="60" Column="26" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialLevel.cs" Line="7" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\TutorialSwitchPanelScript.cs" Line="12" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\HackingCompletePanel.cs" Line="9" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

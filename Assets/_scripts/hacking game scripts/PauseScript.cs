@@ -47,6 +47,7 @@ public class PauseScript : MonoBehaviour {
 
 				//print ("escaping");
 
+				//if game is running, then pause it
 				if(Time.timeScale == 1){
 
 					Time.timeScale = 0;

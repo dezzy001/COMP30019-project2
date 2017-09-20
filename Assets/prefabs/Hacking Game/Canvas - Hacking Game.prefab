@@ -61,7 +61,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1067842808166126
 GameObject:
   m_ObjectHideFlags: 1
@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 224159889462568808}
   - component: {fileID: 222987199378961470}
   - component: {fileID: 114618253183932230}
+  - component: {fileID: 114851860210279462}
   m_Layer: 5
   m_Name: Hacking Complete Panel
   m_TagString: Untagged
@@ -990,7 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 1028267572118006}
-  switchToPanelScript: {fileID: 114198357039241196}
+  allowPauseKey: 1
 --- !u!114 &114269401670709342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1360,6 +1361,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Leave
+--- !u!114 &114851860210279462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409266567150718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2c3b11bc0a4394ebef47a34ec13942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseScript: {fileID: 114239695232440146}
 --- !u!114 &114941886226943164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1874,10 +1887,10 @@ RectTransform:
   m_Father: {fileID: 224159889462568808}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -33.554993, y: -15}
-  m_SizeDelta: {x: 67.11, y: 30}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -75}
+  m_SizeDelta: {x: 120, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224905802624654918
 RectTransform:

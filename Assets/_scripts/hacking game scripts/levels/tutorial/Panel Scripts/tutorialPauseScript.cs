@@ -13,6 +13,7 @@ This class is to be drag and dropped on: Tutorial Panel 4
 */
 public class tutorialPauseScript : TutorialSwitchPanelScript {
 
+	public PlayerController playerScript;
 
 	public Text pressEscText;
 
@@ -22,8 +23,11 @@ public class tutorialPauseScript : TutorialSwitchPanelScript {
 	private bool pressedEsc = false;
 	private bool clickedContinue = false;
 
+	//activate tutorial arrows
+	public GameObject arrow1; 
+	public GameObject arrow2; 
 
-
+	public PauseScript pauseScript;
 
 	public float DELAY_B4_NEXT_TUT = 0.35f;
 	public GameObject nextPanel;
@@ -34,9 +38,10 @@ public class tutorialPauseScript : TutorialSwitchPanelScript {
 	void Start () {
 		
 		//want to activate the pause function at this stage of the tutorial
-		PauseScript pauseScript = GameObject.Find("SceneManagement Script").GetComponent<PauseScript>();
+		pauseScript = GameObject.Find("SceneManagement Script").GetComponent<PauseScript>();
 		pauseScript.allowPauseKey = true;
 
+		playerScript = GameObject.Find("Player").GetComponent<PlayerController>();
 
 		clickContinueButton.onClick.AddListener (ifClickedContinue);
 	}
@@ -47,10 +52,27 @@ public class tutorialPauseScript : TutorialSwitchPanelScript {
 		if(Input.GetKeyDown(KeyCode.Escape) && !pressedEsc){
 			pressEscText.text = "<Click the \"Conitnue\" button>";
 			pressedEsc = true;
+
+			//want time scale to still be one so the arrows can move
+			playerScript.allowMouseRotation = false;
+			playerScript.allowMouseLeftClick = false;
+			Time.timeScale = 1;
+			arrow1.SetActive (true);
+			arrow2.SetActive (true);
+			pauseScript.allowPauseKey = false;
 		}
 
 		if( clickedContinue){
 			clickedContinue = false;
+
+			//want time scale to still be one so the arrows can move
+			playerScript.allowMouseRotation = true;
+			playerScript.allowMouseLeftClick = true;
+			pauseScript.allowPauseKey = true;
+
+
+			arrow1.SetActive (false);
+			arrow2.SetActive (false);
 			//print ("clicked continue button!");
 
 			StartCoroutine (delayBeforeNextTutorial(nextPanel,  DELAY_B4_NEXT_TUT));

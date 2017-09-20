@@ -30,10 +30,8 @@ public class SaveLoadManager : MonoBehaviour {
 	public void newSave(){
 
 
-
-
-		PlayerData data = new PlayerData ();
-		SavePlayer (playerDataScript);
+		PlayerDataScript data = new PlayerDataScript ();
+		SavePlayer (data);
 
 	}
 

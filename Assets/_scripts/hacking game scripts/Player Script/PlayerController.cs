@@ -11,8 +11,13 @@ public class PlayerController : MonoBehaviour {
 	private GameObject playerBodyRight;
 
 	//cooldown variables
+	//projectile
 	public float PROJECTILE_COOLDOWN = 0.08f;// default max cooldown
 	private float projectileCooldownCount;// count for the cooldown
+	//invincibility
+	public float INVINCIBILITY_COOLDOWN = 0.5f;// default max cooldown
+	private float invincibilityCooldownCount = 0;// count for the cooldown
+
 
 	private float PROJECTILE_OFFSET;
 
@@ -161,39 +166,77 @@ public class PlayerController : MonoBehaviour {
 
 			}
 				
-			//decrement the cooldown
-			if(projectileCooldownCount>0){
+
+
+
+			//player health animations here----
+
+			//activate invincibility when hit
+			//destory left body part
+			if(this.healthManager.GetHealth() < 70 && (gotHit1 == false)){
+				//add invincibility here
+
+
+				damangeRing.Play ();
+				gotHit1 = true;
+
+				playerBodyLeft.SetActive (false);
+
+
+				//activate invincibility 
+				invincibilityCooldownCount = INVINCIBILITY_COOLDOWN;
+
+			}
+				
+
+			//destory right body part
+			if(this.healthManager.GetHealth() < 40 && (gotHit2 == false)){
+				//add invincibility here
+
+				damangeRing.Play ();
+				gotHit2 = true;
+
+				playerBodyRight.SetActive (false);
+
+				//activate invincibility 
+				invincibilityCooldownCount = INVINCIBILITY_COOLDOWN;
+			}
+
+
+			//invincibility, if the cool down is greater than zero, then give player invincibility
+			if (gotHit1 && invincibilityCooldownCount > 0) {
+				this.gameObject.tag = "Untagged";
+			} else {
+
+				this.gameObject.tag = "Player";
+			}
+
+
+
+
+			//decrement the cooldown variables
+			if(projectileCooldownCount > 0){
 				projectileCooldownCount -= Time.deltaTime;
 			}
 
+			if(invincibilityCooldownCount > 0){
+				invincibilityCooldownCount -= Time.deltaTime;
+			}
+
+
 		}
-
-
-
-		//player health animations here----
-		//destory left body part
-		if(this.healthManager.GetHealth() < 70 && (gotHit1 == false)){
-			damangeRing.Play ();
-			gotHit1 = true;
-
-			playerBodyLeft.SetActive (false);
-
-		} 
-
-		//destory right body part
-		if(this.healthManager.GetHealth() < 40 && (gotHit2 == false)){
-			damangeRing.Play ();
-			gotHit2 = true;
-
-			playerBodyRight.SetActive (false);
-		}
-
-
     }
 
 
+	//makes player go invincible by changing its tag to untagged for a specified time
+	public void goInvincible(){
+		
 
 
+	}
+
+
+	/*
 	private Vector3 getKeyPress(){
 
 
@@ -221,7 +264,7 @@ public class PlayerController : MonoBehaviour {
 		return velocity;
 
 	}
-
+	*/
 
 
 }
