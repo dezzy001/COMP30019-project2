@@ -77,6 +77,7 @@
      <Compile Include="Assets\_scripts\hacking game scripts\levels\Level1.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\Level2.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\MoveHereScript.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\TutorialSwitchPanelScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialCubeSpawnScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialMoveScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialMoveToAreaScript.cs" />

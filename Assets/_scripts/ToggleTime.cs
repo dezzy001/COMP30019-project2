@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ToggleTime : MonoBehaviour {
 
-	public void timeOn(){
+	public static void timeOn(){
 
 		Time.timeScale = 1;
 	}
 
-	public void timeOff(){
+	public static void timeOff(){
 		Time.timeScale = 0;
 
 	}

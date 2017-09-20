@@ -11,21 +11,20 @@ using UnityEngine.UI;
 This class is to be drag and dropped on: Tutorial Panel 4
 
 */
-public class tutorialPauseScript : MonoBehaviour {
+public class tutorialPauseScript : TutorialSwitchPanelScript {
 
 
 	public Text pressEscText;
 
 	public Button clickContinueButton;
 
-	public GameObject nextTutorialPanel;
 
 	private bool pressedEsc = false;
 	private bool clickedContinue = false;
 
-	public float DELAY_B4_NEXT_TUT = 0.4f;
 
-
+	public float DELAY_B4_NEXT_TUT = 0.35f;
+	public GameObject nextPanel;
 
 	// Use this for initialization
 	void Start () {
@@ -44,7 +43,7 @@ public class tutorialPauseScript : MonoBehaviour {
 			clickedContinue = false;
 			//print ("clicked continue button!");
 
-			StartCoroutine (delayBeforeNextTutorial());
+			StartCoroutine (delayBeforeNextTutorial(nextPanel,  DELAY_B4_NEXT_TUT));
 
 
 
@@ -53,19 +52,14 @@ public class tutorialPauseScript : MonoBehaviour {
 
 	}
 
+
+	//a button listener
 	private void ifClickedContinue(){
 		clickedContinue = true;
 
 	}
 
 
-	IEnumerator delayBeforeNextTutorial(){
-		
-		yield return new WaitForSeconds (DELAY_B4_NEXT_TUT);
-		nextTutorialPanel.SetActive (true);
-		this.gameObject.SetActive (false);
-
-	}
 
 
 

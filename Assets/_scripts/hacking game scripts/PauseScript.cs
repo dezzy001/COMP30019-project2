@@ -16,6 +16,8 @@ public class PauseScript : MonoBehaviour {
 	private MonoBehaviour blurScript;
 	private string blurScriptFileName = "BlurOptimized";
 
+	public bool allowPauseKey = true;
+
 	void Start(){
 		//add all the panels in the scene here
 		allHackingGamePanels.Add (pausePanel);
@@ -40,38 +42,36 @@ public class PauseScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetKeyDown(KeyCode.Escape) && !leavingGame) { //&& !leavingGame
+		if(allowPauseKey == true){
+			if(Input.GetKeyDown(KeyCode.Escape) && !leavingGame) { //&& !leavingGame
 
-			//print ("escaping");
+				//print ("escaping");
 
-			if(Time.timeScale == 1){
-				
-				Time.timeScale = 0;
+				if(Time.timeScale == 1){
 
+					Time.timeScale = 0;
 
+					clickToPanel (pausePanel);
 
-				clickToPanel (pausePanel);
-
-
-
-				//turn mouse on
-				Cursor.visible = true;
+					//turn mouse on
+					Cursor.visible = true;
 
 
-			}else{
-				
-				continueButton ();
+				}else{
+
+					continueButton ();
+					//turn mouse off
+					Cursor.visible = false;
 
 
 
-				//turn mouse off
-				Cursor.visible = false;
-
-
+				}
 
 			}
 
 		}
+
+
 
 
 	}

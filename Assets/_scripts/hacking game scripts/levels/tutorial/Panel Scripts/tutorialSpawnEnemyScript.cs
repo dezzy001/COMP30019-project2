@@ -10,7 +10,7 @@ using UnityEngine;
 This class is to be drag and dropped on: Tutorial Panel 6
 
 */
-public class tutorialSpawnEnemyScript : MonoBehaviour {
+public class tutorialSpawnEnemyScript : TutorialSwitchPanelScript {
 
 
 	//get the player, so you know where to spawn the move here area
@@ -24,9 +24,12 @@ public class tutorialSpawnEnemyScript : MonoBehaviour {
 	//instantiate a move here glowing pad, based on where player is 
 	public GameObject enemy1_prefab; //prefab
 	private GameObject enemy1; //prefab gameobject instance
+	private bool enemy1Spawned = false;
 
+	public GameObject panelToHide;
 
-
+	public float DELAY_B4_NEXT_TUT = 0.35f;
+	public GameObject nextPanel;
 
 	// Use this for initialization
 	void Start () {
@@ -40,7 +43,7 @@ public class tutorialSpawnEnemyScript : MonoBehaviour {
 		groundSizeX = groundSize.x/2;
 		groundSizeZ = groundSize.z/2;
 
-		float spawnOffset = groundSizeX/3;
+		float spawnOffset = groundSizeX*3/5;
 
 		player = GameObject.Find ("Player");
 
@@ -63,15 +66,40 @@ public class tutorialSpawnEnemyScript : MonoBehaviour {
 
 		}
 
+		enemy1.tag = "Untagged";
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 
+		//proper spawning sequence
+		GameObject enemyBodyPart = GameObject.Find ("enemy1(Clone)/enemy1_cube");
+
+		if(enemyBodyPart != null && enemyBodyPart.activeSelf == true && !enemy1Spawned){
+			//pause the game when the enemy has spawned on the ground
+			Time.timeScale = 0;
+			enemy1.tag = "Enemy";
+			enemy1Spawned = true;
+		}
+
+		if(Input.GetMouseButtonDown(0) && enemyBodyPart.activeSelf == true){
+			//unpause when player starts shooting, and hide the current text panel
+			panelToHide.SetActive (false);
+			Time.timeScale = 1;
+		}
+
+
+
+		//print (enemy1 == null);
 		if (enemy1 == null) {
-			
+			//print ("enemy destroyed");
+			StartCoroutine (delayBeforeNextTutorial (nextPanel, DELAY_B4_NEXT_TUT));
 
 		}
+
+
 	}
 }

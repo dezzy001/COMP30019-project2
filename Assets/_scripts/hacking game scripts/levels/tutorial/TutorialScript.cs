@@ -81,154 +81,23 @@ public class TutorialScript : MonoBehaviour {
 			player.allowMouseRotation = true;
 		}
 
-
-
-		//tutorial 3A--------------------
-		//when player finnishes cube tutorial, then pull up next tutorial panel
-		if(tutorialCubes!=null && tutorialCubes.transform.childCount == 0 && !finnishedTutorialCubes){
-			//close the all panel first
-			SwitchToPanel.closeAllPanels (this.allTutorialPanels);
-			//go to tutorial 4
-			clickToPanel (tutorial4);
-
-			finnishedTutorialCubes = true;
-			Destroy (tutorialCubes);
-		}
-
-		if(tutorial3a.activeSelf == true){
-			movePanelToBottom (tutorial3a);
-		}
-
-
-
-		//tutorial 5 ---------------------------------- 
-		// allow movement at 5th tutorial panel
-		if(tutorial5.activeSelf == true ){
-			player.allowKeypressMovement = true;
-		}
-
-
-		//tutorial 5a---------------------------
-		//if the move here was activated and player stepped on it,then go to next tutorial
-
-		if(moveHere != null && moveHere.activeSelf == true){
-			moveHereExists = true;
-		}
-
-
-		if(moveHereExists == true){
-			if(moveHere == null){
-
-				//generate an practise enemy
-				GetComponent<TutorialLevel> ().generateEnemy();
-
-				//close the all panel first
-				SwitchToPanel.closeAllPanels (this.allTutorialPanels);
-				//go to tutorial 6
-				clickToPanel (tutorial6);
-
-
-
-				moveHereExists = false;
-
-
-			}
-		}
-
-		if(tutorial5a.activeSelf == true){
-			movePanelToBottom (tutorial5a);
-		}
-
-
+		/*
 		//tutorial 6 
 		if(tutorial6 != null && tutorial6.activeSelf == true){
 			Time.timeScale = 0;//pause until player clicks
 		}
+		*/
 			
 
 	}
+		
 
 
+	/*static function which allows a panel to be moved vertically by a speed, to a specified height*/
+	public static void movePanelToBottom(GameObject panel, float speed, float stopHeight){
 
-	/*Click methods below*/
-
-
-	//CUBE SPAWN
-	public void clickToSpawnTutorialCubes(){
-
-		if(spawnCubeOnce == true){
-			StartCoroutine (spawnTutorialCubes());
-
-			//close the all panel first
-			SwitchToPanel.closeAllPanels (this.allTutorialPanels);
-
-			//open tutorial 3a
-			clickToPanel(tutorial3a);
-
-
-		}
-
-
-	}
-
-	IEnumerator spawnTutorialCubes(){
-
-		if (spawnCubeOnce == true) {
-			spawnCubeOnce = false;
-			//wait for SPAWN_CUBES_WAIT second before spawning tutorial cubes
-			yield return new WaitForSeconds (SPAWN_CUBES_WAIT);
-			tutorialCubes = GameObject.Instantiate<GameObject> (tutorialCube_prefab);
-			tutorialCubes.transform.position = new Vector3 (0, tutorialCubes.GetComponentInChildren<Collider> ().bounds.size.y / 2, 0);
-
-		}
-
-	}
-
-
-
-	/*
-	//MOVE TO GLOWING AREA 
-	public void clickToSpawnMoveToArea(){
-
-		if(spawnMoveToOnce == true){
-			StartCoroutine (spawnMoveToArea());
-
-			//close the all panel first
-			SwitchToPanel.closeAllPanels (this.allTutorialPanels);
-
-			//open tutorial 5a
-			clickToPanel(tutorial5a);
-
-
-		}
-
-
-	}
-
-
-
-	IEnumerator spawnMoveToArea(){
-
-		if (spawnMoveToOnce == true) {
-			spawnMoveToOnce = false;
-			//wait for SPAWN_CUBES_WAIT second before spawning tutorial cubes
-			yield return new WaitForSeconds (SPAWN_CUBES_WAIT);
-			moveHere = GameObject.Instantiate<GameObject> (moveHere_prefab);
-			//tutorialCubes.transform.position = new Vector3 (0, 0.1, 0);
-
-		}
-
-	}
-	*/
-
-
-
-
-
-	private void movePanelToBottom(GameObject panel){
-
-		if(panel.transform.position.y > 0){
-			panel.transform.position = new Vector3(panel.transform.position.x,panel.transform.position.y-Time.deltaTime*500,panel.transform.position.z);
+		if(panel.transform.position.y > stopHeight){
+			panel.transform.position = new Vector3(panel.transform.position.x,panel.transform.position.y-Time.deltaTime*speed,panel.transform.position.z);
 		}
 
 
@@ -251,7 +120,7 @@ public class TutorialScript : MonoBehaviour {
 		if(firstTime == true){
 			
 			firstTime = false;
-
+			 
 			yield return new WaitForSeconds (DELAY_B4_NEXT_TUT);
 
 			SwitchToPanel.activatePanel (panel,this.allTutorialPanels);

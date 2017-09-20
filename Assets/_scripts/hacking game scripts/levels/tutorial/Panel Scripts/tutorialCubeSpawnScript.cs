@@ -8,7 +8,7 @@ using UnityEngine;
 This class is to be drag and dropped on: Tutorial Panel 3A
 
 */
-public class tutorialCubeSpawnScript : MonoBehaviour {
+public class tutorialCubeSpawnScript : TutorialSwitchPanelScript {
 
 	//ground game object - need the boundaries of the map
 	public GameObject ground;
@@ -22,8 +22,10 @@ public class tutorialCubeSpawnScript : MonoBehaviour {
 	private GameObject cube3;
 	private GameObject cube4;
 
-	public GameObject nextPanel;
+	public GameObject thisPanel;
 	public float DELAY_B4_NEXT_TUT = 0.35f;
+	public GameObject nextPanel;
+
 
 	// Use this for initialization
 	void Start () {
@@ -60,18 +62,13 @@ public class tutorialCubeSpawnScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		TutorialScript.movePanelToBottom (thisPanel , 500, 0);
 
 		if (cube1 == null && cube2 == null && cube3 == null && cube4 == null ) {
-			StartCoroutine (delayBeforeNextTutorial());
+			StartCoroutine (delayBeforeNextTutorial(nextPanel,  DELAY_B4_NEXT_TUT));
 		}
 	}
 
 
-	IEnumerator delayBeforeNextTutorial(){
 
-		yield return new WaitForSeconds (DELAY_B4_NEXT_TUT);
-
-		nextPanel.SetActive (true);
-		this.gameObject.SetActive (false);
-	}
 }

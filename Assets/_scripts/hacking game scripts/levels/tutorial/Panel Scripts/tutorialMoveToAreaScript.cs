@@ -9,7 +9,7 @@ This class is to be drag and dropped on: Tutorial Panel 5A
 
 */
 
-public class tutorialMoveToAreaScript : MonoBehaviour {
+public class tutorialMoveToAreaScript : TutorialSwitchPanelScript {
 
 	//get the player, so you know where to spawn the move here area
 	public GameObject player;
@@ -23,11 +23,9 @@ public class tutorialMoveToAreaScript : MonoBehaviour {
 	public GameObject moveHereParticles_prefab; //prefab
 	private GameObject moveHereParticles; //prefab gameobject instance
 
-
-	public GameObject nextPanel;
-
 	public float DELAY_B4_NEXT_TUT = 0.35f;
-
+	public GameObject nextPanel;
+	public GameObject thisPanel;
 
 	// Use this for initialization
 	void Start () {
@@ -50,16 +48,16 @@ public class tutorialMoveToAreaScript : MonoBehaviour {
 		moveHereParticles = GameObject.Instantiate<GameObject>(moveHereParticles_prefab);
 
 		//want to spawn the glowing area in opposite x and z coordinates relative to the ground
-		if (currentPlayerPos.x < 0 && currentPlayerPos.z < 0) { 
+		if (currentPlayerPos.x <= 0.0f && currentPlayerPos.z < 0.0f) { 
 			moveHereParticles.transform.position = new Vector3 (groundSizeX - spawnOffset ,0.3f,groundSizeZ - spawnOffset);
 
-		} else if (currentPlayerPos.x < 0 && currentPlayerPos.z > 0) { 
+		} else if (currentPlayerPos.x <= 0.0f && currentPlayerPos.z >= 0.0f) { 
 			moveHereParticles.transform.position = new Vector3 (groundSizeX - spawnOffset,0.3f,-groundSizeZ + spawnOffset);
 
-		} else if (currentPlayerPos.x > 0 && currentPlayerPos.z < 0) { 
+		} else if (currentPlayerPos.x > 0.0f && currentPlayerPos.z < 0.0f) { 
 			moveHereParticles.transform.position = new Vector3 (-groundSizeX + spawnOffset,0.3f,groundSizeZ - spawnOffset);
 
-		}else if (currentPlayerPos.x > 0 &&  currentPlayerPos.z > 0){ 
+		}else if (currentPlayerPos.x > 0.0f &&  currentPlayerPos.z >= 0.0f){ 
 			moveHereParticles.transform.position = new Vector3 (-groundSizeX + spawnOffset,0.3f,-groundSizeZ + spawnOffset);
 
 		}
@@ -69,21 +67,17 @@ public class tutorialMoveToAreaScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
+		TutorialScript.movePanelToBottom (thisPanel , 500, 0);
+
 		if(moveHereParticles == null ){
-			//print ("destroyed");
-			StartCoroutine(delayBeforeNextTutorial());
+			
+			StartCoroutine (delayBeforeNextTutorial(nextPanel,  DELAY_B4_NEXT_TUT));
 		}
 	}
 		
 
 
-	IEnumerator delayBeforeNextTutorial(){
-		
-		yield return new WaitForSeconds (DELAY_B4_NEXT_TUT);
-
-		nextPanel.SetActive (true);
-		this.gameObject.SetActive (false);
-	}
 
 
 }
