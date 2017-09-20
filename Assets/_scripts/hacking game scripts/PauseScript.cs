@@ -9,7 +9,7 @@ public class PauseScript : MonoBehaviour {
 
 	//public SwitchToPanel switchToPanelScript;
 
-	private bool leavingGame = false;
+	//private bool leavingGame = false;
 
 	//to get the blur script
 	private Component[] cameraScripts;
@@ -43,7 +43,7 @@ public class PauseScript : MonoBehaviour {
 	void Update () {
 
 		if(allowPauseKey == true){
-			if(Input.GetKeyDown(KeyCode.Escape) && !leavingGame) { //&& !leavingGame
+			if(Input.GetKeyDown(KeyCode.Escape)) { //&& !leavingGame
 
 				//print ("escaping");
 
@@ -90,7 +90,7 @@ public class PauseScript : MonoBehaviour {
 		SwitchToPanel.closeAllPanels (this.allHackingGamePanels);
 
 		Time.timeScale = 1;
-		leavingGame = true;
+		allowPauseKey = false;
 	}
 
 	public void continueButton(){

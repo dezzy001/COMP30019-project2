@@ -69,6 +69,10 @@ public class TutorialScript : MonoBehaviour {
 		player.allowMouseLeftClick = true;
 		player.allowMouseRotation = false;
 
+		//want to deactive the pause function at this stage of the tutorial
+		PauseScript pauseScript = GameObject.Find("SceneManagement Script").GetComponent<PauseScript>();
+		pauseScript.allowPauseKey = false;
+
 	}
 	
 	// Update is called once per frame
@@ -81,12 +85,7 @@ public class TutorialScript : MonoBehaviour {
 			player.allowMouseRotation = true;
 		}
 
-		/*
-		//tutorial 6 
-		if(tutorial6 != null && tutorial6.activeSelf == true){
-			Time.timeScale = 0;//pause until player clicks
-		}
-		*/
+
 			
 
 	}

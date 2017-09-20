@@ -23,11 +23,21 @@ public class tutorialPauseScript : TutorialSwitchPanelScript {
 	private bool clickedContinue = false;
 
 
+
+
 	public float DELAY_B4_NEXT_TUT = 0.35f;
 	public GameObject nextPanel;
 
+
+
 	// Use this for initialization
 	void Start () {
+		
+		//want to activate the pause function at this stage of the tutorial
+		PauseScript pauseScript = GameObject.Find("SceneManagement Script").GetComponent<PauseScript>();
+		pauseScript.allowPauseKey = true;
+
+
 		clickContinueButton.onClick.AddListener (ifClickedContinue);
 	}
 	
