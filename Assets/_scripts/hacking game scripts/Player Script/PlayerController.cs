@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour {
 		);
 
 		//move the player with key presses
-		Vector3 move;
+		//Vector3 move;
 		if(allowKeypressMovement == true){
 			//move = getKeyPress ();
 

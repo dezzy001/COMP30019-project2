@@ -16,22 +16,39 @@ public class StartUI : MonoBehaviour {
 	//Panels
 	public GameObject startPanel;
 	public GameObject mainMenuPanel;
+	public GameObject deleteSavePanel;
+
+	//array of all panels
+	public ArrayList allStartUIPanels;
 
 	public AudioSource audioSource;
 	public AudioClip[] audioClip;
 
+	public Button deleteSavesButton;
+	public SaveLoadManager saveLoadManager;
+
+
+
 	// Use this for initialization
 	void Start () {
+		allStartUIPanels = new ArrayList ();
+
+		allStartUIPanels.Add (startPanel);
+		allStartUIPanels.Add (mainMenuPanel);
+		allStartUIPanels.Add (deleteSavePanel);
+
 
 		audioSource = GetComponent<AudioSource> ();
 
 		//set all panels to false, other than the start Panel to true
-		//do not show
-		mainMenuPanel.SetActive (false);
-		//show
+		closeAllPanels();
+
 		startPanel.SetActive (true);
 
+
 	}
+
+
 
 	public void clickToMainMenu(){
 
@@ -39,6 +56,21 @@ public class StartUI : MonoBehaviour {
 
 		startPanel.SetActive (false);
 		mainMenuPanel.SetActive (true);
+	}
+
+	public void openAndClosePopUp(GameObject panel){
+		if (panel.activeSelf == true) {
+			audioSource.PlayOneShot (audioClip [1], 1.0f);
+			panel.SetActive (false);
+		} else {
+			audioSource.PlayOneShot (audioClip [1], 1.0f);
+			panel.SetActive (true);
+		}
+
+	}
+
+	public void closeAllPanels(){
+		SwitchToPanel.closeAllPanels (allStartUIPanels);
 	}
 	
 	// Update is called once per frame

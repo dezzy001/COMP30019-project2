@@ -86,6 +86,9 @@
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialCubeScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialLevel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialScript.cs" />
+     <Compile Include="Assets\_scripts\saves and items scripts\Items.cs" />
+     <Compile Include="Assets\_scripts\saves and items scripts\PlayerDataScript.cs" />
+     <Compile Include="Assets\_scripts\saves and items scripts\SaveLoadManager.cs" />
      <Compile Include="Assets\_scripts\start scripts\StartUI.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />

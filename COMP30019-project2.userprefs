@@ -1,44 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialMoveToAreaScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\Player Script\ProjectileController.cs">
     <Files>
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialMoveScript.cs" Line="27" Column="33" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialMoveToAreaScript.cs" Line="20" Column="21" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialPauseScript.cs" Line="36" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\TutorialSwitchPanelScript.cs" Line="12" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialCubeSpawnScript.cs" Line="25" Column="29" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialScript.cs" Line="89" Column="4" />
-      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialSpawnEnemyScript.cs" Line="77" Column="3" />
-      <File FileName="Assets\_scripts\ToggleTime.cs" Line="9" Column="3" />
-      <File FileName="Assets\_scripts\hacking game scripts\PauseScript.cs" Line="44" Column="3" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialMoveScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialMoveToAreaScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialPauseScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\TutorialSwitchPanelScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialCubeSpawnScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\tutorialSpawnEnemyScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\ToggleTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\PauseScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\Player Script\ProjectileController.cs" Line="9" Column="2" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="COMP30019-project2" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="_scripts" expanded="True">
-                <Node name="hacking game scripts" expanded="True">
-                  <Node name="levels" expanded="True">
-                    <Node name="tutorial" expanded="True">
-                      <Node name="Panel Scripts" expanded="True">
-                        <Node name="tutorialMoveToAreaScript.cs" selected="True" />
-                      </Node>
-                    </Node>
-                  </Node>
-                  <Node name="Player Script" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="COMP30019-project2" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

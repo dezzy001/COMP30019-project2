@@ -16,17 +16,10 @@ public class TutorialScript : MonoBehaviour {
 
 	public GameObject tutorial6;
 
-	//misc variables + constants
-	private bool finnishedTutorialCubes = false;// turns true when you finish the cube tutorial
 
 	// true when tutorial panel is active
 
-
-	private bool moveHereExists = false;
-
 	private bool firstTime = true;//first time clicking a panel, disable if it isnt
-	private bool spawnCubeOnce = true;//ensure tutorial only spawns cube tutorial only once
-	private bool spawnMoveToOnce = true;//ensure tutorial only spawns move to tutorial only once
 
 	//constants
 	public float SPAWN_CUBES_WAIT = 1.5f;
