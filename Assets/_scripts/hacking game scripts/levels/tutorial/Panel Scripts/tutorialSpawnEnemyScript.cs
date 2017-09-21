@@ -31,6 +31,8 @@ public class tutorialSpawnEnemyScript : TutorialSwitchPanelScript {
 	public float DELAY_B4_NEXT_TUT = 0.35f;
 	public GameObject nextPanel;
 
+
+
 	// Use this for initialization
 	void Start () {
 

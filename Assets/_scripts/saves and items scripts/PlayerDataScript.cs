@@ -46,8 +46,10 @@ public class PlayerDataScript : MonoBehaviour {
 
 
 
-
-
+	// Keep player data persistent
+	void Awake () {
+		DontDestroyOnLoad (this.gameObject);
+	}
 
 	// Use this for initialization
 	void Start () {

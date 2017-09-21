@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour {
 	private bool gotHit1 = false;
 	private bool gotHit2 = false;
 
+
+
 	void Start(){
 
 		//get the xyz values of this object

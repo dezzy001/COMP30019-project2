@@ -21,9 +21,6 @@ public class SaveLoadManager : MonoBehaviour {
 		//initialise the player game object
 		playerDataScript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript>();
 
-		//load player data every scene with Player object in it
-		loadAll();
-
 	}
 
 	//start a new game function

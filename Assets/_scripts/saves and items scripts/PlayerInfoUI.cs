@@ -19,7 +19,7 @@ public class PlayerInfoUI : MonoBehaviour {
 	void Start () {
 		playerInfoPanel.SetActive (onOffPlayerInfo);
 
-
+		playerData = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript> ();
 
 	}
 	
