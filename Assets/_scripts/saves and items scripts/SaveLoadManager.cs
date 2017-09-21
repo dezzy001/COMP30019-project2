@@ -17,7 +17,7 @@ public class SaveLoadManager : MonoBehaviour {
 	public PlayerDataScript playerDataScript;
 
 
-	void Start(){
+	void Awake(){
 		//initialise the player game object
 		playerDataScript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript>();
 

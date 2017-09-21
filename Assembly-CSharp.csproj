@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\PlayerInfoUI.cs" />
      <Compile Include="Assets\_scripts\ChangeCursor.cs" />
      <Compile Include="Assets\_scripts\ClickSound.cs" />
      <Compile Include="Assets\_scripts\HideCursor.cs" />

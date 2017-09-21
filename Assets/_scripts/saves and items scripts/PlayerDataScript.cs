@@ -49,6 +49,8 @@ public class PlayerDataScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//array list does not really work , unless u upgrade every load() you do
+		//solution - need to create a applyLoad() function, so when you load, call this function too, to apply new changes to array lists
 		chipsList = new ArrayList();
 		upgradesList = new ArrayList();
 
