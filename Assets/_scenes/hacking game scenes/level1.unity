@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657958, g: 0.49641377, b: 0.5748177, a: 1}
+  m_IndirectSpecularColor: {r: 0.44659412, g: 0.49642998, b: 0.57482463, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -335,6 +335,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114132373608600036, guid: aa2d907b1ff207c429e6e739674c14f3,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 224905802624654918, guid: aa2d907b1ff207c429e6e739674c14f3,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -424,6 +429,31 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132373608600036, guid: aa2d907b1ff207c429e6e739674c14f3,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132373608600036, guid: aa2d907b1ff207c429e6e739674c14f3,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132373608600036, guid: aa2d907b1ff207c429e6e739674c14f3,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1965532279}
+    - target: {fileID: 114132373608600036, guid: aa2d907b1ff207c429e6e739674c14f3,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132373608600036, guid: aa2d907b1ff207c429e6e739674c14f3,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa2d907b1ff207c429e6e739674c14f3, type: 2}
@@ -557,3 +587,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9621b0eb99424e148938e6ad1f5b8a8a, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1965532279 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114617318272165188, guid: aa2d907b1ff207c429e6e739674c14f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 909155580}
+  m_Script: {fileID: 11500000, guid: c2e56b740b87b4a2cac37efc6d3b8a47, type: 3}

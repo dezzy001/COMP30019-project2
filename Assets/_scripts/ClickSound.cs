@@ -21,7 +21,7 @@ public class ClickSound : MonoBehaviour {
 	}
 
 	// Call this to play the attached sound
-	void PlaySound() {
+	public void PlaySound() {
 		print ("play sound");
 		source.PlayOneShot (sound);
 	}
