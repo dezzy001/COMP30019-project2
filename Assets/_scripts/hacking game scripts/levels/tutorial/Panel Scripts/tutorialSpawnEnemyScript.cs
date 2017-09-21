@@ -85,7 +85,7 @@ public class tutorialSpawnEnemyScript : TutorialSwitchPanelScript {
 			enemy1Spawned = true;
 		}
 
-		if(Input.GetMouseButtonDown(0) && enemyBodyPart.activeSelf == true){
+		if(enemyBodyPart != null && Input.GetMouseButtonDown(0) && enemyBodyPart.activeSelf == true){
 			//unpause when player starts shooting, and hide the current text panel
 			panelToHide.SetActive (false);
 			Time.timeScale = 1;
