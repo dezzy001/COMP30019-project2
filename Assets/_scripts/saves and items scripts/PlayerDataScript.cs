@@ -14,7 +14,7 @@ public class PlayerDataScript : MonoBehaviour {
 
 
 	//get the items script to apply item effects if player has the item
-	public Items items;
+	public ItemsEffect itemsEffect;
 
 
 	public ArrayList chipsList;
@@ -43,6 +43,8 @@ public class PlayerDataScript : MonoBehaviour {
 	public bool hasUpgrade1;
 	public bool hasUpgrade2;
 	public bool hasUpgrade3;
+
+
 
 
 
@@ -84,12 +86,12 @@ public class PlayerDataScript : MonoBehaviour {
 		
 		if(this.hasChip0 == true){
 
-			items.chip0 ();
+			itemsEffect.chip0 ();
 		}
 
 		if(this.hasChip1 == true){
 
-			items.chip1 ();
+			itemsEffect.chip1 ();
 		}
 
 		if(this.hasChip2 == true){
@@ -108,7 +110,7 @@ public class PlayerDataScript : MonoBehaviour {
 	public void applyUpgrades(){
 		
 		if(this.hasUpgrade0 == true){
-			items.upgrade0 ();
+			itemsEffect.upgrade0 ();
 
 		}
 

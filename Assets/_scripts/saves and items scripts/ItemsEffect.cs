@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 /*All the item effects currently in game go in this class*/
-public class Items : MonoBehaviour {
+public class ItemsEffect : MonoBehaviour {
 
 	//my idea: items will return the name of the item, while performing some effects on the player
 

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_scenes/hacking game scenes/level1.unity
+- path: Assets/_scenes/Camp.unity
   isLoaded: 1
   isActive: 1
