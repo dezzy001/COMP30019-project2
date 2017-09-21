@@ -55,14 +55,14 @@ public class PauseScript : MonoBehaviour {
 					clickToPanel (pausePanel);
 
 					//turn mouse on
-					Cursor.visible = true;
+					// Cursor.visible = true;
 
 
 				}else{
 
 					continueButton ();
 					//turn mouse off
-					Cursor.visible = false;
+					// Cursor.visible = false;
 
 
 

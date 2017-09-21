@@ -22,7 +22,7 @@ public class ClickSound : MonoBehaviour {
 
 	// Call this to play the attached sound
 	public void PlaySound() {
-		print ("play sound");
+		// print ("play sound");
 		source.PlayOneShot (sound);
 	}
 
