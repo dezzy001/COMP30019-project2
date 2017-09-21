@@ -69,6 +69,12 @@ public class StartUI : MonoBehaviour {
 
 	}
 
+	public void clickPlaySound(){
+
+		audioSource.PlayOneShot (audioClip [1], 1.0f);
+
+	}
+
 	public void closeAllPanels(){
 		SwitchToPanel.closeAllPanels (allStartUIPanels);
 	}
