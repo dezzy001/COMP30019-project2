@@ -9,7 +9,7 @@ public class PlayerData {
 	/*
 	public int[] chips;
 	public int[] skills;
-*/
+	*/
 
 	public int[] chips ;
 	public int[] skills ;

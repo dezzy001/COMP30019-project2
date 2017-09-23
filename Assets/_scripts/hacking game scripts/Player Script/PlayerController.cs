@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour {
 
     public float speed = 10.0f; // Default speed sensitivity
     public GameObject projectilePrefab;
+	public GameObject laserPrefab;
+	public GameObject meleePrefab;
 
 	private HealthManager healthManager;
 	private GameObject playerBodyLeft;
@@ -17,9 +19,16 @@ public class PlayerController : MonoBehaviour {
 	//invincibility
 	public float INVINCIBILITY_COOLDOWN = 0.5f;// default max cooldown
 	private float invincibilityCooldownCount = 0;// count for the cooldown
+	//laser
+	public float LASER_COOLDOWN = 3.0f;// default max cooldown
+	private float laserCooldownCount = 0;// count of the cooldown
+	//melee
+	public float MELEE_COOLDOWN = 4.0f;// default max cooldown
+	private float meleeCooldownCount = 0;// count of the cooldown
 
 
 	private float PROJECTILE_OFFSET;
+	private float LASER_OFFSET = 100;
 
 	//used for player direction, always facing mouse
 	private Camera mainCamera;
@@ -45,6 +54,10 @@ public class PlayerController : MonoBehaviour {
 	public bool allowMouseRotation = true; //rotation
 	public bool allowMouseLeftClick = true; //shooting
 	public bool allowKeypressMovement = true; //moving
+
+	//player controller - variable to allow skill(s) to be activated
+	public bool allowLaser = false;
+	public bool allowMelee = false;
 
 	public ParticleSystem damangeRing;
 
@@ -167,6 +180,47 @@ public class PlayerController : MonoBehaviour {
 				projectileCooldownCount = PROJECTILE_COOLDOWN;
 
 			}
+
+			//right click to activate laser
+			if (Input.GetMouseButton (1) && laserCooldownCount <= 0 && allowLaser == true) {
+				GameObject laser = Instantiate<GameObject> (laserPrefab);
+
+				//offset the position of the laser in front of the player (rather then inside)
+				Vector3 spawnPos = this.transform.position + this.transform.forward * LASER_OFFSET;
+
+				//laser will have the same position as player
+				laser.transform.position = spawnPos;
+
+				//make laser face the same direction as player
+				//need the line of code below (y-90) unitys definition of facing forward is x axis, so need to subtract by 90 to make z axis be "facing forward"
+				Vector3 playerDir = new Vector3 (0.0f, this.gameObject.transform.rotation.eulerAngles.y-90 ,0.0f);
+				laser.transform.eulerAngles = playerDir ;
+
+				// make player the parent of laser
+				laser.transform.parent = this.gameObject.transform;
+
+				//reset cooldown after laser is fired
+				laserCooldownCount = LASER_COOLDOWN;
+			}
+
+			//right click to activate melee attack
+			if (Input.GetMouseButton (1) && meleeCooldownCount <= 0 && allowMelee == true) {
+				GameObject melee = Instantiate<GameObject> (meleePrefab);
+
+				//offset the position of the laser in front of the player (rather then inside)
+				Vector3 spawnPos = this.transform.position;
+
+				//laser will have the same position as player
+				melee.transform.position = spawnPos;
+
+				//make laser face the same direction as player
+				//need the line of code below (y-90) unitys definition of facing forward is x axis, so need to subtract by 90 to make z axis be "facing forward"
+				Vector3 playerDir = new Vector3 (0.0f, this.gameObject.transform.rotation.eulerAngles.y ,0.0f);
+				melee.transform.eulerAngles = playerDir ;
+
+				//reset cooldown after melee attack is activated
+				meleeCooldownCount = MELEE_COOLDOWN;
+			}
 				
 
 
@@ -223,6 +277,14 @@ public class PlayerController : MonoBehaviour {
 
 			if(invincibilityCooldownCount > 0){
 				invincibilityCooldownCount -= Time.deltaTime;
+			}
+
+			if (laserCooldownCount > 0) {
+				laserCooldownCount -= Time.deltaTime;
+			}
+
+			if (meleeCooldownCount > 0) {
+				meleeCooldownCount -= Time.deltaTime;
 			}
 
 

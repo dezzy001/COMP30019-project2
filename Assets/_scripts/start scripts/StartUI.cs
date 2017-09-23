@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,7 +34,14 @@ public class StartUI : MonoBehaviour {
 
 	//load the previous game save everytime you start the game
 	void Awake(){
-		saveLoadManager.loadAll ();
+
+		try {
+			saveLoadManager.loadAll ();
+		} catch(Exception e) {
+			print ("Old save not compatible, please make new save from camp.");
+			// saveLoadManager.newSaveAndLoadIt ();
+		}
+
 	}
 
 

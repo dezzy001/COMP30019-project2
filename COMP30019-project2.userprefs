@@ -1,12 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\saves and items scripts\PlayerDataScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_scripts/saves and items scripts/ItemsEffect.cs">
     <Files>
-      <File FileName="Assets\_scripts\saves and items scripts\PlayerDataScript.cs" Line="17" Column="10" />
-      <File FileName="Assets\_scripts\SceneManagement.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\saves and items scripts\PlayerData.cs" Line="34" Column="1" />
-      <File FileName="Assets\_scripts\camp scripts\ItemGeneratorScript.cs" Line="81" Column="3" />
-      <File FileName="Assets\_scripts\saves and items scripts\PlayerInfoUI.cs" Line="44" Column="64" />
+      <File FileName="Assets/_scripts/hacking game scripts/Player Script/PlayerController.cs" Line="98" Column="1" />
+      <File FileName="Assets/_scripts/hacking game scripts/Player Script/LaserController.cs" Line="25" Column="33" />
+      <File FileName="Assets/_scripts/saves and items scripts/ItemsEffect.cs" Line="26" Column="43" />
+      <File FileName="Assets/_scripts/saves and items scripts/PlayerDataScript.cs" Line="70" Column="2" />
+      <File FileName="Assets/_scripts/saves and items scripts/SaveLoadManager.cs" Line="75" Column="1" />
+      <File FileName="Assets/_scripts/saves and items scripts/PlayerData.cs" Line="12" Column="4" />
+      <File FileName="Assets/_scripts/start scripts/StartUI.cs" Line="38" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -37,8 +37,8 @@ public class AdditionalPlayerController : MonoBehaviour {
 
 	//ground game object - need the boundaries of the map
 	private GameObject ground;
-	float groundSizeX;
-	float groundSizeZ; 
+//	float groundSizeX;
+//	float groundSizeZ; 
 
 
 	//player controller - can disable any player movements you do not want  
@@ -86,8 +86,8 @@ public class AdditionalPlayerController : MonoBehaviour {
 		Vector3 groundSize = groundSizeRenderer.bounds.size;
 
 		//divided by 2 for maths purposes (origin of ground is at 0,0 and largeset x is groundSize.x/2)
-		groundSizeX = groundSize.x/2;
-		groundSizeZ = groundSize.z/2;
+//		groundSizeX = groundSize.x/2;
+//		groundSizeZ = groundSize.z/2;
 
 		//handle the health of the player here
 		healthManager = this.gameObject.GetComponent<HealthManager>();
@@ -137,7 +137,7 @@ public class AdditionalPlayerController : MonoBehaviour {
 			Vector3 pointToLook = cameraRay.GetPoint (rayLength);
 			Debug.DrawLine (cameraRay.origin, pointToLook,Color.blue);
 
-			Vector3 pointToLookXZfixed = new Vector3 (pointToLook.x , transform.position.y, pointToLook.z);
+//			Vector3 pointToLookXZfixed = new Vector3 (pointToLook.x , transform.position.y, pointToLook.z);
 
 			if(allowMouseRotation == true){
 				// transform.LookAt (pointToLookXZfixed);

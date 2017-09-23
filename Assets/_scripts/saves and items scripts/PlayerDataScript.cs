@@ -16,7 +16,7 @@ public class PlayerDataScript : MonoBehaviour {
 
 	//Total number of chips/skills/skins
 	public int CHIP_NUM = 2;
-	public int SKILL_NUM = 0;
+	public int SKILL_NUM = 2;
 
 	//get the items script to apply item effects if player has the item
 	public ItemsEffect itemsEffect;
@@ -71,8 +71,8 @@ public class PlayerDataScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//applyItems ();
-		//applySkills ();
+		applyItems ();
+		applySkills ();
 	}
 
 
@@ -102,7 +102,13 @@ public class PlayerDataScript : MonoBehaviour {
 
 	public void applySkills(){
 		
+		if(skillsList[0] > 0){
+			itemsEffect.skill1 ();
+		}
 
+		if(skillsList[1] > 0){
+			itemsEffect.skill2 ();
+		}
 
 	}
 
