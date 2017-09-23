@@ -57,7 +57,12 @@ public class ItemGeneratorScript : MonoBehaviour {
 		createNewItem(chipShopGridPanel,chip2, 1, CHIP ,"chip 2");
 
 		/*skills*/
+		Item skill1 = new Item("Skill 1 - Laser","Shoots a laser beam, lots of damage",100000,0);
+		createNewItem(skillsShopGridPanel, skill1, 0, SKILL,"skill 1");
 
+
+		Item skill2 = new Item("Skill 2 - Saber","Throws a light saber from a galaxy far far away...",100000,0);
+		createNewItem(skillsShopGridPanel, skill2, 1, SKILL ,"skill 2");
 
 		/*skins*/
 

@@ -33,13 +33,13 @@ public class ItemsEffect : MonoBehaviour {
 
 	//chip0 - increase movement speed (increase ram)
 	public void chip1(){
-		print ("Chip 1 active");
+		//print ("Chip 1 active");
 
 	}
 
 	//chip1 - increase invincibility CD time when hit
 	public void chip2(){
-		print ("Chip 2 active");
+		//print ("Chip 2 active");
 
 	}
 
@@ -49,7 +49,7 @@ public class ItemsEffect : MonoBehaviour {
 
 	//skill1 - laser
 	public void skill1(){
-		print ("Skill 1 active");
+		//print ("Skill 1 active");
 		if (player != null) {
 			player.allowLaser = true;
 		}
@@ -57,7 +57,7 @@ public class ItemsEffect : MonoBehaviour {
 
 	//skill2 - melee
 	public void skill2(){
-		print ("Skill 2 active");
+		//print ("Skill 2 active");
 		if (player != null) {
 			player.allowMelee = true;
 		}
