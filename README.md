@@ -85,3 +85,90 @@ https://www.youtube.com/watch?v=jT2jOeFo5HQ
 
 ## Original Game Concept
 ![rough game plan](https://user-images.githubusercontent.com/23565753/30105781-f55da60c-933c-11e7-8a7d-7c6df8f4af2b.png)
+
+
+
+
+# Ideas on skills and items
+Upgrades System
+===============================================================================
+	- expand chip capcity
+
+
+
+
+Items (takes capacity)
+===============================================================================
+Item capacity = 5, 10, 15, 20
+	- according to item capacity, player can mix and match their own wanted items
+
+different types of chips available:
+	1. Invincibility cool down
+	2. +1 player (make it so that it takes 10 capcity to equip)
+			- can buy 2
+			- can equip 2 at max (10 capacity each, limit capacity at 20)
+
+	3. Shield (blocks 1 shot)
+	4. + 5% more gold
+
+
+	Invicibility chip +0.1 seconds for each equipped chip (maybe it will take 2 capacity)
+
+
+
+
+Skills (does not take capacity, but limited to one at a time)
+===============================================================================
+	1. laser (must)
+	2. melee attack (must)
+	
+	3. missiles coming out in circle shape
+	4. can have a blade which spins out and stays there spinning for a while
+	5. skill which makes you invincible for 3 seconds
+	6. healing - can bring back one body part
+
+	(Optional) implement player seeking missile
+
+
+
+Cosmetics (does not take capacity)
+===============================================================================
+- Gold (player colour)
+
+
+
+
+
+-------------------------------------------------------------------------------
+
+								Inventory
+
+-------------------------------------------------------------------------------
+
+Capacity Remaining: 10/20
+
+
+Chip1 ( You have: x5 )
+=====
+
+Funtionality/Description:
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+					-------			---------
+					|Equip|			|Unequip|
+					-------			---------
+
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
