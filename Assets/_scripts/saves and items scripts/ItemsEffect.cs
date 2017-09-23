@@ -12,24 +12,22 @@ public class ItemsEffect : MonoBehaviour {
 	/*Chips description*/
 
 	//chip0 - increase movement speed (increase ram)
-	public string chip0(){
-		print ("chip0 active");
-		return "chip 0";
+	public void chip1(){
+		print ("Chip 1 active");
 
 	}
 
 	//chip1 - increase invincibility CD time when hit
-	public string chip1(){
-		print ("chip1 active");
-		return "chip 1";
+	public void chip2(){
+		print ("Chip 2 active");
+
 	}
 
 	/*Upgrade description*/
 
 	//upgrade1 - get 2 players shooting at once (dual core CPU)
-	public string upgrade0(){
-		print ("upgrade0 active");
-		return "upgrade 0";
+	public void skill1(){
+		print ("Skill 1 active");
 
 	}
 

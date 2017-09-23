@@ -6,8 +6,13 @@ using System;
 [Serializable]
 public class PlayerData {
 
+	/*
 	public int[] chips;
 	public int[] skills;
+*/
+
+	public int[] chips ;
+	public int[] skills ;
 
 	//total limit on the amount of items it can equip
 	public int itemCapacity;
@@ -26,42 +31,23 @@ public class PlayerData {
 
 		currencyAmount = playerDataScript.currencyAmount;
 
-		chips = new int[4];
-		chips [0] = playerDataScript.chip1;
-		chips [1] = playerDataScript.chip2;
-		chips [2] = playerDataScript.chip3;
-		chips [3] = playerDataScript.chip4;
+		chips = new int[playerDataScript.CHIP_NUM];
+		skills = new int[playerDataScript.SKILL_NUM];
 
-		skills = new int[4];
-		skills [0] = playerDataScript.skill1;
-		skills [1] = playerDataScript.skill2;
-		skills [2] = playerDataScript.skill3;
-		skills [3] = playerDataScript.skill4;
+		for(int i = 0; i < playerDataScript.CHIP_NUM ; i++){
+			chips[i] = playerDataScript.chipsList[i];
 
-	}
+		}
 
-	//contructor 2 - to initialise a new playerdata (for a new game)
-	public PlayerData() {
+		for(int i = 0; i < playerDataScript.SKILL_NUM ; i++){
+			skills [i] = playerDataScript.skillsList [i];
 
-		mapsCompleted = 0;
+		}
 
-		currencyAmount = 0;
 
-		chips = new int[4];
-		chips [0] = 0;
-		chips [1] = 0;
-		chips [2] = 0;
-		chips [3] = 0;
-
-		skills = new int[4];
-		skills [0] = 0;
-		skills [1] = 0;
-		skills [2] = 0;
-		skills [3] = 0;
 
 	}
-
-
+		
 
 
 }

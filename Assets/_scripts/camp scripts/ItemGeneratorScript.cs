@@ -9,9 +9,16 @@ using UnityEngine.UI;
 public class ItemGeneratorScript : MonoBehaviour {
 
 
+	//item type
+	private string CHIP = "chip";
+	private string SKILL = "skill";
+	private string SKIN = "skin";
+
+
 	//array list which stores each item created in the script: will be used to active their information in contents area
 	private ArrayList itemContentsArray;
-	private List<int> contentIndexArray; // to identify which item content to show
+	private List<int> playerItemArray; // to identify which item to add to player
+
 
 	//get the playerDataScript
 	private PlayerDataScript playerDataScript;
@@ -31,7 +38,7 @@ public class ItemGeneratorScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		itemContentsArray = new ArrayList ();
-		contentIndexArray = new List<int> ();
+		playerItemArray = new List<int> ();
 
 		playerDataScript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript> ();
 
@@ -40,26 +47,19 @@ public class ItemGeneratorScript : MonoBehaviour {
 		/*--------------Item Generation below---------------*/
 
 
-		//Initialise all items here:
+		//Initialise all items here and add the item to the shop:
 		/*chips*/
 		Item chip1 = new Item("Chip - Invincibility","+1 invincibility",100,2);
+		createNewItem(chipShopGridPanel, chip1, 0, CHIP,"chip 1");
+
 
 		Item chip2 = new Item("Chip - +1 Player","+1 Player",1000,10);
+		createNewItem(chipShopGridPanel,chip2, 1, CHIP ,"chip 2");
 
 		/*skills*/
 
 
 		/*skins*/
-
-
-
-		//Add the item to the shop 
-		/*chips*/
-		createNewItem(chipShopGridPanel,chip1,"chip 1");
-		createNewItem(chipShopGridPanel,chip2,"chip 2");
-
-
-
 
 
 
@@ -70,14 +70,6 @@ public class ItemGeneratorScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetKeyDown(KeyCode.M)){
-			//playerDataScript.chip1 += 1;
-			//print ("bought chip 1");
-
-			print (itemContentsArray.Count);
-		}
-
-
 
 	}
 
@@ -85,8 +77,9 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 	//General Button functions below!
 
+
 	/*creates a new button with specified text to a specified panel, with a listener attached*/
-	void createNewItem(GameObject panel, Item item, string buttonText){
+	void createNewItem(GameObject panel, Item item, int playerItemIndex , string itemType, string buttonText){
 
 		GameObject newButton = Instantiate(selectItemButton_prefab);
 		//set the text of the button to a specified one
@@ -95,14 +88,14 @@ public class ItemGeneratorScript : MonoBehaviour {
 		//to prevent scaling, set the second arguement (world scaling argument) to false
 		newButton.transform.SetParent(panel.transform,false);
 
-
 		//create a item content for this item and make item info panel the parent
 		GameObject newContent = Instantiate(itemContent_prefab);
 		itemContentsArray.Add (newContent);//add to the list of content
 
 		newContent.transform.SetParent (itemPurchasePanel.transform, false);//content will always appear in itemPurchasedPanel
 
-		//initialise item content information here
+
+		//initialise item content information here ==== 
 		Text[] contentTextList = newContent.GetComponentsInChildren<Text> ();
 
 		/*Components will always be in the following orderorder:
@@ -114,11 +107,45 @@ public class ItemGeneratorScript : MonoBehaviour {
 		contentTextList[1].text = item.itemInformation;
 		contentTextList[2].text = "Cost: " + item.itemCost;
 
+		//Buy button implementation here =====
+
+
+		Button contentBuyButton = newContent.GetComponentInChildren<Button> ();
+		contentBuyButton.onClick.AddListener (() => buyItem(playerItemIndex,itemType)); // add a listener which buys the specified item and applies it to the player
+
+
 
 		//add a listener which opens the item information when created
 		newButton.GetComponent<Button> ().onClick.AddListener(() => openItemContent(newContent));
 
 	}
+
+
+	public void buyItem(int playerItemIndex, string itemType){
+
+		if(itemType == CHIP){
+			playerDataScript.chipsList[playerItemIndex] ++;
+
+		}else if(itemType == SKILL){
+			playerDataScript.skillsList[playerItemIndex] ++;
+
+		}else if(itemType == SKIN){
+			//playerDataScript.skinsList[playerItemIndex] ++;
+			print("Skins have not been implemented yet :(");
+		}
+
+
+
+		//print ("quantity bought: " + );
+
+
+
+		//playerDataScript.chip1++;
+		//print ("Item bought: " + playerDataScript.chip1);
+
+
+	}
+
 
 	/*Creates the item content gameobject, makes it a child of Item Information panel
 	 * , and shows the item informations (information of the items stored using Item class)*/

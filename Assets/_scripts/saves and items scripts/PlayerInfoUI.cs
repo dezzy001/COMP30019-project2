@@ -36,18 +36,19 @@ public class PlayerInfoUI : MonoBehaviour {
 		gold.text = "Gold: " + playerData.currencyAmount;
 
 
-		int countForItems = 0;
+		int countForItems = 1;
+		itemCount.text = "";
 
-		/*
-		foreach(bool hasChip in playerData.chipsList){
-			if(hasChip == true){
-				countForItems++;
-			}
+		foreach(int chip in playerData.chipsList){
+
+			itemCount.text += "chip " + countForItems + ": " + chip +"\n";
+			countForItems++;
+			
 		}
 
 
-		itemCount.text = "chip Count: " + countForItems;
-		*/
+
+
 	}
 
 

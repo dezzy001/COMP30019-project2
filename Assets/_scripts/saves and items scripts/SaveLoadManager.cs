@@ -36,7 +36,11 @@ public class SaveLoadManager : MonoBehaviour {
 	public void newSave(){
 
 
-		PlayerDataScript data = new PlayerDataScript ();
+		//PlayerDataScript data = new PlayerDataScript ();
+
+		PlayerDataScript data = gameObject.AddComponent<PlayerDataScript> ();
+	
+
 		SavePlayer (data);
 
 	}
@@ -63,6 +67,15 @@ public class SaveLoadManager : MonoBehaviour {
 			playerDataScript.currencyAmount = loadedData.currencyAmount;
 
 
+			for(int i = 0; i < playerDataScript.CHIP_NUM ;i++){
+				playerDataScript.chipsList[i] = loadedData.chips[i];
+			}
+
+			for(int i = 0; i < playerDataScript.SKILL_NUM ;i++){
+				playerDataScript.skillsList[i] = loadedData.skills[i];
+			}
+
+			/*
 			playerDataScript.chip1 = loadedData.chips [0];
 			playerDataScript.chip2 = loadedData.chips [1];
 			playerDataScript.chip3 = loadedData.chips [2];
@@ -72,7 +85,7 @@ public class SaveLoadManager : MonoBehaviour {
 			playerDataScript.skill1 = loadedData.skills [1];
 			playerDataScript.skill1 = loadedData.skills [2];
 			playerDataScript.skill1 = loadedData.skills [3];
-
+			*/
 
 
 		} else {
