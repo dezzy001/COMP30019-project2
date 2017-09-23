@@ -38,15 +38,16 @@ public class PlayerInfoUI : MonoBehaviour {
 
 		int countForItems = 0;
 
-
+		/*
 		foreach(bool hasChip in playerData.chipsList){
 			if(hasChip == true){
 				countForItems++;
 			}
 		}
 
-		itemCount.text = "chip Count: " + countForItems;
 
+		itemCount.text = "chip Count: " + countForItems;
+		*/
 	}
 
 

@@ -31,6 +31,7 @@ public class StartUI : MonoBehaviour {
 	public SaveLoadManager saveLoadManager;
 
 
+	//load the previous game save everytime you start the game
 	void Awake(){
 		saveLoadManager.loadAll ();
 	}

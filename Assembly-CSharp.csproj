@@ -55,6 +55,7 @@
      <Compile Include="Assets\_scripts\SwitchToPanel.cs" />
      <Compile Include="Assets\_scripts\ToggleTime.cs" />
      <Compile Include="Assets\_scripts\camp scripts\CampUI.cs" />
+     <Compile Include="Assets\_scripts\camp scripts\ItemGeneratorScript.cs" />
      <Compile Include="Assets\_scripts\camp scripts\QuitPanel.cs" />
      <Compile Include="Assets\_scripts\camp scripts\ShopViewPanel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\CameraController.cs" />
