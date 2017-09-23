@@ -72,6 +72,8 @@
      <Compile Include="Assets\_scripts\hacking game scripts\HackingCompletePanel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HealthManager.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\PauseScript.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\Player Script\AdditionalPlayerController.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\Player Script\CounterClockwiseSpin.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Player Script\PlayerController.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Player Script\ProjectileController.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\SpawnAnimation.cs" />
