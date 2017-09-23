@@ -23,6 +23,15 @@ public class SaveLoadManager : MonoBehaviour {
 
 	}
 
+
+
+
+	public void newSaveAndLoadIt(){
+		newSave ();
+		loadAll ();
+
+	}
+
 	//start a new game function
 	public void newSave(){
 
@@ -39,6 +48,8 @@ public class SaveLoadManager : MonoBehaviour {
 
 	}
 
+
+
 	public void loadAll(){
 		
 		//loading player data
@@ -52,15 +63,15 @@ public class SaveLoadManager : MonoBehaviour {
 			playerDataScript.currencyAmount = loadedData.currencyAmount;
 
 
-			playerDataScript.hasChip0 = loadedData.chips [0];
-			playerDataScript.hasChip1 = loadedData.chips [1];
-			playerDataScript.hasChip2 = loadedData.chips [2];
-			playerDataScript.hasChip3 = loadedData.chips [3];
+			playerDataScript.chip1 = loadedData.chips [0];
+			playerDataScript.chip2 = loadedData.chips [1];
+			playerDataScript.chip3 = loadedData.chips [2];
+			playerDataScript.chip4 = loadedData.chips [3];
 
-			playerDataScript.hasUpgrade0 = loadedData.upgrades [0];
-			playerDataScript.hasUpgrade1 = loadedData.upgrades [1];
-			playerDataScript.hasUpgrade2 = loadedData.upgrades [2];
-			playerDataScript.hasUpgrade3 = loadedData.upgrades [3];
+			playerDataScript.skill1 = loadedData.skills [0];
+			playerDataScript.skill1 = loadedData.skills [1];
+			playerDataScript.skill1 = loadedData.skills [2];
+			playerDataScript.skill1 = loadedData.skills [3];
 
 
 

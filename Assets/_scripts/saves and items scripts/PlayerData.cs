@@ -6,9 +6,8 @@ using System;
 [Serializable]
 public class PlayerData {
 
-
-	public bool[] chips;
-	public bool[] upgrades;
+	public int[] chips;
+	public int[] skills;
 
 	//total limit on the amount of items it can equip
 	public int itemCapacity;
@@ -27,17 +26,17 @@ public class PlayerData {
 
 		currencyAmount = playerDataScript.currencyAmount;
 
-		chips = new bool[4];
-		chips [0] = playerDataScript.hasChip0; 
-		chips [1] = playerDataScript.hasChip1;
-		chips [2] = playerDataScript.hasChip2;
-		chips [3] = playerDataScript.hasChip3;
+		chips = new int[4];
+		chips [0] = playerDataScript.chip1;
+		chips [1] = playerDataScript.chip2;
+		chips [2] = playerDataScript.chip3;
+		chips [3] = playerDataScript.chip4;
 
-		upgrades = new bool[4];
-		upgrades [0] = playerDataScript.hasUpgrade0; 
-		upgrades [1] = playerDataScript.hasUpgrade1;
-		upgrades [2] = playerDataScript.hasUpgrade2;
-		upgrades [3] = playerDataScript.hasUpgrade3;
+		skills = new int[4];
+		skills [0] = playerDataScript.skill1;
+		skills [1] = playerDataScript.skill2;
+		skills [2] = playerDataScript.skill3;
+		skills [3] = playerDataScript.skill4;
 
 	}
 
@@ -48,17 +47,17 @@ public class PlayerData {
 
 		currencyAmount = 0;
 
-		chips = new bool[4];
-		chips [0] = false; 
-		chips [1] = false;
-		chips [2] = false;
-		chips [3] = false;
+		chips = new int[4];
+		chips [0] = 0;
+		chips [1] = 0;
+		chips [2] = 0;
+		chips [3] = 0;
 
-		upgrades = new bool[4];
-		upgrades [0] = false; 
-		upgrades [1] = false;
-		upgrades [2] = false;
-		upgrades [3] = false;
+		skills = new int[4];
+		skills [0] = 0;
+		skills [1] = 0;
+		skills [2] = 0;
+		skills [3] = 0;
 
 	}
 

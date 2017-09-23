@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465934, g: 0.49642956, b: 0.57482487, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -386,17 +386,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: newSave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 941737005}
         m_MethodName: changeScene
         m_Mode: 5
@@ -410,6 +399,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 640340820}
         m_MethodName: clickPlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 456085051}
+        m_MethodName: newSaveAndLoadIt
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -835,6 +835,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3d82069703244f4fa04a454ba53aa10, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &456085051 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114750635512602768, guid: f3d82069703244f4fa04a454ba53aa10,
+    type: 2}
+  m_PrefabInternal: {fileID: 456085050}
+  m_Script: {fileID: 11500000, guid: bd5e54aa5e6d03b4cbae8d17fa8a4b40, type: 3}
 --- !u!1 &567617404
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,8 +950,7 @@ MonoBehaviour:
   audioClip:
   - {fileID: 8300000, guid: 45bdae48466274468885d8e9dea91b91, type: 3}
   - {fileID: 8300000, guid: d0796eaa279324eafba05b7e10a8dad3, type: 3}
-  deleteSavesButton: {fileID: 0}
-  saveLoadManager: {fileID: 0}
+  saveLoadManager: {fileID: 456085051}
 --- !u!4 &640340821
 Transform:
   m_ObjectHideFlags: 0

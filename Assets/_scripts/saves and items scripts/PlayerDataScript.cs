@@ -18,7 +18,7 @@ public class PlayerDataScript : MonoBehaviour {
 
 
 	public ArrayList chipsList;
-	public ArrayList upgradesList;
+	public ArrayList skillsList;
 
 
 	/*variables below are used for saving and loading (have persistence)*/
@@ -30,19 +30,19 @@ public class PlayerDataScript : MonoBehaviour {
 	public int currencyAmount;
 
 
-	//check what items the player currently has
+	//check what items the player currently has and the how many quantity
 
 	/*chips*/
-	public bool hasChip0;
-	public bool hasChip1;
-	public bool hasChip2;
-	public bool hasChip3;
+	public int chip1;
+	public int chip2;
+	public int chip3;
+	public int chip4;
 
-	/*upgrades*/
-	public bool hasUpgrade0;
-	public bool hasUpgrade1;
-	public bool hasUpgrade2;
-	public bool hasUpgrade3;
+	/*skills*/
+	public int skill1;
+	public int skill2;
+	public int skill3;
+	public int skill4;
 
 
 
@@ -56,22 +56,10 @@ public class PlayerDataScript : MonoBehaviour {
 		//array list does not really work , unless u upgrade every load() you do
 		//solution - need to create a applyLoad() function, so when you load, call this function too, to apply new changes to array lists
 		chipsList = new ArrayList();
-		upgradesList = new ArrayList();
-
-		chipsList.Add (hasChip0);
-		chipsList.Add (hasChip1);
-		chipsList.Add (hasChip2);
-		chipsList.Add (hasChip3);
-
-
-		upgradesList.Add (hasUpgrade0);
-		upgradesList.Add (hasUpgrade1);
-		upgradesList.Add (hasUpgrade2);
-		upgradesList.Add (hasUpgrade3);
+		skillsList = new ArrayList();
 
 
 
-		
 		applyItems ();
 		applyUpgrades ();
 
@@ -86,22 +74,21 @@ public class PlayerDataScript : MonoBehaviour {
 	//apply the Chips to the player
 	public void applyItems(){
 		
-		if(this.hasChip0 == true){
 
-			itemsEffect.chip0 ();
-		}
-
-		if(this.hasChip1 == true){
-
-			itemsEffect.chip1 ();
-		}
-
-		if(this.hasChip2 == true){
-
+		if(this.chip1 > 0){
 
 		}
 
-		if(this.hasChip3 == true){
+		if(this.chip2 > 0){
+
+		}
+
+		if(this.chip3 > 0){
+
+
+		}
+
+		if(this.chip4 > 0){
 
 
 		}
@@ -111,22 +98,22 @@ public class PlayerDataScript : MonoBehaviour {
 
 	public void applyUpgrades(){
 		
-		if(this.hasUpgrade0 == true){
-			itemsEffect.upgrade0 ();
+
+		if(this.skill1 > 0){
 
 		}
 
-		if(this.hasUpgrade1 == true){
-
-
-		}
-
-		if(this.hasUpgrade2 == true){
+		if(this.skill2 > 0){
 
 
 		}
 
-		if(this.hasUpgrade3 == true){
+		if(this.skill3 > 0){
+
+
+		}
+
+		if(this.skill4 > 0){
 
 
 		}

@@ -24,9 +24,16 @@ public class StartUI : MonoBehaviour {
 	public AudioSource audioSource;
 	public AudioClip[] audioClip;
 
-	public Button deleteSavesButton;
+
+	//public Button deleteSavesButton;
+
+	// get the save load manager script : this is to load the currently saved data every time you open the game
 	public SaveLoadManager saveLoadManager;
 
+
+	void Awake(){
+		saveLoadManager.loadAll ();
+	}
 
 
 	// Use this for initialization
@@ -44,6 +51,7 @@ public class StartUI : MonoBehaviour {
 		closeAllPanels();
 
 		startPanel.SetActive (true);
+
 
 
 	}

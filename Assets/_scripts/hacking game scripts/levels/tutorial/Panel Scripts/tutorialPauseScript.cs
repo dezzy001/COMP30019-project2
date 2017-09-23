@@ -50,7 +50,7 @@ public class tutorialPauseScript : TutorialSwitchPanelScript {
 	void Update () {
 
 		if(Input.GetKeyDown(KeyCode.Escape) && !pressedEsc){
-			pressEscText.text = "<Click the \"Conitnue\" button>";
+			pressEscText.text = "<Click the \"Continue\" button>";
 			pressedEsc = true;
 
 			//want time scale to still be one so the arrows can move
