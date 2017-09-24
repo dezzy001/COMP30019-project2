@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/_scenes/Camp.unity
     guid: 7f685f0e0138fad49b80f65bf6bbcfc1
   - enabled: 1
-    path: Assets/_scenes/hacking game scenes/_TutorialLevel.unity
+    path: Assets/_scenes/hacking game scenes/Levels/_TutorialLevel.unity
     guid: 44b2e802d4f0ed041893d004c55ca96d
   - enabled: 1
-    path: Assets/_scenes/hacking game scenes/level1.unity
+    path: Assets/_scenes/hacking game scenes/Levels/level1.unity
     guid: 18f9b5819083bf8469c83239eadbe8a4
   - enabled: 1
-    path: Assets/_scenes/hacking game scenes/level2.unity
+    path: Assets/_scenes/hacking game scenes/Levels/level2.unity
     guid: f56b40798d6731f4b8ca792a8c177ab8
