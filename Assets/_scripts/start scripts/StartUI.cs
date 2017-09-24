@@ -25,8 +25,10 @@ public class StartUI : MonoBehaviour {
 	public AudioSource audioSource;
 	public AudioClip[] audioClip;
 
+	//continue button: make uninteractable if there is no existing player.sav file
 
 	//public Button deleteSavesButton;
+	public GameObject continueButton;
 
 	// get the save load manager script : this is to load the currently saved data every time you open the game
 	public SaveLoadManager saveLoadManager;
@@ -36,7 +38,17 @@ public class StartUI : MonoBehaviour {
 	void Awake(){
 
 		try {
-			saveLoadManager.loadAll ();
+
+
+			int fileExists = saveLoadManager.loadAll ();
+
+			//if file doesnt exist, then grey out the continue button and dont make it interactable
+			if(fileExists == 0){
+				print("files does not exist");
+				continueButton.GetComponent<Button> ().interactable = false;
+				continueButton.GetComponent<Button> ().image.color = new Color(0.6f,0.6f,0.6f,0.6f);
+			}
+
 		} catch(Exception e) {
 			print ("Old save not compatible, please make new save from camp.");
 			// saveLoadManager.newSaveAndLoadIt ();
@@ -60,6 +72,7 @@ public class StartUI : MonoBehaviour {
 		closeAllPanels();
 
 		startPanel.SetActive (true);
+
 
 
 

@@ -46,6 +46,15 @@ public class PlayerInfoUI : MonoBehaviour {
 			
 		}
 
+		itemCount.text += "\n";
+
+		foreach(int skill in playerData.skillsList){
+
+			itemCount.text += "skill " + countForItems + ": " + skill +"\n";
+			countForItems++;
+
+		}
+
 
 
 

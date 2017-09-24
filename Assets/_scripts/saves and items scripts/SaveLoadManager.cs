@@ -54,7 +54,7 @@ public class SaveLoadManager : MonoBehaviour {
 
 
 
-	public void loadAll(){
+	public int loadAll(){
 		
 		//loading player data
 		PlayerData loadedData = LoadPlayer ();
@@ -87,10 +87,11 @@ public class SaveLoadManager : MonoBehaviour {
 			playerDataScript.skill1 = loadedData.skills [3];
 			*/
 
-
+			return 1; // successful load
 		} else {
 
 			print ("File does not exist, or loaded improperly");
+			return 0;
 		}
 			
 
@@ -99,7 +100,7 @@ public class SaveLoadManager : MonoBehaviour {
 
 	public  void SavePlayer(PlayerDataScript player) {
 		BinaryFormatter bf = new BinaryFormatter ();
-		FileStream stream = new FileStream (Application.persistentDataPath + "/player.sav", FileMode.Create);
+		FileStream stream = new FileStream (Application.dataPath + "/zSaves/player.sav", FileMode.Create);
 
 		// pass in the data of the player so that the class below can handle and store the player attributes
 		// into the stats array
@@ -111,9 +112,9 @@ public class SaveLoadManager : MonoBehaviour {
 
 	public  PlayerData LoadPlayer() { //instead of int[], try return PlayerData type
 		// make sure the file exists
-		if (File.Exists (Application.persistentDataPath + "/player.sav")) {
+		if (File.Exists (Application.dataPath + "/zSaves/player.sav")) {
 			BinaryFormatter bf = new BinaryFormatter ();
-			FileStream stream = new FileStream (Application.persistentDataPath + "/player.sav", FileMode.Open);
+			FileStream stream = new FileStream (Application.dataPath + "/zSaves/player.sav", FileMode.Open);
 
 			PlayerData data = bf.Deserialize (stream) as PlayerData; // cast it as PlayerData
 
