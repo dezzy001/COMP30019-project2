@@ -11,6 +11,7 @@ public class CampUI : MonoBehaviour {
 	public GameObject vendMachinePanel;
 	public GameObject shopPanel;
 	public GameObject restPanel;
+	public GameObject inventoryPanel;
 
 	//array list for the panels , I used array list so you can generalise some functions
 	public ArrayList allCampPanels = new ArrayList();
@@ -25,9 +26,16 @@ public class CampUI : MonoBehaviour {
 		allCampPanels.Add(vendMachinePanel);
 		allCampPanels.Add(shopPanel);
 		allCampPanels.Add (restPanel);
+		allCampPanels.Add (inventoryPanel);
 
 		//always want campPanel to be on
 		SwitchToPanel.activatePanel(campPanel, allCampPanels);
+
+
+		//dont allow player to shoot or rotate in the camp scene
+		PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
+		player.allowMouseLeftClick = false;
+		player.allowMouseRotation = false;
 
 	}
 

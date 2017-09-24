@@ -33,8 +33,17 @@ public class StartUI : MonoBehaviour {
 	// get the save load manager script : this is to load the currently saved data every time you open the game
 	public SaveLoadManager saveLoadManager;
 
+	public SceneManagement sceneManagementScript;
+
 	public PlayerDataScript playerDataScript;
 
+	//bool for whether or not the current save pop-up will show 
+	private bool showPopUpPanel = true;
+
+	//buttons
+	public Button newGameButton;
+	//public Button yesButton;
+	//public Button noButton;
 
 	//load the previous game save everytime you start the game
 	void Awake(){
@@ -46,8 +55,12 @@ public class StartUI : MonoBehaviour {
 
 			int fileExists = saveLoadManager.loadAll ();
 
-			//if file doesnt exist, then grey out the continue button and dont make it interactable
+			//if file doesnt exist or player did not complete the tutorial, then grey out the continue button and dont make it interactable
+			//also do not show the pop up panel (panel which asks if you are erasing saves)
 			if(fileExists == 0 || playerDataScript.mapsCompleted == 0 ){
+
+
+				showPopUpPanel = false; // dont show the pop up panel
 				print("files does not exist");
 				continueButton.GetComponent<Button> ().interactable = false;
 				continueButton.GetComponent<Button> ().image.color = new Color(0.6f,0.6f,0.6f,0.6f);
@@ -77,9 +90,22 @@ public class StartUI : MonoBehaviour {
 
 		startPanel.SetActive (true);
 
+		if(showPopUpPanel == false){
+			//dont show pop up panel
+			newGameButton.onClick.AddListener(() => noPopUpPanel()) ;
+		}else{
+			newGameButton.onClick.AddListener(() => openAndClosePopUp( deleteSavePanel)) ;
+		}
+
+		//yesButton.onClick.AddListener() ;
+		//noButton.onClick.AddListener() ;
+
+	}
 
 
-
+	void noPopUpPanel(){
+		saveLoadManager.newSaveAndLoadIt ();
+		sceneManagementScript.changeScene ("_TutorialLevel");
 	}
 
 
@@ -91,6 +117,8 @@ public class StartUI : MonoBehaviour {
 		startPanel.SetActive (false);
 		mainMenuPanel.SetActive (true);
 	}
+
+
 
 	public void openAndClosePopUp(GameObject panel){
 		if (panel.activeSelf == true) {

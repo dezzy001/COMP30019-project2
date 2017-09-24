@@ -22,7 +22,7 @@ public class ItemsEffect : MonoBehaviour {
 		try {
 			player = GameObject.Find ("Player").GetComponent<PlayerController>();
 		} catch(Exception e) {
-			print ("No player object, please proceed to a scene with player object to load.");
+			//print ("No player object, please proceed to a scene with player object to load.");
 			// saveLoadManager.newSaveAndLoadIt ();
 		}
 
