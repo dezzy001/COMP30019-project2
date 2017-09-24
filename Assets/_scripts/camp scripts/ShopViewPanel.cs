@@ -44,4 +44,6 @@ public class ShopViewPanel : MonoBehaviour {
 
 	}
 
+
+
 }

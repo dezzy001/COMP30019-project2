@@ -33,9 +33,13 @@ public class StartUI : MonoBehaviour {
 	// get the save load manager script : this is to load the currently saved data every time you open the game
 	public SaveLoadManager saveLoadManager;
 
+	public PlayerDataScript playerDataScript;
+
 
 	//load the previous game save everytime you start the game
 	void Awake(){
+
+		playerDataScript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript> ();
 
 		try {
 
@@ -43,7 +47,7 @@ public class StartUI : MonoBehaviour {
 			int fileExists = saveLoadManager.loadAll ();
 
 			//if file doesnt exist, then grey out the continue button and dont make it interactable
-			if(fileExists == 0){
+			if(fileExists == 0 || playerDataScript.mapsCompleted == 0 ){
 				print("files does not exist");
 				continueButton.GetComponent<Button> ().interactable = false;
 				continueButton.GetComponent<Button> ().image.color = new Color(0.6f,0.6f,0.6f,0.6f);

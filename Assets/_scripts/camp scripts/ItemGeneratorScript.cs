@@ -35,6 +35,11 @@ public class ItemGeneratorScript : MonoBehaviour {
 	//get the panel to add item contents to
 	public GameObject itemPurchasePanel;
 
+	//get the button which opens the whole shop
+	public Button shopButton;
+
+
+
 	// Use this for initialization
 	void Start () {
 		itemContentsArray = new ArrayList ();
@@ -68,7 +73,12 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 
 
-		//dont let any item content show
+		//dont let any item content show when the shop button is pressed
+		shopButton.onClick.AddListener(()=>closeContent());
+
+	}
+
+	void closeContent(){
 		closeAllItemContent ();
 	}
 	

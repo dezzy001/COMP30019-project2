@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class HackingCompleteScript : MonoBehaviour {
 
+	//save load manager to auto-save only after tutorial level is completed
+	public SaveLoadManager saveLoadManager;
+
 	public PlayerDataScript playerDatascript;
 	public GameObject hackingCompletePanel;
 
@@ -22,7 +25,7 @@ public class HackingCompleteScript : MonoBehaviour {
 		try{
 	
 			playerDatascript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript> ();
-
+			saveLoadManager = GameObject.Find ("Player Data Manager").GetComponentInChildren<SaveLoadManager> ();
 	
 
 		}
@@ -56,7 +59,15 @@ public class HackingCompleteScript : MonoBehaviour {
 
 		if(hackingCompletePanel.activeSelf == true){
 			if(playerDatascript.mapsCompleted < currentMapNum){
+
+
+
+
 				playerDatascript.mapsCompleted++;
+				//auto save for tutorial level only
+				saveLoadManager.saveAll();
+
+
 			}
 
 		}
