@@ -354,11 +354,11 @@ public class InventoryGeneratorScript : MonoBehaviour {
 
 
 	//open a pop up for a certain amount of time then close it
-	void openPopUp(GameObject popUpPanel){
+	public void openPopUp(GameObject popUpPanel){
 		StartCoroutine(openPopUpTime (popUpPanel));
 	}
 
-	IEnumerator openPopUpTime(GameObject popUpPanel){
+	public IEnumerator openPopUpTime(GameObject popUpPanel){
 		popUpPanel.SetActive (true);
 		yield return new WaitForSeconds (POPUP_WAIT_TIME);
 		popUpPanel.SetActive (false);

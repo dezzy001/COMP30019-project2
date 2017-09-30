@@ -10,7 +10,9 @@ public class CampUI : MonoBehaviour {
 	public GameObject campPanel;
 	public GameObject vendMachinePanel;
 	public GameObject shopPanel;
-	public GameObject restPanel;
+	public GameObject savePanel;
+	public GameObject mainMenuPanel;
+	public GameObject quitPanel;
 	public GameObject inventoryPanel;
 
 	//array list for the panels , I used array list so you can generalise some functions
@@ -25,8 +27,11 @@ public class CampUI : MonoBehaviour {
 		allCampPanels.Add(campPanel); 
 		allCampPanels.Add(vendMachinePanel);
 		allCampPanels.Add(shopPanel);
-		allCampPanels.Add (restPanel);
+		allCampPanels.Add (savePanel);
+		allCampPanels.Add (mainMenuPanel);
 		allCampPanels.Add (inventoryPanel);
+		allCampPanels.Add (quitPanel);
+
 
 		//always want campPanel to be on
 		SwitchToPanel.activatePanel(campPanel, allCampPanels);
