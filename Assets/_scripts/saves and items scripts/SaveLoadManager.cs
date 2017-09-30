@@ -70,17 +70,22 @@ public class SaveLoadManager : MonoBehaviour {
 
 			playerDataScript.currencyAmount = loadedData.currencyAmount;
 
+			playerDataScript.itemCapacity = loadedData.itemCapacity;
+
 
 			for(int i = 0; i < playerDataScript.CHIP_NUM ;i++){
 				playerDataScript.chipsList[i] = loadedData.chips[i];
+				playerDataScript.hasEquipchips[i] = loadedData.hasEquipchips[i];
 			}
 
 			for(int i = 0; i < playerDataScript.SKILL_NUM ;i++){
 				playerDataScript.skillsList[i] = loadedData.skills[i];
+				playerDataScript.hasEquipskills [i] = loadedData.hasEquipskills [i];
 			}
 
 			for(int i = 0; i < playerDataScript.SKIN_NUM ;i++){
 				playerDataScript.skinsList[i] = loadedData.skills[i];
+				playerDataScript.hasEquipSkins[i] = loadedData.hasEquipSkins[i];
 			}
 
 			/*

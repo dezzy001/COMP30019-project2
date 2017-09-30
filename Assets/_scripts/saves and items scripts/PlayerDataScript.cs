@@ -36,6 +36,8 @@ public class PlayerDataScript : MonoBehaviour {
 	//amount of in game money the player has
 	public int currencyAmount;
 
+	//total limit on the amount of items it can equip
+	public int itemCapacity = 5;//have a default of 5 capacity
 
 	//check what items the player currently has and the how many quantity
 
@@ -135,17 +137,17 @@ public class PlayerDataScript : MonoBehaviour {
 
 
 		//chip1
-		itemData.chip1Effect(hasEquipchips[0]);
+
 		//chip2
-		itemData.chip2Effect (hasEquipchips[1]);
 
 
 
-		/*
+
+
 		//chip1
-		if (chipsList [0] > 0 && chip1.hasEquipItem) {
+		if (chipsList [0] > 0 ) {
 			
-			itemData.chip1Effect (true);
+			itemData.chip1Effect(hasEquipchips[0]);
 
 		} else {
 			
@@ -153,13 +155,14 @@ public class PlayerDataScript : MonoBehaviour {
 		}
 
 		//chip2
-		if (chipsList [1] > 0 && chip2.hasEquipItem) {
-			itemData.chip2Effect (true);
+		if (chipsList [1] > 0 ) {
+			
+			itemData.chip2Effect (hasEquipchips[1]);
 
 		} else {
 			itemData.chip1Effect (false);
 		}
-		*/
+
 
 
 		
@@ -169,34 +172,34 @@ public class PlayerDataScript : MonoBehaviour {
 	public void applySkills(){
 
 		//skill1
-		itemData.skill1Effect(hasEquipskills[0]);
+
 
 		//skill2
-		itemData.skill2Effect(hasEquipskills[1]);
 
 
 
 
-		/*
+
+
 		//skill1
-		if(skillsList[0] > 0 && skill1.hasEquipItem){
+		if(skillsList[0] > 0 ){
 			
-			itemData.skill1Effect (true);
+			itemData.skill1Effect(hasEquipskills[0]);
 		}else {
 			
 			itemData.skill1Effect (false);
 		}
 
 		//skill2
-		if(skillsList[1] > 0 && skill2.hasEquipItem){
+		if(skillsList[1] > 0 ){
 			
-			itemData.skill2Effect (true);
+			itemData.skill2Effect(hasEquipskills[1]);
 
 		}else {
-			
 			itemData.skill2Effect (false);
+
 		}
-		*/
+
 
 	}
 

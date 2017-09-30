@@ -135,6 +135,7 @@ MonoBehaviour:
   hasEquipSkins: 
   mapsCompleted: 0
   currencyAmount: 0
+  itemCapacity: 5
   itemData: {fileID: 0}
 --- !u!114 &114750635512602768
 MonoBehaviour:

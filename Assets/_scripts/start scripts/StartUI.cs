@@ -61,7 +61,7 @@ public class StartUI : MonoBehaviour {
 
 
 				showPopUpPanel = false; // dont show the pop up panel
-				print("files does not exist");
+				print("files does not exist OR tutorial map not complete");
 				continueButton.GetComponent<Button> ().interactable = false;
 				continueButton.GetComponent<Button> ().image.color = new Color(0.6f,0.6f,0.6f,0.6f);
 			}

@@ -39,22 +39,31 @@ public class PlayerData {
 
 		currencyAmount = playerDataScript.currencyAmount;
 
+		itemCapacity = playerDataScript.itemCapacity;
+
 		chips = new int[playerDataScript.CHIP_NUM];
 		skills = new int[playerDataScript.SKILL_NUM];
 		skins = new int[playerDataScript.SKIN_NUM];
 
+		hasEquipchips = new bool[playerDataScript.CHIP_NUM];
+		hasEquipskills = new bool[playerDataScript.SKILL_NUM];
+		hasEquipSkins =new bool[playerDataScript.SKIN_NUM];
+
 		for(int i = 0; i < playerDataScript.CHIP_NUM ; i++){
 			chips[i] = playerDataScript.chipsList[i];
+			hasEquipchips[i] = playerDataScript.hasEquipchips[i];
 
 		}
 
 		for(int i = 0; i < playerDataScript.SKILL_NUM ; i++){
 			skills [i] = playerDataScript.skillsList [i];
+			hasEquipskills[i] = playerDataScript.hasEquipskills[i];
 
 		}
 
 		for(int i = 0; i < playerDataScript.SKIN_NUM ; i++){
 			skins [i] = playerDataScript.skinsList [i];
+			hasEquipSkins[i] = playerDataScript.hasEquipSkins[i];
 
 		}
 

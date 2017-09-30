@@ -30,8 +30,8 @@ public class ItemData : MonoBehaviour {
 
 		//Initialise all items here and add the item to the shop:
 		/*chips*/
-		chip1 = new Item("Chip - Invincibility","+1 invincibility",100,2 );
-		chip2 = new Item("Chip - +1 Player","+1 Player",1000,10 );
+		chip1 = new Item("Chip 1 - Invincibility","+1 invincibility",100,2 );
+		chip2 = new Item("Chip 2 - Player +1","+1 Player",1000,10 );
 
 		/*skills*/
 		skill1 = new Item("Skill 1 - Laser","Shoots a laser beam, lots of damage",100000,0 );

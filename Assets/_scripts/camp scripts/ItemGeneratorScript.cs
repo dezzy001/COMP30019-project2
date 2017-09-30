@@ -17,11 +17,17 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 	//array list which stores each item created in the script: will be used to active their information in contents area
 	private ArrayList itemContentsArray;
-	private List<int> playerItemArray; // to identify which item to add to player
 
 
 	//get the playerDataScript
 	private PlayerDataScript playerDataScript;
+
+	public InventoryGeneratorScript inventoryGeneratorScript; // need this to add item to inventory when you purchase an item
+
+	//add items to inventory panels when an item in shop is purchased
+	public GameObject inventoryChipGridPanel;
+	public GameObject inventorySkillGridPanel;
+	public GameObject inventorySkinGridPanel;
 
 	//get a button prefab
 	public GameObject selectItemButton_prefab;
@@ -31,6 +37,8 @@ public class ItemGeneratorScript : MonoBehaviour {
 	public GameObject chipShopGridPanel;
 	public GameObject skillsShopGridPanel;
 	public GameObject skinsShopGridPanel;
+
+
 
 	//get the panel to add item contents to
 	public GameObject itemPurchasePanel;
@@ -54,7 +62,6 @@ public class ItemGeneratorScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		itemContentsArray = new ArrayList ();
-		playerItemArray = new List<int> ();
 
 		//find the persisted data
 		playerDataScript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript> ();
@@ -88,6 +95,9 @@ public class ItemGeneratorScript : MonoBehaviour {
 		shopButton.onClick.AddListener(()=>closeContent());
 
 	}
+
+
+
 
 	void closeContent(){
 		closeAllItemContent ();
@@ -126,11 +136,13 @@ public class ItemGeneratorScript : MonoBehaviour {
 		/*Components will always be in the following orderorder:
 		contentTextList[0] = Item Name
 		contentTextList[1] = Information
-		contentTextList[2] = cost*/
+		contentTextList[2] = cost
+		contentTextList[3] = Capacity*/
 
 		contentTextList[0].text = item.itemName;
 		contentTextList[1].text = item.itemInformation;
 		contentTextList[2].text = "Cost: " + item.itemCost;
+		contentTextList[3].text = "Capacity: " + item.itemCapacity;
 
 		//Buy button implementation here =====
 
@@ -138,7 +150,7 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 		Button contentBuyButton = newContent.GetComponentInChildren<Button> ();
 
-		contentBuyButton.onClick.AddListener (() => buyItem(playerItemIndex,itemType, contentBuyButton)); // add a listener which buys the specified item and applies it to the player
+		contentBuyButton.onClick.AddListener (() => buyItem( panel,  item,  playerItemIndex ,  itemType,  buttonText, contentBuyButton)); // add a listener which buys the specified item and applies it to the player
 
 		//if the player already has the item, then item is out of stock
 		if(itemType == CHIP){
@@ -163,18 +175,13 @@ public class ItemGeneratorScript : MonoBehaviour {
 		}
 
 
-		if(playerDataScript.chipsList[playerItemIndex] > 0){
-			//item sold out code
-			itemSoldOut(contentBuyButton);
-		}
-
 		//add a listener which opens the item information when created
 		newButton.GetComponent<Button> ().onClick.AddListener(() => openItemContent(newContent));
 
 	}
 
 
-	public void buyItem(int playerItemIndex, string itemType, Button contentBuyButton){
+	public void buyItem(GameObject panel, Item item, int playerItemIndex , string itemType, string buttonText, Button contentBuyButton){
 
 		if(itemType == CHIP){
 			if (playerDataScript.chipsList [playerItemIndex] <= 0) {
@@ -182,6 +189,7 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 				//item sold out code
 				itemSoldOut(contentBuyButton);
+				inventoryGeneratorScript.addInventory (inventoryChipGridPanel, item, playerItemIndex, itemType, buttonText);
 			}
 
 
@@ -191,6 +199,7 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 				//item sold out code
 				itemSoldOut(contentBuyButton);
+				inventoryGeneratorScript.addInventory (inventorySkillGridPanel, item, playerItemIndex, itemType, buttonText);
 			}
 			//playerDataScript.skillsList[playerItemIndex] ++;
 
@@ -201,6 +210,7 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 				//item sold out code
 				itemSoldOut(contentBuyButton);
+				inventoryGeneratorScript.addInventory (inventorySkinGridPanel, item, playerItemIndex, itemType, buttonText);
 			}
 			//playerDataScript.skinsList[playerItemIndex] ++;
 			//print("Skins have not been implemented yet :(");
