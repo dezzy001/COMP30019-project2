@@ -45,8 +45,9 @@ public class StartUI : MonoBehaviour {
 	//public Button yesButton;
 	//public Button noButton;
 
-	//load the previous game save everytime you start the game
-	void Awake(){
+
+	// Use this for initialization
+	void Start () {
 
 		playerDataScript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript> ();
 
@@ -71,11 +72,6 @@ public class StartUI : MonoBehaviour {
 			// saveLoadManager.newSaveAndLoadIt ();
 		}
 
-	}
-
-
-	// Use this for initialization
-	void Start () {
 		allStartUIPanels = new ArrayList ();
 
 		allStartUIPanels.Add (startPanel);
