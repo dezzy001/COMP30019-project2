@@ -38,6 +38,9 @@ public class ItemGeneratorScript : MonoBehaviour {
 	public GameObject skillsShopGridPanel;
 	public GameObject skinsShopGridPanel;
 
+	//popup notice panel
+	public GameObject noGoldPopUpPanel;
+	public float POPUP_WAIT_TIME = 1.2f;
 
 
 	//get the panel to add item contents to
@@ -183,38 +186,52 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 	public void buyItem(GameObject panel, Item item, int playerItemIndex , string itemType, string buttonText, Button contentBuyButton){
 
-		if(itemType == CHIP){
-			if (playerDataScript.chipsList [playerItemIndex] <= 0) {
-				playerDataScript.chipsList [playerItemIndex]++;
+		if (item.itemCost > playerDataScript.currencyAmount) {
+			//print ("have a panel here saying you dont have enough gold to buy this item");
+			openPopUp(noGoldPopUpPanel);
 
-				//item sold out code
-				itemSoldOut(contentBuyButton);
-				inventoryGeneratorScript.addInventory (inventoryChipGridPanel, item, playerItemIndex, itemType, buttonText);
+		} else {//else if you have enough gold then allow player to buy item, while deducting the gold
+			if(itemType == CHIP){
+				if (playerDataScript.chipsList [playerItemIndex] <= 0) {
+					playerDataScript.chipsList [playerItemIndex]++;
+
+					//item sold out code
+					itemSoldOut(contentBuyButton);
+					inventoryGeneratorScript.addInventory (inventoryChipGridPanel, item, playerItemIndex, itemType, buttonText);
+
+					playerDataScript.currencyAmount -= item.itemCost;//deduct item cost
+				}
+
+
+			}else if(itemType == SKILL){
+				if(playerDataScript.skillsList[playerItemIndex] <= 0){
+					playerDataScript.skillsList[playerItemIndex] ++;
+
+					//item sold out code
+					itemSoldOut(contentBuyButton);
+					inventoryGeneratorScript.addInventory (inventorySkillGridPanel, item, playerItemIndex, itemType, buttonText);
+
+					playerDataScript.currencyAmount -= item.itemCost;//deduct item cost
+				}
+				//playerDataScript.skillsList[playerItemIndex] ++;
+
+			}else if(itemType == SKIN){
+
+				if(playerDataScript.skinsList[playerItemIndex] <= 0){
+					playerDataScript.skinsList[playerItemIndex] ++;
+
+					//item sold out code
+					itemSoldOut(contentBuyButton);
+					inventoryGeneratorScript.addInventory (inventorySkinGridPanel, item, playerItemIndex, itemType, buttonText);
+
+					playerDataScript.currencyAmount -= item.itemCost;//deduct item cost
+				}
+				//playerDataScript.skinsList[playerItemIndex] ++;
+				//print("Skins have not been implemented yet :(");
 			}
-
-
-		}else if(itemType == SKILL){
-			if(playerDataScript.skillsList[playerItemIndex] <= 0){
-				playerDataScript.skillsList[playerItemIndex] ++;
-
-				//item sold out code
-				itemSoldOut(contentBuyButton);
-				inventoryGeneratorScript.addInventory (inventorySkillGridPanel, item, playerItemIndex, itemType, buttonText);
-			}
-			//playerDataScript.skillsList[playerItemIndex] ++;
-
-		}else if(itemType == SKIN){
-
-			if(playerDataScript.skinsList[playerItemIndex] <= 0){
-				playerDataScript.skinsList[playerItemIndex] ++;
-
-				//item sold out code
-				itemSoldOut(contentBuyButton);
-				inventoryGeneratorScript.addInventory (inventorySkinGridPanel, item, playerItemIndex, itemType, buttonText);
-			}
-			//playerDataScript.skinsList[playerItemIndex] ++;
-			//print("Skins have not been implemented yet :(");
 		}
+
+
 
 
 
@@ -259,6 +276,19 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 		SwitchToPanel.activatePanel (content,itemContentsArray);
 
+	}
+
+
+
+	//open a pop up for a certain amount of time then close it
+	void openPopUp(GameObject popUpPanel){
+		StartCoroutine(openPopUpTime (popUpPanel));
+	}
+
+	IEnumerator openPopUpTime(GameObject popUpPanel){
+		popUpPanel.SetActive (true);
+		yield return new WaitForSeconds (POPUP_WAIT_TIME);
+		popUpPanel.SetActive (false);
 	}
 
 

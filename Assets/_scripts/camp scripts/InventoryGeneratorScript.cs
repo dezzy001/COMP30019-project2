@@ -28,6 +28,9 @@ public class InventoryGeneratorScript : MonoBehaviour {
 	public GameObject skillsInventoryGridPanel;
 	public GameObject skinsInventoryGridPanel;
 
+	//popup notice panel
+	public GameObject noCapacityPopUpPanel;
+	public float POPUP_WAIT_TIME = 1.2f;
 
 	//get the panel to add item contents to
 	public GameObject inventoryInfoPanel;
@@ -155,21 +158,30 @@ public class InventoryGeneratorScript : MonoBehaviour {
 		contentTextList[1].text = item.itemInformation;
 		contentTextList[2].text = "Capacity: " + item.itemCapacity;
 
+
+		// button which opens item content here =====
+		//add a listener which opens the item information when created
+		Button newButtonComponent = newButton.GetComponent<Button> ();
+		newButtonComponent.onClick.AddListener(() => openItemContent(newContent));
+
+
 		//Buy button implementation here =====
-
-
-
 		Button contentBuyButton = newContent.GetComponentInChildren<Button> ();
 
-		contentBuyButton.onClick.AddListener (() => equipItem(playerItemIndex,itemType, contentBuyButton, item)); // add a listener which buys the specified item and applies it to the player
+		contentBuyButton.onClick.AddListener (() => equipItem(playerItemIndex,itemType, contentBuyButton, item, newButtonComponent, buttonText)); // add a listener which buys the specified item and applies it to the player
 
-		//show the equip button text as equip or unequip before the scene loads
+		//show the equip button text as equip or unequip before the scene loads. also calculates chip capacity (basically loads the state of the inventory beforehand)
 		if(itemType == CHIP){
+
 			if(playerDataScript.chipsList[playerItemIndex] > 0){
 				
 				if (playerDataScript.hasEquipchips [playerItemIndex] == true) {
 					contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
-					//currentPlayerCapacity += ;
+					currentPlayerCapacity += item.itemCapacity;
+
+					newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f);
+					newButtonComponent.GetComponentInChildren<Text> ().text = buttonText + " (Equipped)";
+
 				} else {
 					contentBuyButton.GetComponentInChildren<Text> ().text = "Equip";
 				}
@@ -181,6 +193,10 @@ public class InventoryGeneratorScript : MonoBehaviour {
 			if(playerDataScript.skillsList[playerItemIndex] > 0){
 				if(playerDataScript.hasEquipskills[playerItemIndex] == true){
 					contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
+					currentPlayerCapacity += item.itemCapacity;
+
+					newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f);
+					newButtonComponent.GetComponentInChildren<Text> ().text = buttonText + " (Equipped)";
 				} else {
 					contentBuyButton.GetComponentInChildren<Text> ().text = "Equip";
 				}
@@ -189,8 +205,13 @@ public class InventoryGeneratorScript : MonoBehaviour {
 		}else if(itemType == SKIN){
 
 			if(playerDataScript.skinsList[playerItemIndex] > 0){
-				if(playerDataScript.hasEquipskills[playerItemIndex] == true){
+				if(playerDataScript.hasEquipSkins[playerItemIndex] == true){
+					
 					contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
+					currentPlayerCapacity += item.itemCapacity;
+
+					newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f);
+					newButtonComponent.GetComponentInChildren<Text> ().text = buttonText + " (Equipped)";
 				} else {
 					contentBuyButton.GetComponentInChildren<Text> ().text = "Equip";
 				}
@@ -199,33 +220,43 @@ public class InventoryGeneratorScript : MonoBehaviour {
 
 
 
-		//add a listener which opens the item information when created
-		newButton.GetComponent<Button> ().onClick.AddListener(() => openItemContent(newContent));
+
 
 	}
 
 
-	//equips the item when you press equip and unequips if u press unequip. button text also changes
-	public void equipItem(int playerItemIndex, string itemType, Button contentBuyButton, Item item){
+	//equips the item when you press equip and unequips if u press unequip. button text also changes. also calculates chip capacity 
+	public void equipItem(int playerItemIndex, string itemType, Button contentBuyButton, Item item, Button newButtonComponent, string buttonText){
 		if(itemType == CHIP){
 			if(playerDataScript.chipsList[playerItemIndex] > 0){
 
-				if (playerDataScript.hasEquipchips [playerItemIndex] == true) {//if equipped
+				if (playerDataScript.hasEquipchips [playerItemIndex] == true) {//want to UNequip
 					
+					currentPlayerCapacity -= item.itemCapacity;//decrease item capacity
+
 					playerDataScript.hasEquipchips [playerItemIndex] = false;
 					contentBuyButton.GetComponentInChildren<Text> ().text = "Equip";
 
+					newButtonComponent.image.color = Color.white;
+					newButtonComponent.GetComponentInChildren<Text> ().text = buttonText;
 
 
-				} else { // if unequipped
+
+				} else { // want to equip
 
 					//cannot equip if adding on the item capcity to current capcity exceeds player capacity
 					if(item.itemCapacity + currentPlayerCapacity >  playerDataScript.itemCapacity){
+						//print ("capacity exceeds...");
+						//show a message to the user saying that cannot equip since capcity exceeds player capacity
+						openPopUp(noCapacityPopUpPanel);
 
 					}else{
-						
-					playerDataScript.hasEquipchips [playerItemIndex] = true;
-					contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
+						currentPlayerCapacity += item.itemCapacity;
+						playerDataScript.hasEquipchips [playerItemIndex] = true;
+						contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
+
+						newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f);
+						newButtonComponent.GetComponentInChildren<Text> ().text = buttonText + " (Equipped)";
 
 					}
 				}
@@ -234,25 +265,62 @@ public class InventoryGeneratorScript : MonoBehaviour {
 
 
 		}else if(itemType == SKILL){
+			
 			if(playerDataScript.skillsList[playerItemIndex] > 0){
 				if(playerDataScript.hasEquipskills[playerItemIndex] == true){
+					
+					currentPlayerCapacity -= item.itemCapacity;//decrease item capacity
+
 					playerDataScript.hasEquipskills [playerItemIndex] = false;
 					contentBuyButton.GetComponentInChildren<Text> ().text = "Equip";
+
+					newButtonComponent.image.color = Color.white;
+					newButtonComponent.GetComponentInChildren<Text> ().text = buttonText;
 				} else {
-					playerDataScript.hasEquipskills [playerItemIndex] = true;
-					contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
+					//cannot equip if adding on the item capcity to current capcity exceeds player capacity
+					if (item.itemCapacity + currentPlayerCapacity > playerDataScript.itemCapacity) {
+						//print ("capacity exceeds...");
+						//show a message to the user saying that cannot equip since capcity exceeds player capacity
+						openPopUp(noCapacityPopUpPanel);
+
+					} else {
+						currentPlayerCapacity += item.itemCapacity;
+						playerDataScript.hasEquipskills [playerItemIndex] = true;
+						contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
+
+						newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f);
+						newButtonComponent.GetComponentInChildren<Text> ().text = buttonText + " (Equipped)";
+					}
 				}
 
 			}
 		}else if(itemType == SKIN){
 
 			if(playerDataScript.skinsList[playerItemIndex] > 0){
-				if(playerDataScript.hasEquipskills[playerItemIndex] == true){
+				
+				if(playerDataScript.hasEquipSkins[playerItemIndex] == true){
+					
+					currentPlayerCapacity -= item.itemCapacity;//decrease item capacity
+
 					playerDataScript.hasEquipSkins [playerItemIndex] = false;
 					contentBuyButton.GetComponentInChildren<Text> ().text = "Equip";
+
+					newButtonComponent.image.color = Color.white;
+					newButtonComponent.GetComponentInChildren<Text> ().text = buttonText;
 				} else {
-					playerDataScript.hasEquipSkins [playerItemIndex] = true;
-					contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
+					//cannot equip if adding on the item capcity to current capcity exceeds player capacity
+					if (item.itemCapacity + currentPlayerCapacity > playerDataScript.itemCapacity) {
+						//print ("capacity exceeds...");
+						//show a message to the user saying that cannot equip since capcity exceeds player capacity
+						openPopUp(noCapacityPopUpPanel);
+					} else {
+						currentPlayerCapacity += item.itemCapacity;
+						playerDataScript.hasEquipSkins [playerItemIndex] = true;
+						contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
+
+						newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f);
+						newButtonComponent.GetComponentInChildren<Text> ().text = buttonText + " (Equipped)";
+					}
 				}
 			}
 		}
@@ -285,11 +353,21 @@ public class InventoryGeneratorScript : MonoBehaviour {
 	}
 
 
+	//open a pop up for a certain amount of time then close it
+	void openPopUp(GameObject popUpPanel){
+		StartCoroutine(openPopUpTime (popUpPanel));
+	}
+
+	IEnumerator openPopUpTime(GameObject popUpPanel){
+		popUpPanel.SetActive (true);
+		yield return new WaitForSeconds (POPUP_WAIT_TIME);
+		popUpPanel.SetActive (false);
+	}
 
 		
 	void Update(){
 
-		capacityText.text = "##/" + playerDataScript.itemCapacity.ToString() ;
+		capacityText.text = currentPlayerCapacity + "/" + playerDataScript.itemCapacity.ToString() ;
 
 	
 	}
