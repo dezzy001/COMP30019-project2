@@ -114,7 +114,7 @@ public class SaveLoadManager : MonoBehaviour {
 
 	public  void SavePlayer(PlayerDataScript player) {
 		BinaryFormatter bf = new BinaryFormatter ();
-		FileStream stream = new FileStream (Application.dataPath + "/zSaves/player.sav", FileMode.Create);
+		FileStream stream = new FileStream (Application.dataPath + "/player.sav", FileMode.Create); //"/zSaves/player.sav"
 
 		// pass in the data of the player so that the class below can handle and store the player attributes
 		// into the stats array
@@ -126,9 +126,9 @@ public class SaveLoadManager : MonoBehaviour {
 
 	public  PlayerData LoadPlayer() { //instead of int[], try return PlayerData type
 		// make sure the file exists
-		if (File.Exists (Application.dataPath + "/zSaves/player.sav")) {
+		if (File.Exists (Application.dataPath + "/player.sav")) {
 			BinaryFormatter bf = new BinaryFormatter ();
-			FileStream stream = new FileStream (Application.dataPath + "/zSaves/player.sav", FileMode.Open);
+			FileStream stream = new FileStream (Application.dataPath + "/player.sav", FileMode.Open);//"/zSaves/player.sav"
 
 			PlayerData data = bf.Deserialize (stream) as PlayerData; // cast it as PlayerData
 
