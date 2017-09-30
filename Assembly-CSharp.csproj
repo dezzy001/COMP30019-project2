@@ -100,7 +100,7 @@
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialScript.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\Inventory.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\Item.cs" />
-     <Compile Include="Assets\_scripts\saves and items scripts\ItemsEffect.cs" />
+     <Compile Include="Assets\_scripts\saves and items scripts\ItemData.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\PlayerData.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\PlayerDataScript.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\PlayerInfoUI.cs" />

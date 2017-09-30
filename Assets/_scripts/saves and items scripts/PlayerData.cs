@@ -11,8 +11,14 @@ public class PlayerData {
 	public int[] skills;
 	*/
 
+	//how many items the player owns
 	public int[] chips ;
 	public int[] skills ;
+
+	//how many of the items the player owns has he equip
+	//public bool[] hasEquipchips ;
+	//public bool[] hasEquipskills ;
+
 
 	//total limit on the amount of items it can equip
 	public int itemCapacity;

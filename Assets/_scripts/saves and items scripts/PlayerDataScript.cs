@@ -17,12 +17,11 @@ public class PlayerDataScript : MonoBehaviour {
 	//Total number of chips/skills/skins
 	public int CHIP_NUM = 2;
 	public int SKILL_NUM = 2;
-
-	//get the items script to apply item effects if player has the item
-	public ItemsEffect itemsEffect;
+	public int SKIN_NUM = 0;
 
 	public int[] chipsList;
 	public int[] skillsList;
+	public int[] skinsList;
 
 
 	/*variables below are used for saving and loading (have persistence)*/
@@ -36,17 +35,43 @@ public class PlayerDataScript : MonoBehaviour {
 
 	//check what items the player currently has and the how many quantity
 
+	//make sure there is only one instance of this class
+	public static PlayerDataScript instance;
+
+
+	//get all the item information from item generator script
+	public ItemData itemData; // use this to know if item is equipped or not
+
+	public Item chip1;
+	public Item chip2;
+	public Item skill1;
+	public Item skill2;
+
+
 
 	// Keep player data persistent
 	void Awake () {
 
+
+
 		if(SceneManager.GetActiveScene().name == "Start"){
-			DontDestroyOnLoad (this.gameObject);
+
+			if(instance == null){
+				DontDestroyOnLoad (this.gameObject);
+			}else if (instance != null){
+				Destroy (this.gameObject);
+			}
+
+
 		}
+
+
+		itemData = GameObject.Find ("ItemData").GetComponent<ItemData> ();
 
 
 		chipsList = new int[CHIP_NUM];
 		skillsList = new int[SKILL_NUM];
+		skinsList = new int[SKIN_NUM];
 
 		for(int i = 0; i < CHIP_NUM ;i++){
 			chipsList[i] = 0 ;
@@ -56,12 +81,24 @@ public class PlayerDataScript : MonoBehaviour {
 			skillsList[i] = 0  ;
 		}
 
+		for(int i = 0; i < SKIN_NUM ;i++){
+			skillsList[i] = 0  ;
+		}
+
 
 	}
 
 	// Use this for initialization
 	void Start () {
 
+		//get all the item data from item generator script
+		chip1 = itemData.chip1;
+		chip2 = itemData.chip2;
+
+		skill1 = itemData.skill1;
+		skill2 = itemData.skill2;
+
+		//print (chip1.itemName + ", "+chip1.itemCost+ ", "+ chip1.hasEquipItem);
 
 		applyItems ();
 		applySkills ();
@@ -79,21 +116,32 @@ public class PlayerDataScript : MonoBehaviour {
 	//apply the Chips to the player
 	public void applyItems(){
 
-		if(chipsList[0] > 0){
+		//chip1
+		itemData.chip1Effect(chip1.hasEquipItem);
+		//chip2
+		itemData.chip2Effect (chip2.hasEquipItem);
 
-			for(int i = 0; i<chipsList[0] ; i++){
-				itemsEffect.chip1 ();
-			}
 
 
+		/*
+		//chip1
+		if (chipsList [0] > 0 && chip1.hasEquipItem) {
+			
+			itemData.chip1Effect (true);
+
+		} else {
+			
+			itemData.chip1Effect (false);
 		}
 
-		if(chipsList[1] > 0){
-			for(int i = 0; i<chipsList[1] ; i++){
-				itemsEffect.chip2 ();
-			}
+		//chip2
+		if (chipsList [1] > 0 && chip2.hasEquipItem) {
+			itemData.chip2Effect (true);
 
+		} else {
+			itemData.chip1Effect (false);
 		}
+		*/
 
 
 		
@@ -101,14 +149,36 @@ public class PlayerDataScript : MonoBehaviour {
 	}
 
 	public void applySkills(){
-		
-		if(skillsList[0] > 0){
-			itemsEffect.skill1 ();
+
+		//skill1
+		itemData.skill1Effect(skill1.hasEquipItem);
+
+		//skill2
+		itemData.skill2Effect(skill2.hasEquipItem);
+
+
+
+
+		/*
+		//skill1
+		if(skillsList[0] > 0 && skill1.hasEquipItem){
+			
+			itemData.skill1Effect (true);
+		}else {
+			
+			itemData.skill1Effect (false);
 		}
 
-		if(skillsList[1] > 0){
-			itemsEffect.skill2 ();
+		//skill2
+		if(skillsList[1] > 0 && skill2.hasEquipItem){
+			
+			itemData.skill2Effect (true);
+
+		}else {
+			
+			itemData.skill2Effect (false);
 		}
+		*/
 
 	}
 

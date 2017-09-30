@@ -21,6 +21,10 @@ public class SaveLoadManager : MonoBehaviour {
 		//initialise the player game object
 		playerDataScript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript>();
 
+		if (playerDataScript == null) {
+			print ("ERROR- cannot find playerDataScript in saveloadmanager");
+		} 
+
 	}
 
 
@@ -96,6 +100,7 @@ public class SaveLoadManager : MonoBehaviour {
 			
 
 	}
+
 
 
 	public  void SavePlayer(PlayerDataScript player) {

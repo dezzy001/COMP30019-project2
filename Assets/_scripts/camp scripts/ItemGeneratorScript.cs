@@ -39,13 +39,23 @@ public class ItemGeneratorScript : MonoBehaviour {
 	public Button shopButton;
 
 
+	//get item info from ItemData
+	public ItemData itemData;
+
+	/*Items Here*/
+	public Item chip1;
+	public Item chip2;
+	public Item skill1;
+	public Item skill2;
 
 	// Use this for initialization
 	void Start () {
 		itemContentsArray = new ArrayList ();
 		playerItemArray = new List<int> ();
 
+		//find the persisted data
 		playerDataScript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript> ();
+		itemData = GameObject.Find ("ItemData").GetComponent<ItemData> ();
 
 
 
@@ -54,20 +64,17 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 		//Initialise all items here and add the item to the shop:
 		/*chips*/
-		Item chip1 = new Item("Chip - Invincibility","+1 invincibility",100,2);
+		chip1 = itemData.chip1;
 		createNewItem(chipShopGridPanel, chip1, 0, CHIP,"chip 1");
-
-
-		Item chip2 = new Item("Chip - +1 Player","+1 Player",1000,10);
+		chip2 = itemData.chip2;
 		createNewItem(chipShopGridPanel,chip2, 1, CHIP ,"chip 2");
 
 		/*skills*/
-		Item skill1 = new Item("Skill 1 - Laser","Shoots a laser beam, lots of damage",100000,0);
+		skill1 = itemData.skill1;
 		createNewItem(skillsShopGridPanel, skill1, 0, SKILL,"skill 1");
-
-
-		Item skill2 = new Item("Skill 2 - Saber","Throws a light saber from a galaxy far far away...",100000,0);
+		skill2 = itemData.skill2;
 		createNewItem(skillsShopGridPanel, skill2, 1, SKILL ,"skill 2");
+
 
 		/*skins*/
 
@@ -84,7 +91,6 @@ public class ItemGeneratorScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 
 	}
 
@@ -125,10 +131,38 @@ public class ItemGeneratorScript : MonoBehaviour {
 		//Buy button implementation here =====
 
 
+
 		Button contentBuyButton = newContent.GetComponentInChildren<Button> ();
-		contentBuyButton.onClick.AddListener (() => buyItem(playerItemIndex,itemType)); // add a listener which buys the specified item and applies it to the player
+
+		contentBuyButton.onClick.AddListener (() => buyItem(playerItemIndex,itemType, contentBuyButton)); // add a listener which buys the specified item and applies it to the player
+
+		//if the player already has the item, then item is out of stock
+		if(itemType == CHIP){
+			if(playerDataScript.chipsList[playerItemIndex] > 0){
+				contentBuyButton.interactable = false;
+				contentBuyButton.GetComponentInChildren<Text> ().text = "(owned)";
+				contentBuyButton.image.color = new Color(0.6f,0.6f,0.6f,0.6f);
+			}
 
 
+		}else if(itemType == SKILL){
+			if(playerDataScript.skillsList[playerItemIndex] > 0){
+				//item sold out code
+				itemSoldOut(contentBuyButton);
+			}
+		}else if(itemType == SKIN){
+
+			if(playerDataScript.skinsList[playerItemIndex] > 0){
+				//item sold out code
+				itemSoldOut(contentBuyButton);
+			}
+		}
+
+
+		if(playerDataScript.chipsList[playerItemIndex] > 0){
+			//item sold out code
+			itemSoldOut(contentBuyButton);
+		}
 
 		//add a listener which opens the item information when created
 		newButton.GetComponent<Button> ().onClick.AddListener(() => openItemContent(newContent));
@@ -136,17 +170,36 @@ public class ItemGeneratorScript : MonoBehaviour {
 	}
 
 
-	public void buyItem(int playerItemIndex, string itemType){
+	public void buyItem(int playerItemIndex, string itemType, Button contentBuyButton){
 
 		if(itemType == CHIP){
-			playerDataScript.chipsList[playerItemIndex] ++;
+			if (playerDataScript.chipsList [playerItemIndex] <= 0) {
+				playerDataScript.chipsList [playerItemIndex]++;
+
+				//item sold out code
+				itemSoldOut(contentBuyButton);
+			}
+
 
 		}else if(itemType == SKILL){
-			playerDataScript.skillsList[playerItemIndex] ++;
+			if(playerDataScript.skillsList[playerItemIndex] <= 0){
+				playerDataScript.skillsList[playerItemIndex] ++;
+
+				//item sold out code
+				itemSoldOut(contentBuyButton);
+			}
+			//playerDataScript.skillsList[playerItemIndex] ++;
 
 		}else if(itemType == SKIN){
+
+			if(playerDataScript.skinsList[playerItemIndex] <= 0){
+				playerDataScript.skinsList[playerItemIndex] ++;
+
+				//item sold out code
+				itemSoldOut(contentBuyButton);
+			}
 			//playerDataScript.skinsList[playerItemIndex] ++;
-			print("Skins have not been implemented yet :(");
+			//print("Skins have not been implemented yet :(");
 		}
 
 
@@ -159,6 +212,13 @@ public class ItemGeneratorScript : MonoBehaviour {
 		//print ("Item bought: " + playerDataScript.chip1);
 
 
+	}
+
+	//what happens to the button when an item has sold out
+	public void itemSoldOut(Button contentBuyButton){
+		contentBuyButton.interactable = false;
+		contentBuyButton.GetComponentInChildren<Text> ().text = "(owned)";
+		contentBuyButton.image.color = new Color(0.6f,0.6f,0.6f,0.6f);
 	}
 
 
