@@ -3,7 +3,6 @@
 ## Top Todo Items:
 * Add hacking complete blur!
 * When solution comes out for tutorial, upgrade Health Manager Script!
-* During tutorial's "continue" stage, there is a potential bug which allows you to restart the game and go through to the camp with the continue button at the main start menu.
 
 ## Data types to save:
 ### Item
