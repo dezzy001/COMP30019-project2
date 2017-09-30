@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114016573972839954}
   - component: {fileID: 65799954371255624}
   - component: {fileID: 114707008902558822}
+  - component: {fileID: 114084838954321410}
   m_Layer: 0
   m_Name: enemy1
   m_TagString: Enemy
@@ -341,6 +342,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createOnDestroy: {fileID: 0}
   startingHealth: 100
+  zeroHealthEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114084838954321410}
+        m_MethodName: enemyDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114072652500540964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -357,6 +374,17 @@ MonoBehaviour:
   PROJECTILE_COOLDOWN: 1.5
   DIST_FROM_PLAYER: 6.5
   velocity: {x: 5, y: 0, z: 0}
+--- !u!114 &114084838954321410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1447701287971692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a9e183667ba4f468a6a3c3fb33088b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114707008902558822
 MonoBehaviour:
   m_ObjectHideFlags: 1

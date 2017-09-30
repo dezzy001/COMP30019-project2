@@ -5,6 +5,9 @@ using UnityEngine;
 public class PauseScript : MonoBehaviour {
 
 	public GameObject pausePanel;
+	public GameObject playerDeadPanel;
+	public GameObject hackingCompletePanel;
+
 	private ArrayList allHackingGamePanels = new ArrayList();
 
 	//public SwitchToPanel switchToPanelScript;
@@ -21,6 +24,11 @@ public class PauseScript : MonoBehaviour {
 	void Start(){
 		//add all the panels in the scene here
 		allHackingGamePanels.Add (pausePanel);
+		//allHackingGamePanels.Add (playerDeadPanel);
+		//allHackingGamePanels.Add (hackingCompletePanel);
+
+		hackingCompletePanel.SetActive (false);
+		playerDeadPanel.SetActive (false);
 		pausePanel.SetActive (false);//dont want pause panel to show
 
 		cameraScripts = GameObject.Find ("Main Camera").GetComponents<MonoBehaviour>();

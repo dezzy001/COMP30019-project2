@@ -35,6 +35,12 @@ public class SceneManagement : MonoBehaviour {
 
 	}
 
+	public void retryScene(){
+		string currSceneName = SceneManager.GetActiveScene ().name;
+		playerDeathEvent.playerDead = false; // set player to alive again
+		StartCoroutine (LoadAsynchronously(currSceneName));
+	}
+
 
 	IEnumerator LoadAsynchronously(string sceneName){
 

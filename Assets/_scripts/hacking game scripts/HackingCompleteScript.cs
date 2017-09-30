@@ -23,7 +23,6 @@ public class HackingCompleteScript : MonoBehaviour {
 	void Awake () {
 
 		try{
-	
 			playerDatascript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript> ();
 			saveLoadManager = GameObject.Find ("Player Data Manager").GetComponentInChildren<SaveLoadManager> ();
 	
@@ -58,17 +57,29 @@ public class HackingCompleteScript : MonoBehaviour {
 
 
 		if(hackingCompletePanel.activeSelf == true){
-			if(playerDatascript.mapsCompleted < currentMapNum){
 
 
+			if (playerDatascript.mapsCompleted < currentMapNum) {
 
 
 				playerDatascript.mapsCompleted++;
+				//only get gold once for each level
+				playerDatascript.currencyAmount += 500;
+
 				//auto save for tutorial level only
-				saveLoadManager.saveAll();
+				string currSceneName = SceneManager.GetActiveScene ().name;
+				if (currSceneName == "_TutorialLevel") {
+					saveLoadManager.saveAll ();
+				}
 
 
-			}
+
+			} 
+
+
+
+
+
 
 		}
 

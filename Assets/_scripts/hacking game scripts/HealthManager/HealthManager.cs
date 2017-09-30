@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class HealthManager : MonoBehaviour {
 
     public GameObject createOnDestroy;
     public int startingHealth = 100; // default starting health
     private int currentHealth;
+
+
+	public UnityEvent zeroHealthEvent;
 
 	// Use this for initialization
 	void Start () {
@@ -23,11 +27,10 @@ public class HealthManager : MonoBehaviour {
     public void ApplyDamage(int damage)
     {
         currentHealth -= damage;
-        if (currentHealth <= 0)
-        {
-
-
-            Destroy(this.gameObject);
+        if (currentHealth <= 0){
+			
+            //Destroy(this.gameObject);
+			zeroHealthEvent.Invoke();
 
 			/* IMPLEMENT PARTICLE EFFECTS LATER
             GameObject obj = Instantiate(this.createOnDestroy);

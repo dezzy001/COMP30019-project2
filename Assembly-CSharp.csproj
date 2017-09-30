@@ -75,7 +75,9 @@
      <Compile Include="Assets\_scripts\hacking game scripts\EnemyHeightScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HackingCompletePanel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HackingCompleteScript.cs" />
-     <Compile Include="Assets\_scripts\hacking game scripts\HealthManager.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\HealthManager\HealthManager.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\HealthManager\enemyDeathEvent.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\HealthManager\playerDeathEvent.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\PauseScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Player Script\AdditionalPlayerController.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Player Script\CounterClockwiseSpin.cs" />
@@ -100,6 +102,7 @@
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialCubeScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialLevel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\TutorialScript.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\playerDeadScript.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\Inventory.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\Item.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\ItemData.cs" />

@@ -64,9 +64,13 @@ public class PlayerController : MonoBehaviour {
 	private bool gotHit1 = false;
 	private bool gotHit2 = false;
 
-
+	//hacking panel, know when game is over so can turn player invincible
+	//public GameObject hackingPanel;
+	//public GameObject playerDeadPanel;
 
 	void Start(){
+
+
 
 		//get the xyz values of this object
 		Vector3 playerSize = this.GetComponent<Collider>().bounds.size;
@@ -259,13 +263,22 @@ public class PlayerController : MonoBehaviour {
 			}
 
 
-			//invincibility, if the cool down is greater than zero, then give player invincibility
-			if (gotHit1 && invincibilityCooldownCount > 0) {
-				this.gameObject.tag = "Untagged";
-			} else {
+			//player is untagged if he finnishes the map or dies
+			if (GameObject.Find("Hacking Complete Panel") == null && GameObject.Find("Player Dead Panel") == null) {
 
-				this.gameObject.tag = "Player";
+				//invincibility, if the cool down is greater than zero, then give player invincibility
+				if (gotHit1 && invincibilityCooldownCount > 0) {
+					this.gameObject.tag = "Untagged";
+				} else {
+
+					this.gameObject.tag = "Player";
+				}
+
+
+			} else {
+				this.gameObject.tag = "Untagged";
 			}
+
 
 
 

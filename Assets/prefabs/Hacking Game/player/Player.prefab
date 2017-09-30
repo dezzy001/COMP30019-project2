@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 54571110356446212}
   - component: {fileID: 143886014091826476}
   - component: {fileID: 114551331364327242}
+  - component: {fileID: 114697349270491558}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1632,7 +1633,7 @@ Transform:
   - {fileID: 4981982057285416}
   - {fileID: 4025181944642366}
   m_Father: {fileID: 4754936349552198}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4242515592660744
 Transform:
@@ -2066,7 +2067,7 @@ Transform:
   - {fileID: 4966431160179212}
   - {fileID: 4769125735293288}
   m_Father: {fileID: 4754936349552198}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4589614856003172
 Transform:
@@ -2304,8 +2305,8 @@ Transform:
   - {fileID: 4290567482229184}
   - {fileID: 4162490775487278}
   - {fileID: 4682188915007682}
-  - {fileID: 4586319813390046}
   - {fileID: 4241160626195650}
+  - {fileID: 4586319813390046}
   m_Father: {fileID: 4934501685719644}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4010,6 +4011,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createOnDestroy: {fileID: 0}
   startingHealth: 100
+  zeroHealthEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114697349270491558}
+        m_MethodName: openPlayerDeadPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114223074835951916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4101,6 +4118,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createOnDestroy: {fileID: 0}
   startingHealth: 100
+  zeroHealthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114519681251044640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4163,6 +4185,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnParticleSystem: {fileID: 0}
   spawnAnimationFileNameWithoutSpaces: SpawnAnimation
+--- !u!114 &114697349270491558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208440756384486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eebda64919e2145439ff2193d8d6f3cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &114708750429324302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4176,6 +4210,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createOnDestroy: {fileID: 0}
   startingHealth: 100
+  zeroHealthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114746032932289408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4189,6 +4228,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createOnDestroy: {fileID: 0}
   startingHealth: 100
+  zeroHealthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114780242907272710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4202,6 +4246,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createOnDestroy: {fileID: 0}
   startingHealth: 100
+  zeroHealthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114783733995596810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4238,6 +4287,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createOnDestroy: {fileID: 0}
   startingHealth: 100
+  zeroHealthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114854578240183476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4287,6 +4341,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   createOnDestroy: {fileID: 0}
   startingHealth: 100
+  zeroHealthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114981525655374146
 MonoBehaviour:
   m_ObjectHideFlags: 1
