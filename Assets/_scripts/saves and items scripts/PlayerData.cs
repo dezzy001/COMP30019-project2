@@ -14,10 +14,12 @@ public class PlayerData {
 	//how many items the player owns
 	public int[] chips ;
 	public int[] skills ;
+	public int[] skins;
 
 	//how many of the items the player owns has he equip
-	//public bool[] hasEquipchips ;
-	//public bool[] hasEquipskills ;
+	public bool[] hasEquipchips ;
+	public bool[] hasEquipskills ;
+	public bool[] hasEquipSkins;
 
 
 	//total limit on the amount of items it can equip
@@ -39,6 +41,7 @@ public class PlayerData {
 
 		chips = new int[playerDataScript.CHIP_NUM];
 		skills = new int[playerDataScript.SKILL_NUM];
+		skins = new int[playerDataScript.SKIN_NUM];
 
 		for(int i = 0; i < playerDataScript.CHIP_NUM ; i++){
 			chips[i] = playerDataScript.chipsList[i];
@@ -47,6 +50,11 @@ public class PlayerData {
 
 		for(int i = 0; i < playerDataScript.SKILL_NUM ; i++){
 			skills [i] = playerDataScript.skillsList [i];
+
+		}
+
+		for(int i = 0; i < playerDataScript.SKIN_NUM ; i++){
+			skins [i] = playerDataScript.skinsList [i];
 
 		}
 

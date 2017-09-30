@@ -14,9 +14,11 @@ public class ItemData : MonoBehaviour {
 	/*Items Here*/
 	public Item chip1;
 	public Item chip2;
+
 	public Item skill1;
 	public Item skill2;
 
+	public Item skin1;
 
 	void Start() {
 
@@ -28,15 +30,15 @@ public class ItemData : MonoBehaviour {
 
 		//Initialise all items here and add the item to the shop:
 		/*chips*/
-		chip1 = new Item("Chip - Invincibility","+1 invincibility",100,2);
-		chip2 = new Item("Chip - +1 Player","+1 Player",1000,10);
+		chip1 = new Item("Chip - Invincibility","+1 invincibility",100,2 );
+		chip2 = new Item("Chip - +1 Player","+1 Player",1000,10 );
 
 		/*skills*/
-		skill1 = new Item("Skill 1 - Laser","Shoots a laser beam, lots of damage",100000,0);
+		skill1 = new Item("Skill 1 - Laser","Shoots a laser beam, lots of damage",100000,0 );
 		skill2 = new Item("Skill 2 - Saber","Throws a light saber from a galaxy far far away...",100000,0);
 
 		/*skins*/
-
+		skin1 = new Item("Skin 1 - Golden Skin","YOU ARE RICH!",1000000,0);
 
 	}
 

@@ -79,6 +79,10 @@ public class SaveLoadManager : MonoBehaviour {
 				playerDataScript.skillsList[i] = loadedData.skills[i];
 			}
 
+			for(int i = 0; i < playerDataScript.SKIN_NUM ;i++){
+				playerDataScript.skinsList[i] = loadedData.skills[i];
+			}
+
 			/*
 			playerDataScript.chip1 = loadedData.chips [0];
 			playerDataScript.chip2 = loadedData.chips [1];

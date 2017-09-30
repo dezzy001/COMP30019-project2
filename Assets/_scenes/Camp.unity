@@ -338,7 +338,7 @@ MonoBehaviour:
     type: 2}
   chipShopGridPanel: {fileID: 1532315395}
   skillsShopGridPanel: {fileID: 1928533024}
-  skinsShopGridPanel: {fileID: 0}
+  skinsShopGridPanel: {fileID: 1938158956}
   itemPurchasePanel: {fileID: 1728264401}
   shopButton: {fileID: 621332039}
   itemData: {fileID: 0}
@@ -3981,6 +3981,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1714252265648560, guid: 3a16438c59c5e7d44a41ba21a39a263a, type: 2}
+      propertyPath: m_Name
+      value: Skills Shop Grid
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a16438c59c5e7d44a41ba21a39a263a, type: 2}
   m_IsPrefabParent: 0
@@ -4668,6 +4672,10 @@ Prefab:
     - target: {fileID: 1961349504682300, guid: 3a16438c59c5e7d44a41ba21a39a263a, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714252265648560, guid: 3a16438c59c5e7d44a41ba21a39a263a, type: 2}
+      propertyPath: m_Name
+      value: Skins Shop Grid
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a16438c59c5e7d44a41ba21a39a263a, type: 2}
@@ -8493,6 +8501,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1753640271964050, guid: 5125b2c2718aacc48805307f653ad9bc,
     type: 2}
   m_PrefabInternal: {fileID: 1460688890}
+--- !u!1 &1938158956 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1714252265648560, guid: 3a16438c59c5e7d44a41ba21a39a263a,
+    type: 2}
+  m_PrefabInternal: {fileID: 936577929}
 --- !u!1 &2015348341
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,8 +45,11 @@ public class ItemGeneratorScript : MonoBehaviour {
 	/*Items Here*/
 	public Item chip1;
 	public Item chip2;
+
 	public Item skill1;
 	public Item skill2;
+
+	public Item skin1;
 
 	// Use this for initialization
 	void Start () {
@@ -75,8 +78,9 @@ public class ItemGeneratorScript : MonoBehaviour {
 		skill2 = itemData.skill2;
 		createNewItem(skillsShopGridPanel, skill2, 1, SKILL ,"skill 2");
 
-
 		/*skins*/
+		skin1 = itemData.skin1;
+		createNewItem (skinsShopGridPanel, skin1, 0, SKIN, "skin 1");
 
 
 

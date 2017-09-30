@@ -17,12 +17,16 @@ public class PlayerDataScript : MonoBehaviour {
 	//Total number of chips/skills/skins
 	public int CHIP_NUM = 2;
 	public int SKILL_NUM = 2;
-	public int SKIN_NUM = 0;
+	public int SKIN_NUM = 1;
 
 	public int[] chipsList;
 	public int[] skillsList;
 	public int[] skinsList;
 
+	//how many of the items the player owns has he equip
+	public bool[] hasEquipchips ;
+	public bool[] hasEquipskills ;
+	public bool[] hasEquipSkins;
 
 	/*variables below are used for saving and loading (have persistence)*/
 
@@ -47,6 +51,7 @@ public class PlayerDataScript : MonoBehaviour {
 	public Item skill1;
 	public Item skill2;
 
+	public Item skin1;
 
 
 	// Keep player data persistent
@@ -73,16 +78,23 @@ public class PlayerDataScript : MonoBehaviour {
 		skillsList = new int[SKILL_NUM];
 		skinsList = new int[SKIN_NUM];
 
+		hasEquipchips = new bool[CHIP_NUM];
+		hasEquipskills = new bool[SKILL_NUM];
+		hasEquipSkins = new bool[SKIN_NUM];
+
 		for(int i = 0; i < CHIP_NUM ;i++){
 			chipsList[i] = 0 ;
+			hasEquipchips[i] = false ;
 		}
 
 		for(int i = 0; i < SKILL_NUM ;i++){
 			skillsList[i] = 0  ;
+			hasEquipskills[i] = false ;
 		}
 
 		for(int i = 0; i < SKIN_NUM ;i++){
-			skillsList[i] = 0  ;
+			skinsList[i] = 0  ;
+			hasEquipSkins[i] = false ;
 		}
 
 
@@ -97,6 +109,9 @@ public class PlayerDataScript : MonoBehaviour {
 
 		skill1 = itemData.skill1;
 		skill2 = itemData.skill2;
+
+		skin1 = itemData.skin1;
+		//print (skin1);
 
 		//print (chip1.itemName + ", "+chip1.itemCost+ ", "+ chip1.hasEquipItem);
 
@@ -116,10 +131,13 @@ public class PlayerDataScript : MonoBehaviour {
 	//apply the Chips to the player
 	public void applyItems(){
 
+
+
+
 		//chip1
-		itemData.chip1Effect(chip1.hasEquipItem);
+		itemData.chip1Effect(hasEquipchips[0]);
 		//chip2
-		itemData.chip2Effect (chip2.hasEquipItem);
+		itemData.chip2Effect (hasEquipchips[1]);
 
 
 
@@ -151,10 +169,10 @@ public class PlayerDataScript : MonoBehaviour {
 	public void applySkills(){
 
 		//skill1
-		itemData.skill1Effect(skill1.hasEquipItem);
+		itemData.skill1Effect(hasEquipskills[0]);
 
 		//skill2
-		itemData.skill2Effect(skill2.hasEquipItem);
+		itemData.skill2Effect(hasEquipskills[1]);
 
 
 
