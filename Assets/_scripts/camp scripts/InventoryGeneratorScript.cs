@@ -57,7 +57,8 @@ public class InventoryGeneratorScript : MonoBehaviour {
 	public Text capacityText;
 	private int currentPlayerCapacity;
 
-
+	//add sound to all the initialised buttons
+	public ClickSound clickSound;
 
 
 	void Start () {
@@ -227,6 +228,9 @@ public class InventoryGeneratorScript : MonoBehaviour {
 
 	//equips the item when you press equip and unequips if u press unequip. button text also changes. also calculates chip capacity 
 	public void equipItem(int playerItemIndex, string itemType, Button contentBuyButton, Item item, Button newButtonComponent, string buttonText){
+
+		clickSound.PlaySound ();
+
 		if(itemType == CHIP){
 			if(playerDataScript.chipsList[playerItemIndex] > 0){
 
@@ -333,6 +337,8 @@ public class InventoryGeneratorScript : MonoBehaviour {
 	/*Creates the item content gameobject, makes it a child of Item Information panel
 	 , and shows the item informations (information of the items stored using Item class)*/
 	void openItemContent(GameObject content){//int contentID
+
+		clickSound.PlaySound ();
 		SwitchToItemContent (content);
 	}
 

@@ -1,9 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\HackingCompleteScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\camp scripts\ItemGeneratorScript.cs">
     <Files>
-      <File FileName="Assets\_scripts\hacking game scripts\PauseScript.cs" Line="20" Column="50" />
-      <File FileName="Assets\_scripts\hacking game scripts\HackingCompleteScript.cs" Line="62" Column="1" />
+      <File FileName="Assets\_scripts\ClickSound.cs" Line="7" Column="24" />
+      <File FileName="Assets\_scripts\camp scripts\InventoryGeneratorScript.cs" Line="341" Column="27" />
+      <File FileName="Assets\_scripts\camp scripts\ItemGeneratorScript.cs" Line="247" Column="71" />
+      <File FileName="Assets\_scripts\camp scripts\MapGeneratorScript.cs" Line="28" Column="31" />
+      <File FileName="Assets\_scripts\hacking game scripts\HealthManager\playerDeathEvent.cs" Line="15" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

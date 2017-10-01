@@ -28,17 +28,20 @@ public class ItemData : MonoBehaviour {
 			print ("ERROR - could not find Player Data Manager");
 		}
 
+
+		//Item (name, info, cost, capacity);
+
 		//Initialise all items here and add the item to the shop:
 		/*chips*/
-		chip1 = new Item("Chip 1 - Invincibility","+0.5 sec invincibility when damaged",100,1 );
+		chip1 = new Item("Chip 1 - Invincibility","+0.5 sec invincibility when damaged",1000,1 );
 		chip2 = new Item("Chip 2 - Player +1","+1 Player",1000,5 );
 
 		/*skills*/
-		skill1 = new Item("Skill 1 - Laser","Shoots a laser beam, lots of damage",100000,4 );
-		skill2 = new Item("Skill 2 - Saber","Throws a light saber from a galaxy far far away...",100000,4);
+		skill1 = new Item("Skill 1 - Laser","Shoots a laser beam, lots of damage",1000,4 );
+		skill2 = new Item("Skill 2 - Saber","Throws a light saber from a galaxy far far away...",1000,4);
 
 		/*skins*/
-		skin1 = new Item("Skin 1 - Golden Skin","YOU ARE RICH!",1000000,0);
+		skin1 = new Item("Skin 1 - Golden Skin","YOU ARE RICH!",9999,0);
 
 	}
 
@@ -65,8 +68,12 @@ public class ItemData : MonoBehaviour {
 			
 			if(active == true){
 				//print ("Chip 1 active");
+				player.INVINCIBILITY_COOLDOWN += 0.5f;
+
 			}else{
 				//print ("Chip 1 NOT active");
+
+
 			}
 		}
 
@@ -78,8 +85,12 @@ public class ItemData : MonoBehaviour {
 		if (player != null) {
 			if(active == true){
 				//print ("Chip 2 active");
+
+
 			}else{
 				//print ("Chip 2 NOT active");
+
+
 			}
 
 		}

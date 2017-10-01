@@ -62,6 +62,10 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 	public Item skin1;
 
+
+	//add sound to all the initialised buttons
+	public ClickSound clickSound;
+
 	// Use this for initialization
 	void Start () {
 		itemContentsArray = new ArrayList ();
@@ -147,20 +151,24 @@ public class ItemGeneratorScript : MonoBehaviour {
 		contentTextList[2].text = "Cost: " + item.itemCost;
 		contentTextList[3].text = "Capacity: " + item.itemCapacity;
 
+
+
+		//add a listener which opens the item information when created
+		Button newButtonComponent =  newButton.GetComponent<Button> ();
+		newButtonComponent.onClick.AddListener(() => openItemContent(newContent));
+
 		//Buy button implementation here =====
-
-
 
 		Button contentBuyButton = newContent.GetComponentInChildren<Button> ();
 
-		contentBuyButton.onClick.AddListener (() => buyItem( panel,  item,  playerItemIndex ,  itemType,  buttonText, contentBuyButton)); // add a listener which buys the specified item and applies it to the player
+		contentBuyButton.onClick.AddListener (() => buyItem( panel,  item,  playerItemIndex ,  itemType,  buttonText, contentBuyButton, newButtonComponent)); // add a listener which buys the specified item and applies it to the player
 
 		//if the player already has the item, then item is out of stock
 		if(itemType == CHIP){
 			if(playerDataScript.chipsList[playerItemIndex] > 0){
-				contentBuyButton.interactable = false;
-				contentBuyButton.GetComponentInChildren<Text> ().text = "(owned)";
-				contentBuyButton.image.color = new Color(0.6f,0.6f,0.6f,0.6f);
+				itemSoldOut(contentBuyButton);
+				newButtonComponent.GetComponentInChildren<Text> ().text = buttonText+" (owned)";
+				newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f); 
 			}
 
 
@@ -168,23 +176,28 @@ public class ItemGeneratorScript : MonoBehaviour {
 			if(playerDataScript.skillsList[playerItemIndex] > 0){
 				//item sold out code
 				itemSoldOut(contentBuyButton);
+				newButtonComponent.GetComponentInChildren<Text> ().text = buttonText+" (owned)";
+				newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f); 
 			}
 		}else if(itemType == SKIN){
 
 			if(playerDataScript.skinsList[playerItemIndex] > 0){
 				//item sold out code
 				itemSoldOut(contentBuyButton);
+				newButtonComponent.GetComponentInChildren<Text> ().text = buttonText+" (owned)";
+				newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f); 
 			}
 		}
 
 
-		//add a listener which opens the item information when created
-		newButton.GetComponent<Button> ().onClick.AddListener(() => openItemContent(newContent));
+
 
 	}
 
 
-	public void buyItem(GameObject panel, Item item, int playerItemIndex , string itemType, string buttonText, Button contentBuyButton){
+	public void buyItem(GameObject panel, Item item, int playerItemIndex , string itemType, string buttonText, Button contentBuyButton, Button newButtonComponent){
+
+		clickSound.PlaySound ();
 
 		if (item.itemCost > playerDataScript.currencyAmount) {
 			//print ("have a panel here saying you dont have enough gold to buy this item");
@@ -199,6 +212,9 @@ public class ItemGeneratorScript : MonoBehaviour {
 					itemSoldOut(contentBuyButton);
 					inventoryGeneratorScript.addInventory (inventoryChipGridPanel, item, playerItemIndex, itemType, buttonText);
 
+					newButtonComponent.GetComponentInChildren<Text> ().text = buttonText+" (owned)";
+					newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f); 
+
 					playerDataScript.currencyAmount -= item.itemCost;//deduct item cost
 				}
 
@@ -210,6 +226,9 @@ public class ItemGeneratorScript : MonoBehaviour {
 					//item sold out code
 					itemSoldOut(contentBuyButton);
 					inventoryGeneratorScript.addInventory (inventorySkillGridPanel, item, playerItemIndex, itemType, buttonText);
+
+					newButtonComponent.GetComponentInChildren<Text> ().text = buttonText+" (owned)";
+					newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f); 
 
 					playerDataScript.currencyAmount -= item.itemCost;//deduct item cost
 				}
@@ -223,6 +242,9 @@ public class ItemGeneratorScript : MonoBehaviour {
 					//item sold out code
 					itemSoldOut(contentBuyButton);
 					inventoryGeneratorScript.addInventory (inventorySkinGridPanel, item, playerItemIndex, itemType, buttonText);
+
+					newButtonComponent.GetComponentInChildren<Text> ().text = buttonText+" (owned)";
+					newButtonComponent.image.color = new Color(0.6f,0.6f,0.6f,0.6f); 
 
 					playerDataScript.currencyAmount -= item.itemCost;//deduct item cost
 				}
@@ -256,7 +278,9 @@ public class ItemGeneratorScript : MonoBehaviour {
 	/*Creates the item content gameobject, makes it a child of Item Information panel
 	 * , and shows the item informations (information of the items stored using Item class)*/
 	void openItemContent(GameObject content){//int contentID
-	
+
+		clickSound.PlaySound ();
+
 		SwitchToItemContent (content);
 		//print (content.GetInstanceID()); // debugging purposes!!!!!!!!!!!!!!!!!!!!!!!!--------------------------------------------------------------------
 

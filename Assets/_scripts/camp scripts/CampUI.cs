@@ -62,6 +62,12 @@ public class CampUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.D) 
+			&& Input.GetKeyDown(KeyCode.F) && Input.GetKeyDown(KeyCode.Space)  ){
+
+			GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript>().currencyAmount += 99999;
+
+		}
 
 		
 	}

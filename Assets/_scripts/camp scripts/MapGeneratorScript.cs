@@ -24,6 +24,9 @@ public class MapGeneratorScript : MonoBehaviour {
 	public GameObject mapGridPanel;
 
 
+	//add sound to all the initialised buttons
+	public ClickSound clickSound;
+
 	// Use this for initialization
 	void Start () {
 
@@ -92,6 +95,7 @@ public class MapGeneratorScript : MonoBehaviour {
 	/*Creates the item content gameobject, makes it a child of Item Information panel
 	 * , and shows the item informations (information of the items stored using Item class)*/
 	void goToMap(string sceneString){//int contentID
+		clickSound.PlaySound ();
 		sceneManagement.changeScene(sceneString);
 
 	}
