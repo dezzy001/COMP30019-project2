@@ -63,10 +63,10 @@ public class CampUI : MonoBehaviour {
 	void Update () {
 
 		if(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.D) 
-			&& Input.GetKeyDown(KeyCode.F) && Input.GetKeyDown(KeyCode.Space)  ){
+			&& Input.GetKeyDown(KeyCode.F)   ){
 
 			GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript>().currencyAmount += 99999;
-
+			GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript>().mapsCompleted += 99999;
 		}
 
 		

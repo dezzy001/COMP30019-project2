@@ -89,9 +89,16 @@
      <Compile Include="Assets\_scripts\hacking game scripts\Player Script\PlayerGoldCount.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Player Script\ProjectileController.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\SpawnAnimation.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\Wall\GreyWall.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\Wall\WallGenGrey1.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\Wall\WallGenRandom1.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\Wall\WallGenWhite1.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\Wall\WallGeneratorScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\EnemySpawner.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\Level1.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\Level2.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\Level3.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\triggerSpawnEnemy.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\MoveArrowScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\MoveHereScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\Panel Scripts\TutorialSwitchPanelScript.cs" />

@@ -10,6 +10,9 @@ public class ProjectileController : MonoBehaviour {
     public string tagToDamage = "Enemy";
 	public string tagUntouchableEnemys = "EnemyUntouchable";
 
+	public string tagWallWhite =  "Wallwhite";
+	public string tagWallGrey = "Wallgrey";
+
 	public AudioSource audioSource;
 	public AudioClip[] audioClip;
 
@@ -67,6 +70,24 @@ public class ProjectileController : MonoBehaviour {
 
 		//cannot damage these enemys
 		if(col.gameObject.tag == tagUntouchableEnemys){
+
+			PlaySoundOneShot (bulletHitSound);
+
+		}
+
+		//cannot damage these enemys
+		if(col.gameObject.tag == tagWallWhite){
+
+			PlaySoundOneShot (bulletHitSound);
+
+		}
+
+		//cannot damage these enemys
+		if(col.gameObject.tag == tagWallGrey){
+
+			// Damage object with relevant tag
+			HealthManager healthManager = col.gameObject.GetComponent<HealthManager>();
+			healthManager.ApplyDamage(damageAmount);
 
 			PlaySoundOneShot (bulletHitSound);
 

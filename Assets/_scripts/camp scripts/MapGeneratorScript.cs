@@ -42,21 +42,27 @@ public class MapGeneratorScript : MonoBehaviour {
 
 		int mapsCompleted = playerDataScript.mapsCompleted;
 
-		/*show map 1*/
+		/*show map tutorial*/
 		if(mapsCompleted >= 0){
 			createNewMap("Tutorial", 0, "_TutorialLevel");
 		}
 
-		/*show map 2*/
+		/*show map 1*/
 		if(mapsCompleted >= 1){
 
 			createNewMap("Map 1",1 , "level1");
 		}
 
-		/*show map 3*/
+		/*show map 2*/
 		if(mapsCompleted >= 2){
 
 			createNewMap("Map 2",2 , "level2");
+		}
+
+		/*show map 3*/
+		if(mapsCompleted >= 3){
+
+			createNewMap("Map 3",3 , "level3");
 		}
 
 

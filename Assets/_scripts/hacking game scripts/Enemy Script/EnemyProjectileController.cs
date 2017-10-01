@@ -8,6 +8,8 @@ public class EnemyProjectileController : MonoBehaviour {
 	public int damageAmount = 34; // default player projectile damage
 
 	public string tagToDamage = "Player";
+	public string tagWallWhite =  "Wallwhite";
+	public string tagWallGrey = "Wallgrey";
 
 	//ground game object - need the boundaries of the map
 	public GameObject ground;
@@ -41,8 +43,7 @@ public class EnemyProjectileController : MonoBehaviour {
 	}
 
 	// Handle collisions
-	void OnTriggerEnter(Collider col)
-	{
+	void OnTriggerEnter(Collider col){
 
 		if (col.gameObject.tag == tagToDamage){
 
@@ -54,5 +55,13 @@ public class EnemyProjectileController : MonoBehaviour {
 
 
 		}
+
+		if(col.gameObject.tag == tagWallWhite || col.gameObject.tag == tagWallGrey ){
+			// Destroy self
+			Destroy(this.gameObject);
+		}
+
+
+
 	}
 }

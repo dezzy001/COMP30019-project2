@@ -16,6 +16,7 @@ public class HackingCompleteScript : MonoBehaviour {
 	private int TUTORIAL = 1;
 	private int MAP1 = 2;
 	private int MAP2 = 3;
+	private int MAP3 = 4;
 
 	public int currentMapNum;
 
@@ -47,6 +48,8 @@ public class HackingCompleteScript : MonoBehaviour {
 			currentMapNum = MAP1;
 		}else if (currSceneName == "level2"){
 			currentMapNum = MAP2;
+		}else if (currSceneName == "level3"){
+			currentMapNum = MAP3;
 		}
 
 
