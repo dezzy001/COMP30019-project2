@@ -59,20 +59,18 @@ public class ItemData : MonoBehaviour {
 
 
 	/*Chips effects*/
-
 	//chip0 - increase movement speed (increase ram)
 	public void chip1Effect(bool active){
-		
+
+
 		//print ("Chip 1 active");
 		if (player != null) {
 			
 			if(active == true){
-				//print ("Chip 1 active");
-				player.INVINCIBILITY_COOLDOWN += 0.5f;
+
+
 
 			}else{
-				//print ("Chip 1 NOT active");
-
 
 			}
 		}

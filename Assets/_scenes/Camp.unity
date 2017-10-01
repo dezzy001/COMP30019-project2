@@ -295,7 +295,7 @@ RectTransform:
   m_LocalScale: {x: 0.72875, y: 0.72875, z: 0.72875}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 64360679}
   - component: {fileID: 64360678}
   m_Layer: 5
-  m_Name: skins tab
+  m_Name: skins tab button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -648,8 +648,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -17.375}
-  m_SizeDelta: {x: 70, y: 25.25}
+  m_AnchoredPosition: {x: -55, y: -19}
+  m_SizeDelta: {x: 65, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &64360678
 MonoBehaviour:
@@ -685,8 +685,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.8161765, g: 0.8161765, b: 0.8161765, a: 1}
+    m_PressedColor: {r: 0.63235295, g: 0.63235295, b: 0.63235295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1223,7 +1223,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2579,7 +2579,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &342008249
 MonoBehaviour:
@@ -3215,8 +3215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 56, y: -17.400002}
-  m_SizeDelta: {x: 70, y: 25.3}
+  m_AnchoredPosition: {x: 55, y: -19}
+  m_SizeDelta: {x: 65, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419255584
 MonoBehaviour:
@@ -3238,8 +3238,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.8161765, g: 0.8161765, b: 0.8161765, a: 1}
+    m_PressedColor: {r: 0.63235295, g: 0.63235295, b: 0.63235295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4227,7 +4227,7 @@ GameObject:
   - component: {fileID: 649448405}
   - component: {fileID: 649448404}
   m_Layer: 5
-  m_Name: Close Panel Button (1)
+  m_Name: Close Panel Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4362,7 +4362,7 @@ GameObject:
   - component: {fileID: 655448557}
   - component: {fileID: 655448556}
   m_Layer: 5
-  m_Name: chips tab
+  m_Name: chips tab button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4385,8 +4385,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 56, y: -17.400002}
-  m_SizeDelta: {x: 70, y: 25.3}
+  m_AnchoredPosition: {x: 55, y: -19}
+  m_SizeDelta: {x: 65, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &655448556
 MonoBehaviour:
@@ -4422,8 +4422,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.8161765, g: 0.8161765, b: 0.8161765, a: 1}
+    m_PressedColor: {r: 0.63235295, g: 0.63235295, b: 0.63235295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5041,7 +5041,7 @@ RectTransform:
   m_LocalScale: {x: 0.72875, y: 0.72875, z: 0.72875}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5257,7 +5257,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &789423827
 GameObject:
@@ -5537,6 +5537,75 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 821669717}
+--- !u!1 &841741391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 841741394}
+  - component: {fileID: 841741393}
+  - component: {fileID: 841741392}
+  m_Layer: 5
+  m_Name: Tab Button Scripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &841741392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 841741391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c88e11d9808a0d4f86ebbf28a50061f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipTabButton: {fileID: 419255584}
+  skillTabButton: {fileID: 1763119403}
+  skinTabButton: {fileID: 1166263230}
+  chipTabPanel: {fileID: 2089441846}
+  skillTabPanel: {fileID: 892220491}
+  skinTabPanel: {fileID: 1526328193}
+--- !u!114 &841741393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 841741391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c88e11d9808a0d4f86ebbf28a50061f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipTabButton: {fileID: 655448557}
+  skillTabButton: {fileID: 1870618056}
+  skinTabButton: {fileID: 64360679}
+  chipTabPanel: {fileID: 1681324869}
+  skillTabPanel: {fileID: 785609159}
+  skinTabPanel: {fileID: 322396240}
+--- !u!224 &841741394
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 841741391}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.72875, y: 0.72875, z: 0.72875}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 400.00003, y: 225.0429}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &884247789
 GameObject:
   m_ObjectHideFlags: 0
@@ -6574,7 +6643,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4228243713630980, guid: f3d82069703244f4fa04a454ba53aa10, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3d82069703244f4fa04a454ba53aa10, type: 2}
@@ -6778,8 +6847,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -17.375}
-  m_SizeDelta: {x: 70, y: 25.25}
+  m_AnchoredPosition: {x: -55, y: -19}
+  m_SizeDelta: {x: 65, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1166263230
 MonoBehaviour:
@@ -6801,8 +6870,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.8161765, g: 0.8161765, b: 0.8161765, a: 1}
+    m_PressedColor: {r: 0.63235295, g: 0.63235295, b: 0.63235295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -7458,7 +7527,7 @@ GameObject:
   - component: {fileID: 1302785444}
   - component: {fileID: 1302785443}
   m_Layer: 5
-  m_Name: Close Panel Button (1)
+  m_Name: Close Panel Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7764,7 +7833,7 @@ RectTransform:
   m_Children:
   - {fileID: 1999927591}
   m_Father: {fileID: 1586713894}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7945,7 +8014,7 @@ RectTransform:
   m_Children:
   - {fileID: 1135514262}
   m_Father: {fileID: 1586713894}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8340,7 +8409,7 @@ Prefab:
     - target: {fileID: 224164406206070894, guid: 5125b2c2718aacc48805307f653ad9bc,
         type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224164406206070894, guid: 5125b2c2718aacc48805307f653ad9bc,
         type: 2}
@@ -8850,7 +8919,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4747831160175532, guid: 9621b0eb99424e148938e6ad1f5b8a8a, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4747831160175532, guid: 9621b0eb99424e148938e6ad1f5b8a8a, type: 2}
       propertyPath: m_LocalScale.x
@@ -9037,10 +9106,10 @@ RectTransform:
   - {fileID: 1427928603}
   - {fileID: 2015348342}
   - {fileID: 2137416686}
+  - {fileID: 1460688891}
   - {fileID: 1757957442}
   - {fileID: 1399850778}
   - {fileID: 1341271431}
-  - {fileID: 1460688891}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10351,7 +10420,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1729210651
 MonoBehaviour:
@@ -10467,7 +10536,7 @@ RectTransform:
   m_Children:
   - {fileID: 53653062}
   m_Father: {fileID: 1586713894}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10542,8 +10611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3, y: -17.375}
-  m_SizeDelta: {x: 70, y: 25.25}
+  m_AnchoredPosition: {x: 0, y: -19}
+  m_SizeDelta: {x: 65, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763119403
 MonoBehaviour:
@@ -10565,8 +10634,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.8161765, g: 0.8161765, b: 0.8161765, a: 1}
+    m_PressedColor: {r: 0.63235295, g: 0.63235295, b: 0.63235295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -11141,7 +11210,7 @@ GameObject:
   - component: {fileID: 1870618056}
   - component: {fileID: 1870618055}
   m_Layer: 5
-  m_Name: skills tab
+  m_Name: skills tab button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11164,8 +11233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3, y: -17.375}
-  m_SizeDelta: {x: 70, y: 25.25}
+  m_AnchoredPosition: {x: 0, y: -19}
+  m_SizeDelta: {x: 65, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870618055
 MonoBehaviour:
@@ -11201,8 +11270,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.8161765, g: 0.8161765, b: 0.8161765, a: 1}
+    m_PressedColor: {r: 0.63235295, g: 0.63235295, b: 0.63235295, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -12325,5 +12394,5 @@ Transform:
   - {fileID: 239077404}
   - {fileID: 1326796068}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

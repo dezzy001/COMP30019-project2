@@ -61,6 +61,7 @@
      <Compile Include="Assets\_scripts\camp scripts\MapGeneratorScript.cs" />
      <Compile Include="Assets\_scripts\camp scripts\QuitPanel.cs" />
      <Compile Include="Assets\_scripts\camp scripts\ShopViewPanel.cs" />
+     <Compile Include="Assets\_scripts\camp scripts\tabButtonScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\CameraController.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\DestroyIfOffscreen.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\DestroyWhenParticlesFinished.cs" />
@@ -108,7 +109,6 @@
      <Compile Include="Assets\_scripts\saves and items scripts\ItemData.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\PlayerData.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\PlayerDataScript.cs" />
-     <Compile Include="Assets\_scripts\saves and items scripts\PlayerInfoUI.cs" />
      <Compile Include="Assets\_scripts\saves and items scripts\SaveLoadManager.cs" />
      <Compile Include="Assets\_scripts\start scripts\StartUI.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
