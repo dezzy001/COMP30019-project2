@@ -124,9 +124,9 @@ public class PlayerDataScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		applyItems ();
 		applySkills ();
+		//print (skillsList[0]);
 	}
 
 
@@ -183,10 +183,8 @@ public class PlayerDataScript : MonoBehaviour {
 
 		//skill1
 		if(skillsList[0] > 0 ){
-			
 			itemData.skill1Effect(hasEquipskills[0]);
 		}else {
-			
 			itemData.skill1Effect (false);
 		}
 

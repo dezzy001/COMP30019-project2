@@ -166,6 +166,9 @@ public class PlayerController : MonoBehaviour {
 			//should put this in a method later ...
 
 			if (Input.GetMouseButton(0) && projectileCooldownCount <= 0 && allowMouseLeftClick == true){
+
+
+
 				GameObject projectile = Instantiate<GameObject>(projectilePrefab);
 
 				//offset the position of the projectile in front of the player (rather then inside)
@@ -185,8 +188,12 @@ public class PlayerController : MonoBehaviour {
 
 			}
 
+
 			//right click to activate laser
 			if (Input.GetMouseButton (1) && laserCooldownCount <= 0 && allowLaser == true) {
+
+
+
 				GameObject laser = Instantiate<GameObject> (laserPrefab);
 
 				//offset the position of the laser in front of the player (rather then inside)

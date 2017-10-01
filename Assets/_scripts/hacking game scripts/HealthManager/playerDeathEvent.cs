@@ -12,7 +12,7 @@ public class playerDeathEvent : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		playerDead = false;
-		print (playerDead);
+		//print (playerDead);
 		//playerDeadPanel.SetActive (false);
 		player = GameObject.Find ("Player");
 	}
