@@ -22,7 +22,7 @@ public class SaveLoadManager : MonoBehaviour {
 		playerDataScript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript>();
 
 		if (playerDataScript == null) {
-			print ("ERROR- cannot find playerDataScript in saveloadmanager");
+			print ("ERROR - cannot find playerDataScript in saveloadmanager");
 		} 
 
 	}
@@ -42,10 +42,15 @@ public class SaveLoadManager : MonoBehaviour {
 
 		//PlayerDataScript data = new PlayerDataScript ();
 
+		/*THIS IS NOT HOW YOU DO IT*/
+
 		PlayerDataScript data = gameObject.AddComponent<PlayerDataScript> ();
 	
 
 		SavePlayer (data);
+
+		Destroy (data);
+
 
 	}
 

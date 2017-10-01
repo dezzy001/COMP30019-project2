@@ -55,19 +55,18 @@ public class PlayerDataScript : MonoBehaviour {
 
 	public Item skin1;
 
-
+	public static bool createOnlyOnce = false;
 	// Keep player data persistent
 	void Awake () {
 
 
 
 		if(SceneManager.GetActiveScene().name == "Start"){
-
-			if(instance == null){
+			if(createOnlyOnce == false){
 				DontDestroyOnLoad (this.gameObject);
-			}else if (instance != null){
-				Destroy (this.gameObject);
+				createOnlyOnce = true;
 			}
+
 
 
 		}
