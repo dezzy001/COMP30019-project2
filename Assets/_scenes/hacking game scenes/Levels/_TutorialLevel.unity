@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657958, g: 0.49641377, b: 0.5748177, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657993, g: 0.49641407, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2872,7 +2872,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Use "ASWD" keys to move around
+  m_Text: Use "WASD" keys to move around
 --- !u!222 &965983416
 CanvasRenderer:
   m_ObjectHideFlags: 0
