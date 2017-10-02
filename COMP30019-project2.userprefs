@@ -1,7 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_scripts/hacking game scripts/Enemy Script/Enemy3Controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_scripts/hacking game scripts/Enemy Script/EnemyProjectileController.cs">
     <Files>
+      <File FileName="Assets/_scripts/hacking game scripts/Enemy Script/EnemyProjectileController.cs" Line="60" Column="19" />
       <File FileName="Assets/_scripts/hacking game scripts/Enemy Script/Enemy3Controller.cs" Line="42" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
