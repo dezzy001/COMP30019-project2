@@ -382,7 +382,7 @@ MonoBehaviour:
   enemyRows: 3
   enemyCols: 3
   enemySpacing: 3.5
-  enemy1_prefab: {fileID: 1447701287971692, guid: 54aff31ac313a2a4dac624b2e1d8f83a,
+  enemy1_prefab: {fileID: 1702453636491058, guid: ef286f7bc93ef4afb8667d001e6dd17f,
     type: 2}
   enemy2_prefab: {fileID: 1886158763731012, guid: e3b17cea2eaa0af4493181ccaa607e06,
     type: 2}

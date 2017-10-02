@@ -18,9 +18,11 @@ public class enemyDeathEvent : MonoBehaviour {
 	}
 
 	public void enemyDeath(){
-		
-		Instantiate (enemyOnDeathParticle_prefab,this.transform.position, enemyOnDeathParticle_prefab.transform.rotation);
 
+		ParticleSystem enemyOnDeathParticle ;
+
+		enemyOnDeathParticle = Instantiate (enemyOnDeathParticle_prefab,this.transform.position, enemyOnDeathParticle_prefab.transform.rotation);
+		enemyOnDeathParticle.Play ();
 
 		Destroy(this.gameObject);
 

@@ -32,6 +32,9 @@ public class Enemy3Controller : MonoBehaviour {
 		player = GameObject.Find("Player");
 		ground = GameObject.Find("Ground");
 
+
+		this.transform.LookAt (player.transform);
+
 		// ground boundaries
 		Renderer groundSizeRenderer = ground.GetComponent<Renderer>();
 		Vector3 groundSize = groundSizeRenderer.bounds.size;

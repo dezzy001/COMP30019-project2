@@ -324,7 +324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301b426e18abca146992261e9a03de91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetParticleSystem: {fileID: 198542999686093156}
 --- !u!135 &135169061568388542
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -3491,7 +3490,7 @@ ParticleSystem:
   simulationSpeed: 2
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   autoRandomSeed: 1
   startDelay:
     serializedVersion: 2
@@ -3537,7 +3536,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 853769577
+  randomSeed: -1093398581
   InitialModule:
     serializedVersion: 3
     enabled: 1
