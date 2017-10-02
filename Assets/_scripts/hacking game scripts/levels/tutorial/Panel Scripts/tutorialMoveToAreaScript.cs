@@ -73,6 +73,7 @@ public class tutorialMoveToAreaScript : TutorialSwitchPanelScript {
 		if(moveHereParticles == null ){
 			
 			StartCoroutine (delayBeforeNextTutorial(nextPanel,  DELAY_B4_NEXT_TUT));
+			player.GetComponent<PlayerController> ().allowKeypressMovement = false;
 		}
 	}
 		

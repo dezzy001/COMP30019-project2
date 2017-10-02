@@ -48,6 +48,9 @@ public class tutorialSpawnEnemyScript : TutorialSwitchPanelScript {
 		float spawnOffset = groundSizeX*3/5;
 
 		player = GameObject.Find ("Player");
+		//allow player movement again, since we disabled it when they stepped onto the glowing area
+		player.GetComponent<PlayerController> ().allowKeypressMovement = true;
+
 
 		Vector3 currentPlayerPos = player.transform.position;
 

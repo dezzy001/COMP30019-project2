@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114317329173584288}
   - component: {fileID: 114337355123050732}
   - component: {fileID: 54862457271263316}
+  - component: {fileID: 114505773711448610}
   m_Layer: 0
   m_Name: Enemy Projectile Weak
   m_TagString: Enemy
@@ -128,8 +129,8 @@ MonoBehaviour:
   zeroHealthEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114337355123050732}
-        m_MethodName: enemyDeath
+      - m_Target: {fileID: 114505773711448610}
+        m_MethodName: projectileDeath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -150,6 +151,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92a9e183667ba4f468a6a3c3fb33088b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyOnDeathParticle_prefab: {fileID: 0}
+--- !u!114 &114505773711448610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1704712826968036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196938c65cd45314bbbe40a03200eb5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114935610521592232

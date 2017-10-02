@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class enemyDeathEvent : MonoBehaviour {
 
+
+	public ParticleSystem enemyOnDeathParticle_prefab;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,6 +18,11 @@ public class enemyDeathEvent : MonoBehaviour {
 	}
 
 	public void enemyDeath(){
+		
+		Instantiate (enemyOnDeathParticle_prefab,this.transform.position, enemyOnDeathParticle_prefab.transform.rotation);
+
+
 		Destroy(this.gameObject);
+
 	}
 }

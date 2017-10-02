@@ -39,9 +39,9 @@ GameObject:
   - component: {fileID: 65500439546462216}
   - component: {fileID: 114081610849360698}
   - component: {fileID: 114261021817512942}
-  - component: {fileID: 114150393062526950}
   - component: {fileID: 65728186856726086}
   - component: {fileID: 54256091033113404}
+  - component: {fileID: 114666777349332156}
   m_Layer: 0
   m_Name: seeking projectile
   m_TagString: Enemy
@@ -171,17 +171,6 @@ MonoBehaviour:
   tagWallWhite: Wallwhite
   tagWallGrey: Wallgrey
   ground: {fileID: 0}
---- !u!114 &114150393062526950
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1798043945647120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92a9e183667ba4f468a6a3c3fb33088b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114261021817512942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,8 +187,8 @@ MonoBehaviour:
   zeroHealthEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114150393062526950}
-        m_MethodName: enemyDeath
+      - m_Target: {fileID: 114666777349332156}
+        m_MethodName: projectileDeath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -211,3 +200,14 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114666777349332156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1798043945647120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196938c65cd45314bbbe40a03200eb5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

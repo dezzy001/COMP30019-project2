@@ -50,7 +50,7 @@ public class SpawnAnimation : MonoBehaviour {
 
 		//activate all the body parts when animations occur
 		foreach(Transform body in bodyParts){
-			if(body.CompareTag("Body")){
+			if( body.CompareTag("Body") ){
 				body.gameObject.SetActive (true);
 			}
 		}

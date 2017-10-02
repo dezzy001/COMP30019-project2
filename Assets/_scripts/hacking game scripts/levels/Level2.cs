@@ -113,7 +113,7 @@ public class Level2 : MonoBehaviour {
 						GameObject enemy = GameObject.Instantiate<GameObject> (enemy1_prefab);
 
 						//size of enemy1_prefab
-						Vector3 enemy1Size = enemy.GetComponent<BoxCollider>().bounds.size;
+						Vector3 enemy1Size = enemy.GetComponent<Collider>().bounds.size;
 
 						enemy.transform.parent = this.transform;
 						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
@@ -126,7 +126,7 @@ public class Level2 : MonoBehaviour {
 						GameObject enemy = GameObject.Instantiate<GameObject> (enemy2_prefab);
 
 						//size of enemy2_prefab
-						Vector3 enemy2Size = enemy.GetComponent<CapsuleCollider>().bounds.size;
+						Vector3 enemy2Size = enemy.GetComponent<Collider>().bounds.size;
 
 						enemy.transform.parent = this.transform;
 						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;

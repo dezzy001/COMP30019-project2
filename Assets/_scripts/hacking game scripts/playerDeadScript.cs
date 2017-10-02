@@ -18,7 +18,7 @@ public class playerDeadScript : MonoBehaviour {
 	void Update () {
 		
 		if (playerDeathEvent.playerDead == true) {
-			print (playerDeathEvent.playerDead);
+			//print (playerDeathEvent.playerDead);
 			playerDeadPanel.SetActive (true);
 		}
 

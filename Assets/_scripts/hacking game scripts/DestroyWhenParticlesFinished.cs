@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class DestroyWhenParticlesFinished : MonoBehaviour{
 
-	/*
 
+	/*
     public ParticleSystem targetParticleSystem;
+
 
     void Update(){
         if (!this.targetParticleSystem.IsAlive())
@@ -15,7 +16,7 @@ public class DestroyWhenParticlesFinished : MonoBehaviour{
         }
     }
 
-	*/
 
+	*/
 }
 

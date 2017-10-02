@@ -47,6 +47,20 @@ public class ProjectileController : MonoBehaviour {
 
 	}
 
+
+	/*
+	void enemyFlashWhenHit(){
+
+		StartCoroutine (flash());
+
+	}
+
+	IEnumerator flash(){
+
+
+	}
+	*/
+
     // Handle collisions
     void OnTriggerEnter(Collider col){
 
