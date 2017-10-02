@@ -48,8 +48,7 @@ public class tutorialSpawnEnemyScript : TutorialSwitchPanelScript {
 		float spawnOffset = groundSizeX*3/5;
 
 		player = GameObject.Find ("Player");
-		//allow player movement again, since we disabled it when they stepped onto the glowing area
-		player.GetComponent<PlayerController> ().allowKeypressMovement = true;
+
 
 
 		Vector3 currentPlayerPos = player.transform.position;
@@ -85,6 +84,8 @@ public class tutorialSpawnEnemyScript : TutorialSwitchPanelScript {
 
 		if(enemyBodyPart != null && enemyBodyPart.activeSelf == true && !enemy1Spawned){
 			//pause the game when the enemy has spawned on the ground
+			//allow player movement again, since we disabled it when they stepped onto the glowing area
+			player.GetComponent<PlayerController> ().allowKeypressMovement = true;
 			Time.timeScale = 0;
 			enemy1.tag = "Enemy";
 			enemy1Spawned = true;
