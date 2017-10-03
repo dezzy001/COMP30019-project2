@@ -32,7 +32,7 @@ public class Enemy3Controller : MonoBehaviour {
 		player = GameObject.Find("Player");
 		ground = GameObject.Find("Ground");
 
-
+		// look at the player
 		this.transform.LookAt (player.transform);
 
 		// ground boundaries
@@ -43,6 +43,13 @@ public class Enemy3Controller : MonoBehaviour {
 
 		// initialise weapon cooldown
 		projectileCooldownCount = PROJECTILE_COOLDOWN;
+
+
+		//y height of the enemy
+		float sizeY = this.GetComponent<Collider>().bounds.size.y;
+
+		// initialise enemy y position at the ground
+		this.transform.position = new Vector3(this.transform.position.x, sizeY/2, this.transform.position.z);
 	}
 
 	// Update is called once per frame
