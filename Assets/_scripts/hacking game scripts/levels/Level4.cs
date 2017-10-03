@@ -46,10 +46,22 @@ public class Level4 : MonoBehaviour {
 				//turn off the sheild for boss if only it is the only one left
 				print ("works");
 
+
 				//GameObject enemyBoss1BodyPart = GameObject.Find ("EnemyBoss1/EnemyBoss1 BodyPart");
 
-				ParticleSystem enemyBoss1Particle = enemyBoss1.GetComponentsInChildren<ParticleSystem>() [2];
-				enemyBoss1Particle.Stop ();
+				Transform[] enemyBoss1Transform = enemyBoss1.GetComponentsInChildren<Transform>();
+
+				foreach(Transform enemyBody in enemyBoss1Transform){
+					if(enemyBody.tag == "BossShield"){
+						
+						ParticleSystem[] enemyParticleSystems =  enemyBody.GetComponentsInChildren<ParticleSystem> ();
+						foreach(ParticleSystem enemyParticle in enemyParticleSystems){
+							enemyParticle.Stop ();
+						}
+					}
+				}
+
+				//enemyBoss1Particle.Stop ();
 
 				enemyBoss1.tag = "Enemy";
 

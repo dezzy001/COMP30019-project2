@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_scripts/hacking game scripts/Player Script/ProjectileController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\levels\Level4.cs">
     <Files>
-      <File FileName="Assets/_scripts/hacking game scripts/Player Script/ProjectileController.cs" Line="68" Column="28" />
-      <File FileName="Assets/_scripts/hacking game scripts/Enemy Script/Enemy3Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets/_scripts/hacking game scripts/levels/Level2.cs" Line="1" Column="1" />
-      <File FileName="Assets/_scripts/hacking game scripts/levels/Level4.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\Player Script\ProjectileController.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\Enemy Script\Enemy3Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\Level2.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\Level4.cs" Line="66" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
