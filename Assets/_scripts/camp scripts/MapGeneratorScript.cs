@@ -68,7 +68,7 @@ public class MapGeneratorScript : MonoBehaviour {
 		/*show map 4*/
 		if (mapsCompleted >= 4) {
 
-			createNewMap ("Map 4", 3, "level4");
+			createNewMap ("Map 4", 4, "level4");
 		}
 
 
