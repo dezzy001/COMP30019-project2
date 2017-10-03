@@ -61,8 +61,8 @@ public class Level2 : MonoBehaviour {
 	void Update () {
 		if(gameStarted == true){
 			if(transform.childCount == 0){
+				
 				StartCoroutine (showHackingPanel());
-
 
 			}else if(transform.childCount == 1){
 				//turn off the sheild for boss if only it is the only one left
@@ -100,7 +100,7 @@ public class Level2 : MonoBehaviour {
 					GameObject enemy = GameObject.Instantiate<GameObject> (enemyBoss1_prefab);
 
 					//size of enemyBoss1_prefab
-					Vector3 enemyBoss1Size = enemy.GetComponent<SphereCollider>().bounds.size;
+					Vector3 enemyBoss1Size = enemy.GetComponent<Collider>().bounds.size;
 
 					enemy.transform.parent = this.transform;
 					enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;

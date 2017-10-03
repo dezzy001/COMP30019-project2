@@ -22,6 +22,11 @@ public class ProjectileController : MonoBehaviour {
 	private int bulletHitSound = 1;
 	private int bulletHitUntouchableSound = 2;
 
+	//flash animation using glow material
+	public Material flashMaterial;
+	public float FLASH_WAIT = 0.1f;
+
+
 	void Start(){
 
 		audioSource = GetComponent<AudioSource> ();
@@ -49,18 +54,18 @@ public class ProjectileController : MonoBehaviour {
 	}
 
 
-	/*
-	void enemyFlashWhenHit(){
 
-		StartCoroutine (flash());
 
-	}
+	IEnumerator flashBlink(Material originalMaterial, MeshRenderer flashMaterial){
 
-	IEnumerator flash(){
+		yield return new WaitForSeconds (FLASH_WAIT);
+		flashMaterial.material = originalMaterial;
 
 
 	}
-	*/
+
+
+
 
     // Handle collisions
     void OnTriggerEnter(Collider col){
@@ -80,6 +85,16 @@ public class ProjectileController : MonoBehaviour {
 			healthManager.ApplyDamage(damageAmount);
 
 			PlaySoundOneShot (bulletHitSound);
+
+			MeshRenderer flash = col.GetComponentInChildren<MeshRenderer> ();
+
+			Material originalMaterial = flash.material;
+
+			flash.material = flashMaterial;
+
+			// change it back after co-routine
+			StartCoroutine (flashBlink(originalMaterial,flash));
+
 
         }
 

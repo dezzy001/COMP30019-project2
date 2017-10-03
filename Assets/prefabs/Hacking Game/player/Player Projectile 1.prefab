@@ -214,3 +214,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00f4850fa3089407e890484e38d0d533, type: 3}
   - {fileID: 8300000, guid: 840cc57fcbf824aee9d23b895cc5d26c, type: 3}
   timeToLive: 5
+  flashMaterial: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
+  FLASH_WAIT: 0.1

@@ -34,6 +34,7 @@ public class Enemy3Controller : MonoBehaviour {
 
 		// look at the player
 		this.transform.LookAt (player.transform);
+		print ("dont forget to take out lookAt() if you dont want it");
 
 		// ground boundaries
 		Renderer groundSizeRenderer = ground.GetComponent<Renderer>();
@@ -87,6 +88,8 @@ public class Enemy3Controller : MonoBehaviour {
 		if (projectileCooldownCount <= 0){
 
 			GameObject projectile = Instantiate<GameObject>(projectilePrefab);
+
+		
 
 			//size of projectiles - want to stick the projectile to the ground
 			Vector3 projectileSize = projectile.GetComponent<Collider>().bounds.size;
