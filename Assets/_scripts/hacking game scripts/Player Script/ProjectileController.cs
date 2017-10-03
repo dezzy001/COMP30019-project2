@@ -20,6 +20,7 @@ public class ProjectileController : MonoBehaviour {
 
 	private int laserFireSound = 0;
 	private int bulletHitSound = 1;
+	private int bulletHitUntouchableSound = 2;
 
 	void Start(){
 
@@ -85,9 +86,12 @@ public class ProjectileController : MonoBehaviour {
 		//cannot damage these enemys
 		if(col.gameObject.tag == tagUntouchableEnemys){
 
-			PlaySoundOneShot (bulletHitSound);
+			PlaySoundOneShot (bulletHitUntouchableSound);
 
 		}
+
+
+
 
 		//cannot damage these enemys
 		if(col.gameObject.tag == tagWallWhite){

@@ -9,6 +9,7 @@ TagManager:
   - Body
   - Wallwhite
   - Wallgrey
+  - EnemyUntouchableSound
   layers:
   - Default
   - TransparentFX

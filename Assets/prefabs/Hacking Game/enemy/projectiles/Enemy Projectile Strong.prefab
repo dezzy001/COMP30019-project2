@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76762aa5181fb594499769ddeeadaccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 8, y: 0, z: 0}
+  velocity: {x: 13, y: 0, z: 0}
   damageAmount: 34
   tagToDamage: Player
   tagWallWhite: Wallwhite

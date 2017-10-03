@@ -255,9 +255,9 @@ MonoBehaviour:
     type: 2}
   projectilePrefabWeak: {fileID: 1704712826968036, guid: e7f70a98e31dea44aaf9051366cb2766,
     type: 2}
-  PROJECTILE_COOLDOWN: 0.2
+  PROJECTILE_COOLDOWN: 0.1
   DIST_FROM_PLAYER: 6.5
-  spiralSpeed: 7
+  spiralSpeed: 10
   velocity: {x: 1, y: 0, z: 0}
 --- !u!114 &114165333822081660
 MonoBehaviour:
