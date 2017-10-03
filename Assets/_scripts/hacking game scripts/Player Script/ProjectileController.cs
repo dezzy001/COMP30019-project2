@@ -24,10 +24,9 @@ public class ProjectileController : MonoBehaviour {
 
 	//flash animation using glow material
 	public Material flashMaterial;
+
 	// public Material enemyMaterial;
 	public float FLASH_WAIT = 1.0f;
-
-	private bool beforeFirstFlash = true;
 
 
 	void Start(){
@@ -65,7 +64,6 @@ public class ProjectileController : MonoBehaviour {
 
 		if (flashMaterial != null) {
 			flashMaterial.material = originalMaterial;
-			beforeFirstFlash = true;
 		}
 
 
@@ -94,24 +92,26 @@ public class ProjectileController : MonoBehaviour {
 
 			PlaySoundOneShot (bulletHitSound);
 
+
+			// grab the mesh renderer component from the object which is hit by player projectile
 			MeshRenderer[] flash = col.GetComponentsInChildren<MeshRenderer> ();
 
 
-			if (beforeFirstFlash == true) {
-				foreach (MeshRenderer singleFlash in flash) {
+			foreach (MeshRenderer singleFlash in flash) {
 
+				if (singleFlash.sharedMaterial != flashMaterial) {
 
-					Material originalMaterial = singleFlash.material;
+					// grab the original material and store it for later restoration purpose
+					Material originalMaterial = singleFlash.sharedMaterial;
 					singleFlash.material = flashMaterial;
+
 					// change it back after co-routine
 					StartCoroutine (flashBlink (originalMaterial, singleFlash));
 
-
-				
-					
 				}
-				beforeFirstFlash = false;
+
 			}
+
 
 
 

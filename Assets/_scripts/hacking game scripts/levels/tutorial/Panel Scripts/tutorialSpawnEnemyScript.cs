@@ -80,7 +80,7 @@ public class tutorialSpawnEnemyScript : TutorialSwitchPanelScript {
 
 
 		//proper spawning sequence
-		GameObject enemyBodyPart = GameObject.Find ("enemy1(Clone)/enemy1_cube");
+		GameObject enemyBodyPart = GameObject.Find ("Enemy1(Clone)/enemy1_cube");
 
 		if(enemyBodyPart != null && enemyBodyPart.activeSelf == true && !enemy1Spawned){
 			//pause the game when the enemy has spawned on the ground
