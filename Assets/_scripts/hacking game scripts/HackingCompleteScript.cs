@@ -17,6 +17,7 @@ public class HackingCompleteScript : MonoBehaviour {
 	private int MAP1 = 2;
 	private int MAP2 = 3;
 	private int MAP3 = 4;
+	private int MAP4 = 5;
 
 	public int currentMapNum;
 
@@ -42,14 +43,16 @@ public class HackingCompleteScript : MonoBehaviour {
 
 		string currSceneName = SceneManager.GetActiveScene().name;
 
-		if(currSceneName == "_TutorialLevel"){
+		if (currSceneName == "_TutorialLevel") {
 			currentMapNum = TUTORIAL;
-		}else if (currSceneName == "level1"){
+		} else if (currSceneName == "level1") {
 			currentMapNum = MAP1;
-		}else if (currSceneName == "level2"){
+		} else if (currSceneName == "level2") {
 			currentMapNum = MAP2;
-		}else if (currSceneName == "level3"){
+		} else if (currSceneName == "level3") {
 			currentMapNum = MAP3;
+		} else if (currSceneName == "level4") {
+			currentMapNum = MAP4;
 		}
 
 

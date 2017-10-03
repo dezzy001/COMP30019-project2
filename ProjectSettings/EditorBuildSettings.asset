@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_scenes/hacking game scenes/Levels/level3.unity
     guid: e0ec8f0dbaef65049a9aaff0e4f416d7
+  - enabled: 1
+    path: Assets/_scenes/hacking game scenes/Levels/level4.unity
+    guid: 5abdcf316749b4ed0ac5f36c8e26bef2
