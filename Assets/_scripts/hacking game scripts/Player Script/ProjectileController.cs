@@ -24,7 +24,10 @@ public class ProjectileController : MonoBehaviour {
 
 	//flash animation using glow material
 	public Material flashMaterial;
-	public float FLASH_WAIT = 0.1f;
+	// public Material enemyMaterial;
+	public float FLASH_WAIT = 1.0f;
+
+	private bool beforeFirstFlash = true;
 
 
 	void Start(){
@@ -59,7 +62,12 @@ public class ProjectileController : MonoBehaviour {
 	IEnumerator flashBlink(Material originalMaterial, MeshRenderer flashMaterial){
 
 		yield return new WaitForSeconds (FLASH_WAIT);
-		flashMaterial.material = originalMaterial;
+
+		if (flashMaterial != null) {
+			flashMaterial.material = originalMaterial;
+			beforeFirstFlash = true;
+		}
+
 
 
 	}
@@ -86,14 +94,30 @@ public class ProjectileController : MonoBehaviour {
 
 			PlaySoundOneShot (bulletHitSound);
 
-			MeshRenderer flash = col.GetComponentInChildren<MeshRenderer> ();
+			MeshRenderer[] flash = col.GetComponentsInChildren<MeshRenderer> ();
 
-			Material originalMaterial = flash.material;
 
-			flash.material = flashMaterial;
+			if (beforeFirstFlash == true) {
+				foreach (MeshRenderer singleFlash in flash) {
 
-			// change it back after co-routine
-			StartCoroutine (flashBlink(originalMaterial,flash));
+
+					Material originalMaterial = singleFlash.material;
+					singleFlash.material = flashMaterial;
+					// change it back after co-routine
+					StartCoroutine (flashBlink (originalMaterial, singleFlash));
+
+
+				
+					
+				}
+				beforeFirstFlash = false;
+			}
+
+
+
+
+
+
 
 
         }
