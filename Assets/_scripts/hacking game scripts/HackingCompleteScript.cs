@@ -18,6 +18,12 @@ public class HackingCompleteScript : MonoBehaviour {
 	private int MAP2 = 3;
 	private int MAP3 = 4;
 	private int MAP4 = 5;
+	private int MAP5 = 6;
+	private int MAP6 = 7;
+	private int MAP7 = 8;
+	private int MAP8 = 9;
+	private int MAP9 = 10;
+	private int MAP10 = 11;
 
 	public int currentMapNum;
 
@@ -53,6 +59,18 @@ public class HackingCompleteScript : MonoBehaviour {
 			currentMapNum = MAP3;
 		} else if (currSceneName == "level4") {
 			currentMapNum = MAP4;
+		}else if (currSceneName == "level5") {
+			currentMapNum = MAP5;
+		}else if (currSceneName == "level6") {
+			currentMapNum = MAP6;
+		}else if (currSceneName == "level7") {
+			currentMapNum = MAP7;
+		}else if (currSceneName == "level8") {
+			currentMapNum = MAP8;
+		}else if (currSceneName == "level9") {
+			currentMapNum = MAP9;
+		}else if (currSceneName == "level10") {
+			currentMapNum = MAP10;
 		}
 
 

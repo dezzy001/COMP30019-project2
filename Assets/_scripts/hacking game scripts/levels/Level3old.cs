@@ -1,8 +1,8 @@
-﻿	using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level2 : MonoBehaviour {
+public class Level3old: MonoBehaviour {
 
 
 	//when game complete show the hacking complete panel
@@ -14,7 +14,7 @@ public class Level2 : MonoBehaviour {
 	//number of enemys 
 	public int enemyRows = 3;
 	public int enemyCols = 3;
-	public float enemySpacing = 3.5f;
+	public float enemySpacing = 5.5f;
 
 
 	//enemy prefabs
@@ -48,10 +48,10 @@ public class Level2 : MonoBehaviour {
 		groundSizeZ = groundSize.z/2;
 
 		//make the offset of the spawn from the bottom left corner of the map
-		this.transform.position = new Vector3 (-groundSizeX + groundSizeX/5,0,-groundSizeZ + groundSizeX/5);
+		//this.transform.position = new Vector3 (-groundSizeX + groundSizeX/5,0,-groundSizeZ + groundSizeX/5);
 
 		//generate the spacing based on the map size
-		enemySpacing = groundSizeX*3/4;
+		//enemySpacing = groundSizeX*3/4;
 
 		generateEnemy ();
 
@@ -61,8 +61,8 @@ public class Level2 : MonoBehaviour {
 	void Update () {
 		if(gameStarted == true){
 			if(transform.childCount == 0){
-				
 				StartCoroutine (showHackingPanel());
+
 
 			}else if(transform.childCount == 1){
 				//turn off the sheild for boss if only it is the only one left
@@ -93,14 +93,10 @@ public class Level2 : MonoBehaviour {
 				int chooseRandEnemy = Random.Range(1,5) ;
 				if(row == 1 && col == 1){
 
-					//dont want something spawning at the middle (given row = col = 3)
-					continue;
-
-				}else if(row == 2 && col == 2){
 					GameObject enemy = GameObject.Instantiate<GameObject> (enemyBoss1_prefab);
 
 					//size of enemyBoss1_prefab
-					Vector3 enemyBoss1Size = enemy.GetComponent<Collider>().bounds.size;
+					Vector3 enemyBoss1Size = enemy.GetComponent<SphereCollider>().bounds.size;
 
 					enemy.transform.parent = this.transform;
 					enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
@@ -113,7 +109,7 @@ public class Level2 : MonoBehaviour {
 						GameObject enemy = GameObject.Instantiate<GameObject> (enemy1_prefab);
 
 						//size of enemy1_prefab
-						Vector3 enemy1Size = enemy.GetComponent<Collider>().bounds.size;
+						Vector3 enemy1Size = enemy.GetComponent<BoxCollider>().bounds.size;
 
 						enemy.transform.parent = this.transform;
 						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;
@@ -126,7 +122,7 @@ public class Level2 : MonoBehaviour {
 						GameObject enemy = GameObject.Instantiate<GameObject> (enemy2_prefab);
 
 						//size of enemy2_prefab
-						Vector3 enemy2Size = enemy.GetComponent<Collider>().bounds.size;
+						Vector3 enemy2Size = enemy.GetComponent<CapsuleCollider>().bounds.size;
 
 						enemy.transform.parent = this.transform;
 						enemy.transform.localPosition = new Vector3 (col,0,row) * enemySpacing;

@@ -97,10 +97,12 @@
      <Compile Include="Assets\_scripts\hacking game scripts\Wall\WallGenWhite1.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Wall\WallGeneratorScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\EnemySpawner.cs" />
-     <Compile Include="Assets\_scripts\hacking game scripts\levels\Level1.cs" />
-     <Compile Include="Assets\_scripts\hacking game scripts\levels\Level2.cs" />
-     <Compile Include="Assets\_scripts\hacking game scripts\levels\Level3.cs" />
-     <Compile Include="Assets\_scripts\hacking game scripts\levels\Level4.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\Level1old.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\Level2old.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\Level3old.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\LevelNoBoss.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\LevelOneBoss.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\levelScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\triggerSpawnEnemy.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\MoveArrowScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\MoveHereScript.cs" />

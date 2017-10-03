@@ -23,6 +23,12 @@ public class Enemy2Controller : MonoBehaviour {
 		player = GameObject.Find("Player");
 
 		projectileCooldownCount = PROJECTILE_COOLDOWN; //init cooldown count
+
+		//y height of the enemy
+		float sizeY = this.GetComponent<Collider>().bounds.size.y;
+
+		// initialise enemy y position at the ground
+		this.transform.position = new Vector3(this.transform.position.x, sizeY/2, this.transform.position.z);
 	}
 
 	// Update is called once per frame

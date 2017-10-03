@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour {
 		PROJECTILE_OFFSET = playerSize.z;//offset for the projectile position relative to player
 
 		//keep the player on the ground
-		this.gameObject.transform.position = new Vector3 (0,playerSize.y/2,0);
+		this.gameObject.transform.position = new Vector3 (this.gameObject.transform.position.x,playerSize.y/2,this.gameObject.transform.position.z);
 
 
 		//apply a colour to the material of the mesh renderer component

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level1 : MonoBehaviour {
+public class Level1old : MonoBehaviour {
 
 
 	//when game complete show the hacking complete panel

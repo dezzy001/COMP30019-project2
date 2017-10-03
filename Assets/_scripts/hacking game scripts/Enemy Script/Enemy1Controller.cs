@@ -30,6 +30,12 @@ public class Enemy1Controller : MonoBehaviour {
 		//make sure enemy is rotated to proper position (default is facing upwards)
 		this.transform.eulerAngles = new Vector3 (0,0,0);
 
+		//y height of the enemy
+		float sizeY = this.GetComponent<Collider>().bounds.size.y;
+
+		// initialise enemy y position at the ground
+		this.transform.position = new Vector3(this.transform.position.x, sizeY/2, this.transform.position.z);
+
 	}
 
 	// Update is called once per frame

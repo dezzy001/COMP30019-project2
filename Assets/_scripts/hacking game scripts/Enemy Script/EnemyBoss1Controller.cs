@@ -22,12 +22,21 @@ public class EnemyBoss1Controller : MonoBehaviour {
 	public float spiralSpeed = 7.0f;
 
 	//velocity of the enemys who can move
-	public Vector3 velocity = new Vector3(1,0,0);
+	//public Vector3 velocity = new Vector3(1,0,0);
 
+	// basic attributes of the enemy
+	public float rotateSpeed = 10.0f;
+	public float moveSpeed = 5.0f;
+	public float gravity = 20.0f;
+
+	private Vector3 moveDirection = Vector3.zero;
+	private CharacterController controller;
 	//want the enemy projectiles to aim at the player
 	private GameObject player;
 
 	void Start(){
+
+		controller = GetComponent<CharacterController>(); // grab character controller
 
 		//initialise untouchable tage
 		gameObject.tag = "EnemyUntouchable"; 
@@ -36,6 +45,12 @@ public class EnemyBoss1Controller : MonoBehaviour {
 		player = GameObject.Find("Player");
 
 		projectileCooldownCount = PROJECTILE_COOLDOWN; //init cooldown count
+
+		//y height of the enemy
+		float sizeY = this.GetComponent<Collider>().bounds.size.y;
+
+		// initialise enemy y position at the ground
+		this.transform.position = new Vector3(this.transform.position.x, sizeY/2, this.transform.position.z);
 	}
 
 	// Update is called once per frame
@@ -52,7 +67,12 @@ public class EnemyBoss1Controller : MonoBehaviour {
 		float distanceFromPlayer = Vector3.Distance(this.transform.position , player.transform.position);
 
 		if(distanceFromPlayer > DIST_FROM_PLAYER){
-			this.transform.Translate(velocity * Time.deltaTime);
+			// enemy is not close enough to player, proceed to move the enemy
+			moveDirection = transform.right;
+			moveDirection *= moveSpeed;
+
+			moveDirection.y -= gravity * Time.deltaTime;
+			controller.Move (moveDirection * Time.deltaTime);
 		}
 			
 

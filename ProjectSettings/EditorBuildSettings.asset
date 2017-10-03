@@ -26,3 +26,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_scenes/hacking game scenes/Levels/level4.unity
     guid: 5abdcf316749b4ed0ac5f36c8e26bef2
+  - enabled: 1
+    path: Assets/_scenes/hacking game scenes/Levels/level5.unity
+    guid: f804e78980c1b134eb2aa30fc411f76f
+  - enabled: 1
+    path: Assets/_scenes/hacking game scenes/Levels/level6.unity
+    guid: 397f005ff0df9f44bb83476b2078ef85
+  - enabled: 1
+    path: Assets/_scenes/hacking game scenes/Levels/level7.unity
+    guid: e86a6743a3c34ce4f9d351e3990f116a
+  - enabled: 1
+    path: Assets/_scenes/hacking game scenes/Levels/level8.unity
+    guid: c095e8fb353c1a043a70d860e2fb6074
+  - enabled: 1
+    path: Assets/_scenes/hacking game scenes/Levels/level9.unity
+    guid: 2210c2c783a28bb4a95a350cb96e2f9f
+  - enabled: 1
+    path: Assets/_scenes/hacking game scenes/Levels/level10.unity
+    guid: 48f5d57687b0084498ccc4818802de38
