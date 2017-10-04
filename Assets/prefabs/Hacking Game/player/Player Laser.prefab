@@ -202,12 +202,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7faf25c0c80b45c7b718c931260883b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 0}
-  damageAmount: 200
   tagToDamage: Enemy
   tagUntouchableEnemys: EnemyUntouchable
+  tagWallWhite: Wallwhite
+  tagWallGrey: Wallgrey
   audioSource: {fileID: 0}
   audioClip:
   - {fileID: 8300000, guid: 413f0d91f223d448294f1133c4d098f1, type: 3}
   - {fileID: 8300000, guid: 00f4850fa3089407e890484e38d0d533, type: 3}
-  timeToLive: 2
+  - {fileID: 8300000, guid: 840cc57fcbf824aee9d23b895cc5d26c, type: 3}
+  timeToLive: 1.5
+  flashMaterial: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
+  FLASH_WAIT: 1
+  damageAmount: 50
+  velocity: {x: 0, y: 0, z: 0}
