@@ -1,7 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\levels\triggers\triggerSpawnEnemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\levels\triggers\completeSpawnEnemyOneBoss.cs">
     <Files>
+      <File FileName="Assets\_scripts\hacking game scripts\levels\triggers\completeSpawnEnemyNoBoss.cs" Line="25" Column="5" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\triggers\completeSpawnEnemyOneBoss.cs" Line="26" Column="20" />
       <File FileName="Assets\_scripts\hacking game scripts\levels\triggers\triggerSpawnEnemy.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

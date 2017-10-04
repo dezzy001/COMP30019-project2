@@ -23,6 +23,10 @@ public class triggerSpawnEnemy : MonoBehaviour {
 		levelScript.SetActive (true);
 	}
 
+	public void deactiveEnemySpawnScript(GameObject levelScript){
+		levelScript.SetActive (false);
+	}
+
 	// Handle collisions
 	void OnTriggerEnter(Collider col){
 		print ("trigger");
