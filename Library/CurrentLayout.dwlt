@@ -111,7 +111,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 9431
+  controlID: 104
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 9326
+  controlID: 105
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,10 +206,10 @@ MonoBehaviour:
     y: 0
     width: 359
     height: 731
-  m_MinSize: {x: 204, y: 321}
-  m_MaxSize: {x: 4004, y: 8021}
+  m_MinSize: {x: 204, y: 342}
+  m_MaxSize: {x: 4004, y: 8042}
   vertical: 1
-  controlID: 9432
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -253,8 +253,8 @@ MonoBehaviour:
     y: 504
     width: 359
     height: 227
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 104, y: 121}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -413,14 +413,14 @@ MonoBehaviour:
     width: 600
     height: 344
   m_SceneLighting: 1
-  lastFramingTime: 511.9062454409161
+  lastFramingTime: 1091.2524711609306
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.6031427, y: 7.2499886, z: 8.266304}
+    m_Target: {x: -6.3212285, y: 0.9999924, z: -16.982248}
     speed: 2
-    m_Value: {x: -7.6031427, y: 7.2499886, z: 8.266304}
+    m_Value: {x: -6.3212285, y: 0.9999924, z: -16.982248}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -447,9 +447,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.7071068, y: 0, z: -0, w: -0.7071068}
   m_Size:
-    m_Target: 0.8093681
+    m_Target: 74.09067
     speed: 2
-    m_Value: 0.8093681
+    m_Value: 74.09067
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -490,7 +490,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 24a4f4ff58a5f4ff80a6f4ff0aaef4ff4eb5f4ff5cbbf4ff9ac0f4ffb4c5f4ff4acaf4ff66cef4ffc4d2f4fff8d6f4ffd6d9f4ff30ddf4ff0ee0f4fff6f8f4ff7ea5f5ff5eb7f5ff4e70f7ff3474f8ff5a68fcff7e69fcff647dfcfff83cfdfffa3cfdfffc3cfdff623ffdff643ffdff663ffdff184bfdffa076fdff0484fdffa289fdffe0a2fdff42affdff6cb7fdfffadcfdfff8e5fdff0ceefdffe221feffcc59feffea60feff9668feff0e74fefffa81feff588efeff8894feff529afeff68a0feff4aa8feffa0affeff6ab9fefffec2feffa6cbfeff6ef1ffffe6fbffff00000000
+    m_ExpandedIDs: bef4ffffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -509,7 +509,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
   m_ExpandedScenes:
-  - level10
+  - Start
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -576,7 +576,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_scenes/hacking game scenes/Levels
+    - Assets/_scenes
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
