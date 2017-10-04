@@ -29,18 +29,6 @@ public class Projectile : MonoBehaviour {
 
 
 
-	IEnumerator flashBlink(Material originalMaterial, MeshRenderer flashMaterial){
-
-		yield return new WaitForSeconds (FLASH_WAIT);
-
-		if (flashMaterial != null) {
-			flashMaterial.material = originalMaterial;
-		}
-
-	}
-
-
-
 	// Handle collisions
 	public void OnTriggerEnter(Collider col){
 
@@ -86,6 +74,17 @@ public class Projectile : MonoBehaviour {
 
 	}
 
+	IEnumerator flashBlink(Material originalMaterial, MeshRenderer singleFlash){
+
+		yield return new WaitForSeconds (FLASH_WAIT);
+
+		if (singleFlash != null) {
+			singleFlash.sharedMaterial = originalMaterial;
+			print (originalMaterial == flashMaterial);
+		}
+
+	}
+
 	//make the enemy flash when hit
 	public void flashWhenHit(Collider col){
 		// grab the mesh renderer component from the object which is hit by player projectile
@@ -93,16 +92,22 @@ public class Projectile : MonoBehaviour {
 
 
 		foreach (MeshRenderer singleFlash in flash) {
+			
 
 			if (singleFlash.sharedMaterial != flashMaterial) {
 
 				// grab the original material and store it for later restoration purpose
 				Material originalMaterial = singleFlash.sharedMaterial;
-				singleFlash.material = flashMaterial;
+
+				singleFlash.sharedMaterial = null;
+
+				singleFlash.sharedMaterial = flashMaterial;
 
 				// change it back after co-routine
 				StartCoroutine (flashBlink (originalMaterial, singleFlash));
 
+			} else {
+				singleFlash.material.color = Color.grey;
 			}
 
 		}
