@@ -258,7 +258,9 @@ MonoBehaviour:
   PROJECTILE_COOLDOWN: 0.1
   DIST_FROM_PLAYER: 6.5
   spiralSpeed: 10
-  velocity: {x: 1, y: 0, z: 0}
+  rotateSpeed: 10
+  moveSpeed: 5
+  gravity: 20
 --- !u!114 &114165333822081660
 MonoBehaviour:
   m_ObjectHideFlags: 1

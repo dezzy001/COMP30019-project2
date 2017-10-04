@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class LevelNoBoss : levelScript {
+public class completeSpawnEnemyNoBoss : levelScript {
 
+
+	public UnityEvent triggerEvent;
 
 	void Start () {
 
@@ -18,9 +21,13 @@ public class LevelNoBoss : levelScript {
 		if(gameStarted == true){
 
 			if(transform.childCount == 0){
-				showHackingPanel();
+				triggerEvent.Invoke ();
+				Destroy (this);
 			}
 
 		}
 	}
+
+
+
 }

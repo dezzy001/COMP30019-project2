@@ -104,6 +104,8 @@
      <Compile Include="Assets\_scripts\hacking game scripts\levels\LevelNoBoss.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\LevelOneBoss.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\levelScript.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\triggers\completeSpawnEnemyNoBoss.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\levels\triggers\completeSpawnEnemyOneBoss.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\triggers\triggerSpawnEnemy.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\MoveArrowScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\levels\tutorial\MoveHereScript.cs" />

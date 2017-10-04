@@ -111,7 +111,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 160
+  controlID: 156
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 161
+  controlID: 157
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 342}
   m_MaxSize: {x: 4004, y: 8042}
   vertical: 1
-  controlID: 135
+  controlID: 131
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,8 +228,8 @@ MonoBehaviour:
     y: 0
     width: 359
     height: 504
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -413,14 +413,14 @@ MonoBehaviour:
     width: 600
     height: 344
   m_SceneLighting: 1
-  lastFramingTime: 556.4283933330156
+  lastFramingTime: 511.9062454409161
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.1467137, y: 0.0000038146973, z: -4.3705087}
+    m_Target: {x: 0, y: 12.649997, z: -6.75}
     speed: 2
-    m_Value: {x: -3.1467137, y: 0.0000038146973, z: -4.3705087}
+    m_Value: {x: 0, y: 12.649997, z: -6.75}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -447,9 +447,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.7071068, y: 0, z: -0, w: -0.7071068}
   m_Size:
-    m_Target: 51.309906
+    m_Target: 69.475395
     speed: 2
-    m_Value: 51.309906
+    m_Value: 69.475395
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -488,9 +488,9 @@ MonoBehaviour:
     height: 483
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 386cf7ffb217f8ff2ea6f8ff34a6f8ffe8e4f8ff72f4f8ff78f4f8fffaf4ffffe6fbffff00000000
+    m_SelectedIDs: baa60000
+    m_LastClickedID: 42682
+    m_ExpandedIDs: c24bfdff0a8bfdff9ab9fdff060cfeffdc42feffc64bfeff5e91feff9460ffff9660ffff24d1ffff26d1ffff06f2ffffe6fbffff00000000dc670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -576,7 +576,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/prefabs/Hacking Game/player
+    - Assets/_scripts/hacking game scripts/levels/triggers
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -588,7 +588,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b82d0000
     m_LastClickedID: 11704
-    m_ExpandedIDs: 000000006c26000094260000a4260000e6260000ec260000f6260000f8260000262700002c2700003c270000582700007c2700008227000086270000a4270000d0270000002800001e28000036280000582800008628000098280000aa280000ac280000c4280000ce280000de280000e428000020290000
+    m_ExpandedIDs: 000000006826000090260000a0260000e2260000e8260000f2260000f426000022270000282700003827000054270000782700007e27000082270000a0270000c6270000ce270000f4270000fe2700001c28000034280000562800008428000096280000a8280000aa280000c2280000cc280000dc280000e2280000182900001e290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,21 +613,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 360}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006c26000094260000a4260000e6260000ec260000f6260000f8260000262700002c2700003c270000582700007c2700008227000086270000a4270000d0270000f6270000002800001e28000036280000582800008628000098280000aa280000ac280000c4280000ce280000de280000e42800001a29000020290000c23d0000
+    m_ExpandedIDs: 000000006826000090260000a0260000e2260000e8260000f2260000f426000022270000282700003827000054270000782700007e27000082270000a0270000c6270000ce270000f4270000fe2700001c2800003428000048280000562800008428000096280000a8280000aa280000c2280000cc280000dc280000e2280000182900001e290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Projectile
-      m_OriginalName: Projectile
+      m_Name: completeSpawnEnemyOneBoss
+      m_OriginalName: completeSpawnEnemyOneBoss
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 15844
+      m_UserData: 44340
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
