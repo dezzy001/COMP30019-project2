@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 70727231}
   - component: {fileID: 70727230}
   - component: {fileID: 70727229}
+  - component: {fileID: 70727235}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -444,6 +445,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 70727227}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &70727235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70727227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1 &82738235
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +471,7 @@ GameObject:
   - component: {fileID: 82738239}
   - component: {fileID: 82738238}
   - component: {fileID: 82738237}
+  - component: {fileID: 82738243}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -580,6 +594,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 82738235}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &82738243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82738235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1001 &208892572
 Prefab:
   m_ObjectHideFlags: 0
@@ -682,6 +708,7 @@ GameObject:
   - component: {fileID: 270220578}
   - component: {fileID: 270220577}
   - component: {fileID: 270220576}
+  - component: {fileID: 270220582}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -804,6 +831,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 270220574}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &270220582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 270220574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1 &331805407
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +857,7 @@ GameObject:
   - component: {fileID: 331805411}
   - component: {fileID: 331805410}
   - component: {fileID: 331805409}
+  - component: {fileID: 331805415}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -940,6 +980,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 331805407}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &331805415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 331805407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1001 &430771338
 Prefab:
   m_ObjectHideFlags: 0
@@ -982,6 +1034,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef286f7bc93ef4afb8667d001e6dd17f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &446455343
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4299351603593460, guid: ef286f7bc93ef4afb8667d001e6dd17f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299351603593460, guid: ef286f7bc93ef4afb8667d001e6dd17f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299351603593460, guid: ef286f7bc93ef4afb8667d001e6dd17f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -4.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299351603593460, guid: ef286f7bc93ef4afb8667d001e6dd17f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299351603593460, guid: ef286f7bc93ef4afb8667d001e6dd17f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299351603593460, guid: ef286f7bc93ef4afb8667d001e6dd17f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299351603593460, guid: ef286f7bc93ef4afb8667d001e6dd17f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299351603593460, guid: ef286f7bc93ef4afb8667d001e6dd17f, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ef286f7bc93ef4afb8667d001e6dd17f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &462987646 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4299351603593460, guid: ef286f7bc93ef4afb8667d001e6dd17f,
@@ -1001,6 +1095,7 @@ GameObject:
   - component: {fileID: 545963571}
   - component: {fileID: 545963570}
   - component: {fileID: 545963569}
+  - component: {fileID: 545963575}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -1123,6 +1218,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 545963567}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &545963575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545963567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1 &546976509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1244,7 @@ GameObject:
   - component: {fileID: 546976513}
   - component: {fileID: 546976512}
   - component: {fileID: 546976511}
+  - component: {fileID: 546976517}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -1259,6 +1367,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 546976509}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &546976517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 546976509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1 &708834657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,6 +1393,7 @@ GameObject:
   - component: {fileID: 708834661}
   - component: {fileID: 708834660}
   - component: {fileID: 708834659}
+  - component: {fileID: 708834665}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -1395,6 +1516,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 708834657}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &708834665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 708834657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1001 &737975844
 Prefab:
   m_ObjectHideFlags: 0
@@ -1461,6 +1594,7 @@ GameObject:
   - component: {fileID: 946764472}
   - component: {fileID: 946764471}
   - component: {fileID: 946764470}
+  - component: {fileID: 946764476}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -1583,6 +1717,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 946764468}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &946764476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 946764468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!4 &1071772890 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4299351603593460, guid: ef286f7bc93ef4afb8667d001e6dd17f,
@@ -1602,6 +1748,7 @@ GameObject:
   - component: {fileID: 1098525257}
   - component: {fileID: 1098525256}
   - component: {fileID: 1098525255}
+  - component: {fileID: 1098525261}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -1724,62 +1871,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1098525253}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1103931616
-Prefab:
+--- !u!114 &1098525261
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4856007198084844, guid: 19dcdbc87e30aad4ab237cd6c38eae94, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -17.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856007198084844, guid: 19dcdbc87e30aad4ab237cd6c38eae94, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856007198084844, guid: 19dcdbc87e30aad4ab237cd6c38eae94, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856007198084844, guid: 19dcdbc87e30aad4ab237cd6c38eae94, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856007198084844, guid: 19dcdbc87e30aad4ab237cd6c38eae94, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856007198084844, guid: 19dcdbc87e30aad4ab237cd6c38eae94, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856007198084844, guid: 19dcdbc87e30aad4ab237cd6c38eae94, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856007198084844, guid: 19dcdbc87e30aad4ab237cd6c38eae94, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114144001048172878, guid: 19dcdbc87e30aad4ab237cd6c38eae94,
-        type: 2}
-      propertyPath: enemyCols
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114144001048172878, guid: 19dcdbc87e30aad4ab237cd6c38eae94,
-        type: 2}
-      propertyPath: enemyRows
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1388978095535124, guid: 19dcdbc87e30aad4ab237cd6c38eae94, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 19dcdbc87e30aad4ab237cd6c38eae94, type: 2}
-  m_IsPrefabParent: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1098525253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1 &1105129257 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1947272215560568, guid: aa2d907b1ff207c429e6e739674c14f3,
@@ -1845,6 +1948,7 @@ GameObject:
   - component: {fileID: 1298186324}
   - component: {fileID: 1298186323}
   - component: {fileID: 1298186322}
+  - component: {fileID: 1298186328}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -1967,6 +2071,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1298186320}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1298186328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1298186320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1 &1327369672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,6 +2097,7 @@ GameObject:
   - component: {fileID: 1327369676}
   - component: {fileID: 1327369675}
   - component: {fileID: 1327369674}
+  - component: {fileID: 1327369680}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -2103,6 +2220,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1327369672}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1327369680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1327369672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1001 &1487621939
 Prefab:
   m_ObjectHideFlags: 0
@@ -2211,6 +2340,7 @@ GameObject:
   - component: {fileID: 1710485479}
   - component: {fileID: 1710485478}
   - component: {fileID: 1710485477}
+  - component: {fileID: 1710485483}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -2333,6 +2463,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1710485475}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1710485483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710485475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1 &1764787437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2489,7 @@ GameObject:
   - component: {fileID: 1764787441}
   - component: {fileID: 1764787440}
   - component: {fileID: 1764787439}
+  - component: {fileID: 1764787445}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -2469,6 +2612,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764787437}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1764787445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764787437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1 &1802272005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,6 +2692,7 @@ GameObject:
   - component: {fileID: 1967905054}
   - component: {fileID: 1967905053}
   - component: {fileID: 1967905052}
+  - component: {fileID: 1967905058}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -2659,6 +2815,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1967905050}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1967905058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967905050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1 &1967911322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,6 +2841,7 @@ GameObject:
   - component: {fileID: 1967911326}
   - component: {fileID: 1967911325}
   - component: {fileID: 1967911324}
+  - component: {fileID: 1967911330}
   m_Layer: 0
   m_Name: Grey wall(Clone)
   m_TagString: Wallgrey
@@ -2795,6 +2964,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1967911322}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1967911330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1967911322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!1 &2008040867
 GameObject:
   m_ObjectHideFlags: 0

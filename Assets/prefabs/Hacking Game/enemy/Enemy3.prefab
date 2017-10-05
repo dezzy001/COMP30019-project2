@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4476289231088272}
   - component: {fileID: 33681864859131764}
   - component: {fileID: 23808130486474778}
+  - component: {fileID: 114599633042843262}
   m_Layer: 0
   m_Name: <STL_BINARY>
   m_TagString: Untagged
@@ -88,6 +89,7 @@ GameObject:
   - component: {fileID: 33740317693368236}
   - component: {fileID: 23912235274694084}
   - component: {fileID: 65125213788456008}
+  - component: {fileID: 114740345225145352}
   m_Layer: 0
   m_Name: <STL_BINARY>
   m_TagString: EnemyUntouchable
@@ -272,7 +274,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 02900941cbe8f46f19ffaeb334914d6d, type: 2}
+  - {fileID: 2100000, guid: 1ee5b2acfc228dc419c88e0d239b4024, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -304,7 +306,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 62c1e59f622c0477faa779ec8972cac3, type: 2}
+  - {fileID: 2100000, guid: f9222e20d8523974f95c28cfe490b269, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -409,6 +411,18 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1704712826968036, guid: e7f70a98e31dea44aaf9051366cb2766,
     type: 2}
   PROJECTILE_COOLDOWN: 1.5
+--- !u!114 &114599633042843262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1077495875515108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!114 &114662728119929180
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -432,6 +446,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301b426e18abca146992261e9a03de91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114740345225145352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578839847432854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!143 &143641926476530238
 CharacterController:
   m_ObjectHideFlags: 1

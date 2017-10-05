@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114628217163717148}
   - component: {fileID: 114791245439371306}
   - component: {fileID: 114296712995411598}
+  - component: {fileID: 114034959304389330}
   m_Layer: 0
   m_Name: Grey wall
   m_TagString: Wallgrey
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1575402072368968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 3.96}
+  m_LocalPosition: {x: -4.8591714, y: 1, z: 8.667649}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,6 +97,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114034959304389330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1575402072368968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!114 &114296712995411598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createOnDestroy: {fileID: 0}
-  startingHealth: 70
+  startingHealth: 999999
   zeroHealthEvent:
     m_PersistentCalls:
       m_Calls:

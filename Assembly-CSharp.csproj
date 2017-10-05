@@ -75,6 +75,7 @@
      <Compile Include="Assets\_scripts\hacking game scripts\Enemy Script\StrongEnemyProjectile.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Enemy Script\WeakEnemyProjectile.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\EnemyHeightScript.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\FlashScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HackingCompletePanel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HackingCompleteScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HealthManager\HealthManager.cs" />

@@ -74,44 +74,64 @@ public class Projectile : MonoBehaviour {
 
 	}
 
-	IEnumerator flashBlink(Material originalMaterial, MeshRenderer singleFlash){
 
-		yield return new WaitForSeconds (FLASH_WAIT);
-
-		if (singleFlash != null) {
-			singleFlash.sharedMaterial = originalMaterial;
-			print (originalMaterial == flashMaterial);
-		}
-
-	}
-
-	//make the enemy flash when hit
 	public void flashWhenHit(Collider col){
-		// grab the mesh renderer component from the object which is hit by player projectile
-		MeshRenderer[] flash = col.GetComponentsInChildren<MeshRenderer> ();
 
+		if(col != null){
+			FlashScript[] flashScript = col.gameObject.GetComponentsInChildren<FlashScript> ();
+			foreach(FlashScript flash in flashScript){
+				if (flashScript != null) {
+					flash.enemyFlash ();
+				} else {
+					print ("flash not working");
+				}
 
-		foreach (MeshRenderer singleFlash in flash) {
-			
-
-			if (singleFlash.sharedMaterial != flashMaterial) {
-
-				// grab the original material and store it for later restoration purpose
-				Material originalMaterial = singleFlash.sharedMaterial;
-
-				singleFlash.sharedMaterial = null;
-
-				singleFlash.sharedMaterial = flashMaterial;
-
-				// change it back after co-routine
-				StartCoroutine (flashBlink (originalMaterial, singleFlash));
-
-			} else {
-				singleFlash.material.color = Color.grey;
 			}
 
+
 		}
+			
+
 	}
+
+//	IEnumerator flashBlink(Material originalMaterial, MeshRenderer singleFlash){
+//
+//		yield return new WaitForSeconds (FLASH_WAIT);
+//
+//		if (singleFlash != null) {
+//			singleFlash.sharedMaterial = originalMaterial;
+//			//print (originalMaterial == flashMaterial);
+//		}
+//
+//	}
+
+	//make the enemy flash when hit
+//	public void flashWhenHit(Collider col){
+//		// grab the mesh renderer component from the object which is hit by player projectile
+//		MeshRenderer[] flash = col.GetComponentsInChildren<MeshRenderer> ();
+//
+//
+//		foreach (MeshRenderer singleFlash in flash) {
+//			
+//
+//			if (singleFlash.sharedMaterial != flashMaterial) {
+//
+//				// grab the original material and store it for later restoration purpose
+//				Material originalMaterial = singleFlash.sharedMaterial;
+//
+//				singleFlash.sharedMaterial = null;
+//
+//				singleFlash.sharedMaterial = flashMaterial;
+//
+//				// change it back after co-routine
+//				StartCoroutine (flashBlink (originalMaterial, singleFlash));
+//
+//			} else {
+//				//singleFlash.material.color = Color.grey;
+//			}
+//
+//		}
+//	}
 
 
 	// Handle sound effect playback (playOneShot) and Destroy obj after playback finishes

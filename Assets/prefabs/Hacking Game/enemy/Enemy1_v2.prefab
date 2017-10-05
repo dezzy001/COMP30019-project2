@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 4305234344916072}
   - component: {fileID: 33710727323857722}
   - component: {fileID: 23578287193556768}
+  - component: {fileID: 114474975767479768}
   m_Layer: 0
   m_Name: <STL_BINARY>
   m_TagString: Untagged
@@ -141,6 +142,7 @@ GameObject:
   - component: {fileID: 4005219716917080}
   - component: {fileID: 33811320253941742}
   - component: {fileID: 23432587620287780}
+  - component: {fileID: 114369124826244586}
   m_Layer: 0
   m_Name: <STL_BINARY>
   m_TagString: Untagged
@@ -272,7 +274,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 67b845592aeaf434b9f63a82cc47b866, type: 2}
+  - {fileID: 2100000, guid: 1ee5b2acfc228dc419c88e0d239b4024, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -304,7 +306,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 67b845592aeaf434b9f63a82cc47b866, type: 2}
+  - {fileID: 2100000, guid: 1ee5b2acfc228dc419c88e0d239b4024, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -374,6 +376,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnParticleSystem: {fileID: 198707782440467216}
   spawnAnimationFileNameWithoutSpaces: SpawnAnimation
+--- !u!114 &114369124826244586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987461194232228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!114 &114417549111853484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -421,6 +435,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114474975767479768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1223353120161276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!114 &114757105860207188
 MonoBehaviour:
   m_ObjectHideFlags: 1
