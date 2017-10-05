@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4384661281842320}
   - component: {fileID: 33042267804365048}
   - component: {fileID: 23455018782769606}
+  - component: {fileID: 114979473264812682}
   m_Layer: 0
   m_Name: Cube body
   m_TagString: Body
@@ -317,6 +318,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301b426e18abca146992261e9a03de91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114979473264812682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055511697311060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891236d7c4ef8ae47ba370aa38c3d1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: dc0b6a1d885e4474686f069affd3749a, type: 2}
 --- !u!198 &198334988474614120
 ParticleSystem:
   m_ObjectHideFlags: 1

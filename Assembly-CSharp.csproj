@@ -49,6 +49,8 @@
      <Compile Include="Assets\_scripts\ChangeCursor.cs" />
      <Compile Include="Assets\_scripts\ClickSound.cs" />
      <Compile Include="Assets\_scripts\HideCursor.cs" />
+     <Compile Include="Assets\_scripts\MuteButton.cs" />
+     <Compile Include="Assets\_scripts\MuteVolume.cs" />
      <Compile Include="Assets\_scripts\QuitApplication.cs" />
      <Compile Include="Assets\_scripts\SceneManagement.cs" />
      <Compile Include="Assets\_scripts\ShowCursor.cs" />

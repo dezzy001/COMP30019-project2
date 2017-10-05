@@ -15,12 +15,7 @@ public class FlashScript : MonoBehaviour {
 		thisMeshRend = this.gameObject.GetComponent<MeshRenderer> ();
 		currentMat = thisMeshRend.sharedMaterial;
 	}
-
-	void Update(){
-		if(Input.GetKeyDown(KeyCode.F)){
-			enemyFlash ();
-		}
-	}
+		
 
 	public void enemyFlash(){
 

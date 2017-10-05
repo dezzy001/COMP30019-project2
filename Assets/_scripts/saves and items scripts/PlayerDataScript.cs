@@ -214,7 +214,6 @@ public class PlayerDataScript : MonoBehaviour {
 	public void applySkins(){
 		//skin1
 		if(skinsList[0] > 0 ){
-			print ("equip skinlol");
 			itemData.skin1Effect(hasEquipSkins[0]);
 		}else {
 			itemData.skin1Effect (false);

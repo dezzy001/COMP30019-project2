@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createOnDestroy: {fileID: 0}
-  startingHealth: 999999
+  startingHealth: 75
   zeroHealthEvent:
     m_PersistentCalls:
       m_Calls:
