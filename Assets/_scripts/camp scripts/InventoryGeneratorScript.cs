@@ -30,6 +30,7 @@ public class InventoryGeneratorScript : MonoBehaviour {
 
 	//popup notice panel
 	public GameObject noCapacityPopUpPanel;
+	public GameObject onlyOneSkinPanel;
 	public float POPUP_WAIT_TIME = 1.2f;
 
 	//get the panel to add item contents to
@@ -52,6 +53,9 @@ public class InventoryGeneratorScript : MonoBehaviour {
 	public Item skill2;
 
 	public Item skin1;
+	public Item skin2;
+	public Item skin3;
+	public Item skin4;
 
 
 
@@ -98,7 +102,13 @@ public class InventoryGeneratorScript : MonoBehaviour {
 
 		/*skins*/
 		skin1 = itemData.skin1;
-		addInventory (skinsInventoryGridPanel, skin1, 0, SKIN, "skin 1");
+		addInventory (skinsInventoryGridPanel, skin1, 0, SKIN, "Shadow");
+		skin2 = itemData.skin2;
+		addInventory (skinsInventoryGridPanel, skin2, 1, SKIN, "Toxic Waste");
+		skin3 = itemData.skin3;
+		addInventory (skinsInventoryGridPanel, skin3, 2, SKIN, "Japan Pack");
+		skin4 = itemData.skin4;
+		addInventory (skinsInventoryGridPanel, skin4, 3, SKIN, "Camo");
 
 
 		//dont let any item content show when the shop button is pressed
@@ -212,6 +222,7 @@ public class InventoryGeneratorScript : MonoBehaviour {
 		}else if(itemType == SKIN){
 
 			if(playerDataScript.skinsList[playerItemIndex] > 0){
+
 				if(playerDataScript.hasEquipSkins[playerItemIndex] == true){
 					
 					contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
@@ -307,9 +318,20 @@ public class InventoryGeneratorScript : MonoBehaviour {
 		}else if(itemType == SKIN){
 
 			if(playerDataScript.skinsList[playerItemIndex] > 0){
+
+				int equipCount = 0;
+
+				foreach(bool equipped in playerDataScript.hasEquipSkins){
+					if(equipped == true){
+						equipCount++;
+					}
+				}
+
+				print (equipCount);
 				
-				if(playerDataScript.hasEquipSkins[playerItemIndex] == true){
 					
+				if(playerDataScript.hasEquipSkins[playerItemIndex] == true){//unequiping
+
 					currentPlayerCapacity -= item.itemCapacity;//decrease item capacity
 
 					playerDataScript.hasEquipSkins [playerItemIndex] = false;
@@ -323,7 +345,11 @@ public class InventoryGeneratorScript : MonoBehaviour {
 						//print ("capacity exceeds...");
 						//show a message to the user saying that cannot equip since capcity exceeds player capacity
 						openPopUp(noCapacityPopUpPanel);
-					} else {
+					} else if(equipCount == 1){//if you currently have an equiiped skin then cant equip another
+						print("can only equip one skin");
+						openPopUp(onlyOneSkinPanel);
+
+					}else {
 						currentPlayerCapacity += item.itemCapacity;
 						playerDataScript.hasEquipSkins [playerItemIndex] = true;
 						contentBuyButton.GetComponentInChildren<Text> ().text = "Unequip";
@@ -332,6 +358,13 @@ public class InventoryGeneratorScript : MonoBehaviour {
 						newButtonComponent.GetComponentInChildren<Text> ().text = buttonText + " (Equipped)";
 					}
 				}
+
+
+
+
+
+
+
 			}
 		}
 

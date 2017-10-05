@@ -149,6 +149,12 @@ MonoBehaviour:
     type: 2}
   skin1Material: {fileID: 2100000, guid: dbb590846a75abf4db3f1d14c279e57c, type: 2}
   skin1CircleMaterial: {fileID: 2100000, guid: 881880309daf6e443814fe232166e67f, type: 2}
+  skin2Material: {fileID: 2100000, guid: 55aa9f46804bf774e8b347882cbe6e5a, type: 2}
+  skin2CircleMaterial: {fileID: 2100000, guid: ccc928fa922fe9c4fb525c8e22742423, type: 2}
+  skin3Material: {fileID: 2100000, guid: ad65cd3990107194d9e52b9bbdfcf838, type: 2}
+  skin3CircleMaterial: {fileID: 2100000, guid: f5e84c00b57747d4d9d23e8bae7d9adb, type: 2}
+  skin4Material: {fileID: 2100000, guid: fb5c8cc92e3e8e34d90e041ec95ddbe0, type: 2}
+  skin4CircleMaterial: {fileID: 2100000, guid: cfdbd3441908f824a970bac3bfa23506, type: 2}
   initialPlayerInvincibilityCooldown: -1
 --- !u!114 &114738611397757756
 MonoBehaviour:
@@ -163,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CHIP_NUM: 4
   SKILL_NUM: 2
-  SKIN_NUM: 1
+  SKIN_NUM: 4
   chipsList: 
   skillsList: 
   skinsList: 
@@ -197,3 +203,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d191aea3ace23b41b7a1145a332aebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMute: 0

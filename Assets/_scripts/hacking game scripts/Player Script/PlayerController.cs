@@ -85,12 +85,14 @@ public class PlayerController : MonoBehaviour {
 	//public GameObject hackingPanel;
 	//public GameObject playerDeadPanel;
 
+	private Vector3 playerSize;
+
 	void Start(){
 
 
 
 		//get the xyz values of this object
-		Vector3 playerSize = this.GetComponent<Collider>().bounds.size;
+		playerSize = this.GetComponent<Collider>().bounds.size;
 
 		//projectile variables
 		projectileCooldownCount = PROJECTILE_COOLDOWN; //init cooldown count
@@ -140,6 +142,8 @@ public class PlayerController : MonoBehaviour {
 			transform.position.y,
 			Mathf.Clamp(transform.position.z,-groundSizeZ,groundSizeZ)
 		);
+
+		transform.position = new Vector3(transform.position.x, playerSize.y/2, transform.position.z);
 	}
 
 	// Update is called once per frame

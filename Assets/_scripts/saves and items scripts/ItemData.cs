@@ -22,6 +22,9 @@ public class ItemData : MonoBehaviour {
 	public Item skill2;
 
 	public Item skin1;
+	public Item skin2;
+	public Item skin3;
+	public Item skin4;
 
 	//skin materials
 	public Material originalMaterial;
@@ -29,6 +32,12 @@ public class ItemData : MonoBehaviour {
 
 	public Material skin1Material;
 	public Material skin1CircleMaterial;
+	public Material skin2Material;
+	public Material skin2CircleMaterial;
+	public Material skin3Material;
+	public Material skin3CircleMaterial;
+	public Material skin4Material;
+	public Material skin4CircleMaterial;
 
 	//Initial Player stats to increment
 	public float initialPlayerInvincibilityCooldown = -1;
@@ -55,7 +64,10 @@ public class ItemData : MonoBehaviour {
 		skill2 = new Item("Skill 2 - Saber","Throws a light saber from a galaxy far far away...",1000,4);
 
 		/*skins*/
-		skin1 = new Item("Skin 1 - Shadow Skin","You will be corrupted...",9999,0);
+		skin1 = new Item("Skin 1 - Shadow Skin","You will be corrupted...",5000,0);
+		skin2 = new Item("Skin 2 - Toxic waste Skin","You will be toxic...",5000,0);
+		skin3 = new Item("Skin 3 - Japan pack Skin","You will be nippon...",5000,0);
+		skin4 = new Item("Skin 4 - Camo Skin","You will be camoflauged...",1,0);
 
 
 
@@ -204,7 +216,7 @@ public class ItemData : MonoBehaviour {
 
 	/*------------- Skins description ----------------*/
 
-	//skin1 - GOLDEN SKIN
+	//skin1 
 	public void skin1Effect(bool active){
 
 		//print ("Skill 2 active");
@@ -212,16 +224,61 @@ public class ItemData : MonoBehaviour {
 			if(active == true){
 				applyMaterial (skin1Material,skin1CircleMaterial);
 			}else{
-				applyMaterial (originalMaterial,originalCircleMaterial);
+				//applyMaterial (originalMaterial,originalCircleMaterial);
+			}
+		} 
+	}
+	//skin2
+	public void skin2Effect(bool active){
+
+		//print ("Skill 2 active");
+		if (player != null) {
+			if(active == true){
+				applyMaterial (skin2Material,skin2CircleMaterial);
+			}else{
+				//applyMaterial (originalMaterial,originalCircleMaterial);
+			}
+		} 
+	}
+	//skin3
+	public void skin3Effect(bool active){
+
+		//print ("Skill 2 active");
+		if (player != null) {
+			if(active == true){
+				applyMaterial (skin3Material,skin3CircleMaterial);
+			}else{
+				//applyMaterial (originalMaterial,originalCircleMaterial);
+			}
+		} 
+	}
+	//skin4
+	public void skin4Effect(bool active){
+
+		//print ("Skill 2 active");
+		if (player != null) {
+			if(active == true){
+				applyMaterial (skin4Material,skin4CircleMaterial);
+			}else{
+				//applyMaterial (originalMaterial,originalCircleMaterial);
 			}
 		} 
 	}
 
 
 	//skin methods
+	//og skin
+	public void skinOriginalEffect(){
 
+		//print ("Skill 2 active");
+		if (player != null) {
+			
+				applyMaterial (originalMaterial,originalCircleMaterial);
+	
+		} 
+	}
 
-
+	/*version one applies a one material to players body and one to circle (NOTE need to make one apply a diff mat to each body part) */
 	void applyMaterial(Material skinMaterial, Material skinCircleMaterial){
 
 		// grab the mesh renderer component from the object which is hit by player projectile

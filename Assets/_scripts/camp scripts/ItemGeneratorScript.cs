@@ -63,6 +63,9 @@ public class ItemGeneratorScript : MonoBehaviour {
 	public Item skill2;
 
 	public Item skin1;
+	public Item skin2;
+	public Item skin3;
+	public Item skin4;
 
 
 	//add sound to all the initialised buttons
@@ -94,13 +97,19 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 		/*skills*/
 		skill1 = itemData.skill1;
-		createNewItem(skillsShopGridPanel, skill1, 0, SKILL,"skill 1");
+		createNewItem(skillsShopGridPanel, skill1, 0, SKILL,"Laser");
 		skill2 = itemData.skill2;
-		createNewItem(skillsShopGridPanel, skill2, 1, SKILL ,"skill 2");
+		createNewItem(skillsShopGridPanel, skill2, 1, SKILL ,"Saber");
 
 		/*skins*/
 		skin1 = itemData.skin1;
-		createNewItem (skinsShopGridPanel, skin1, 0, SKIN, "skin 1");
+		createNewItem (skinsShopGridPanel, skin1, 0, SKIN, "Shadow");
+		skin2 = itemData.skin2;
+		createNewItem (skinsShopGridPanel, skin2, 1, SKIN, "Toxic Waste");
+		skin3 = itemData.skin3;
+		createNewItem (skinsShopGridPanel, skin3, 2, SKIN, "Japan Pack");
+		skin4 = itemData.skin4;
+		createNewItem (skinsShopGridPanel, skin4, 3, SKIN, "Camo");
 
 
 
