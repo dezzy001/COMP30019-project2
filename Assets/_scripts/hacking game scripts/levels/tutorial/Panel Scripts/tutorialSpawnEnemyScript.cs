@@ -55,6 +55,7 @@ public class tutorialSpawnEnemyScript : TutorialSwitchPanelScript {
 
 		enemy1 = GameObject.Instantiate<GameObject>(enemy1_prefab);
 
+		/*
 		//want to spawn the glowing area in opposite x and z coordinates relative to the ground
 		if (currentPlayerPos.x < 0 && currentPlayerPos.z < 0) { 
 			enemy1.transform.position = new Vector3 (groundSizeX - spawnOffset , EnemyHeightScript.getEnemyHeight(enemy1) ,groundSizeZ - spawnOffset);
@@ -69,6 +70,9 @@ public class tutorialSpawnEnemyScript : TutorialSwitchPanelScript {
 			enemy1.transform.position = new Vector3 (-groundSizeX + spawnOffset, EnemyHeightScript.getEnemyHeight(enemy1),-groundSizeZ + spawnOffset);
 
 		}
+		*/	
+
+		enemy1.transform.position = new Vector3 (0, 0 ,0);
 
 		enemy1.tag = "Untagged";
 

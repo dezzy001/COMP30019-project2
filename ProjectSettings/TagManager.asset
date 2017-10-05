@@ -11,6 +11,8 @@ TagManager:
   - Wallgrey
   - EnemyUntouchableSound
   - BossShield
+  - playerBody
+  - playerCircle
   layers:
   - Default
   - TransparentFX

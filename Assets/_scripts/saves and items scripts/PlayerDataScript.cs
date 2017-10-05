@@ -15,7 +15,7 @@ public class PlayerDataScript : MonoBehaviour {
 
 
 	//Total number of chips/skills/skins
-	public int CHIP_NUM = 2;
+	public int CHIP_NUM = 4;
 	public int SKILL_NUM = 2;
 	public int SKIN_NUM = 1;
 
@@ -48,8 +48,14 @@ public class PlayerDataScript : MonoBehaviour {
 	//get all the item information from item generator script
 	public ItemData itemData; // use this to know if item is equipped or not
 
+
+
 	public Item chip1;
 	public Item chip2;
+	public Item chip3;
+	public Item chip4;
+
+
 	public Item skill1;
 	public Item skill2;
 
@@ -107,6 +113,8 @@ public class PlayerDataScript : MonoBehaviour {
 		//get all the item data from item generator script
 		chip1 = itemData.chip1;
 		chip2 = itemData.chip2;
+		chip3 = itemData.chip3;
+		chip4 = itemData.chip4;
 
 		skill1 = itemData.skill1;
 		skill2 = itemData.skill2;
@@ -116,30 +124,23 @@ public class PlayerDataScript : MonoBehaviour {
 
 		//print (chip1.itemName + ", "+chip1.itemCost+ ", "+ chip1.hasEquipItem);
 
-		applyItems ();
+		applyChips ();
 		applySkills ();
+		applySkins ();
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		applyItems ();
+		applyChips ();
 		applySkills ();
+		applySkins ();
 		//print (skillsList[0]);
 	}
 
 
 	//apply the Chips to the player
-	public void applyItems(){
-
-
-
-
-		//chip1
-
-		//chip2
-
-
+	public void applyChips(){
 
 
 
@@ -159,9 +160,28 @@ public class PlayerDataScript : MonoBehaviour {
 			itemData.chip2Effect (hasEquipchips[1]);
 
 		} else {
-			itemData.chip1Effect (false);
+			itemData.chip2Effect (false);
 		}
 
+
+		//chip 3
+		if (chipsList [2] > 0 ) {
+
+			itemData.chip3Effect (hasEquipchips[2]);
+
+		} else {
+			itemData.chip3Effect (false);
+		}
+
+
+		//chip4
+		if (chipsList [3] > 0 ) {
+
+			itemData.chip4Effect (hasEquipchips[3]);
+
+		} else {
+			itemData.chip4Effect (false);
+		}
 
 
 		
@@ -169,15 +189,6 @@ public class PlayerDataScript : MonoBehaviour {
 	}
 
 	public void applySkills(){
-
-		//skill1
-
-
-		//skill2
-
-
-
-
 
 
 		//skill1
@@ -198,6 +209,16 @@ public class PlayerDataScript : MonoBehaviour {
 		}
 
 
+	}
+
+	public void applySkins(){
+		//skin1
+		if(skinsList[0] > 0 ){
+			print ("equip skinlol");
+			itemData.skin1Effect(hasEquipSkins[0]);
+		}else {
+			itemData.skin1Effect (false);
+		}
 	}
 
 

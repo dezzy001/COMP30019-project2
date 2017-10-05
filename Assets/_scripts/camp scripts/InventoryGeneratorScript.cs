@@ -45,6 +45,8 @@ public class InventoryGeneratorScript : MonoBehaviour {
 	/*Items Here*/
 	public Item chip1;
 	public Item chip2;
+	public Item chip3;
+	public Item chip4;
 
 	public Item skill1;
 	public Item skill2;
@@ -83,6 +85,10 @@ public class InventoryGeneratorScript : MonoBehaviour {
 		addInventory(chipInventoryGridPanel, chip1, 0, CHIP,"chip 1");
 		chip2 = itemData.chip2;
 		addInventory(chipInventoryGridPanel,chip2, 1, CHIP ,"chip 2");
+		chip3 = itemData.chip3;
+		addInventory(chipInventoryGridPanel, chip3, 2, CHIP,"chip 3");
+		chip4 = itemData.chip4;
+		addInventory(chipInventoryGridPanel,chip4, 3, CHIP ,"chip 4");
 
 		/*skills*/
 		skill1 = itemData.skill1;

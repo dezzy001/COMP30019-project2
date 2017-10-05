@@ -111,8 +111,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a03d82e0eea9540bd9278c65b33c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerGameObject: {fileID: 0}
   player: {fileID: 0}
   playerDataScript: {fileID: 0}
+  originalMaterial: {fileID: 2100000, guid: 74c8156da6f92ea4393d894ed556317b, type: 2}
+  originalCircleMaterial: {fileID: 2100000, guid: 0109ef8ce8aa8aa4298bac0f65f87d62,
+    type: 2}
+  skin1Material: {fileID: 2100000, guid: dbb590846a75abf4db3f1d14c279e57c, type: 2}
+  skin1CircleMaterial: {fileID: 2100000, guid: 881880309daf6e443814fe232166e67f, type: 2}
+  initialPlayerInvincibilityCooldown: -1
 --- !u!114 &114738611397757756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c23f3d4862f30479b22d110a96bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CHIP_NUM: 2
+  CHIP_NUM: 4
   SKILL_NUM: 2
   SKIN_NUM: 1
   chipsList: 

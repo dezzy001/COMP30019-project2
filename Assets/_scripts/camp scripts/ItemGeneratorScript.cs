@@ -56,6 +56,8 @@ public class ItemGeneratorScript : MonoBehaviour {
 	/*Items Here*/
 	public Item chip1;
 	public Item chip2;
+	public Item chip3;
+	public Item chip4;
 
 	public Item skill1;
 	public Item skill2;
@@ -68,12 +70,12 @@ public class ItemGeneratorScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
 		itemContentsArray = new ArrayList ();
 
 		//find the persisted data
 		playerDataScript = GameObject.Find ("Player Data Manager").GetComponent<PlayerDataScript> ();
 		itemData = GameObject.Find ("ItemData").GetComponent<ItemData> ();
-
 
 
 		/*--------------Item Generation below---------------*/
@@ -85,6 +87,10 @@ public class ItemGeneratorScript : MonoBehaviour {
 		createNewItem(chipShopGridPanel, chip1, 0, CHIP,"chip 1");
 		chip2 = itemData.chip2;
 		createNewItem(chipShopGridPanel,chip2, 1, CHIP ,"chip 2");
+		chip3 = itemData.chip3;
+		createNewItem(chipShopGridPanel,chip3, 2, CHIP ,"chip 3");
+		chip4 = itemData.chip4;
+		createNewItem(chipShopGridPanel,chip4, 3, CHIP ,"chip 4");
 
 		/*skills*/
 		skill1 = itemData.skill1;

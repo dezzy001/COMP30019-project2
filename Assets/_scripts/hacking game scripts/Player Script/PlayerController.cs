@@ -59,6 +59,23 @@ public class PlayerController : MonoBehaviour {
 	public bool allowLaser = false;
 	public bool allowMelee = false;
 
+	public bool allowOnePlayer = false;
+	public bool allowTwoPlayer = false;
+	public bool allowSevenPlayer = false;
+
+	//additional players
+	public GameObject additionalPlayersParent;
+
+	public GameObject additionalPlayer1small;
+	public GameObject additionalPlayer2small;
+
+	public GameObject additionalPlayer1;
+	public GameObject additionalPlayer2;
+	public GameObject additionalPlayer3;
+	public GameObject additionalPlayer4;
+	public GameObject additionalPlayer5;
+	public GameObject additionalPlayer6;
+
 	public ParticleSystem damangeRing;
 
 	private bool gotHit1 = false;
@@ -111,6 +128,8 @@ public class PlayerController : MonoBehaviour {
 		//find the left and right body
 		playerBodyLeft = GameObject.Find("Player/Player Spawn Particle System/playerleft");
 		playerBodyRight = GameObject.Find("Player/Player Spawn Particle System/playerright");
+
+
 
 	}
 
@@ -235,6 +254,8 @@ public class PlayerController : MonoBehaviour {
 				meleeCooldownCount = MELEE_COOLDOWN;
 			}
 				
+			additionalPlayer ();
+
 
 
 
@@ -315,8 +336,36 @@ public class PlayerController : MonoBehaviour {
 
 
 	//makes player go invincible by changing its tag to untagged for a specified time
-	public void goInvincible(){
-		
+	public void additionalPlayer(){
+		if (allowOnePlayer == true) {
+			additionalPlayersParent.SetActive (true);
+			additionalPlayer1small.SetActive (true);
+
+		}else if (allowTwoPlayer == true) {
+			additionalPlayersParent.SetActive (true);
+			additionalPlayer1small.SetActive (true);
+			additionalPlayer2small.SetActive (true);
+		}else if (allowSevenPlayer == true) {
+			additionalPlayersParent.SetActive (true);
+			additionalPlayer1.SetActive (true);
+			additionalPlayer2.SetActive (true);
+			additionalPlayer3.SetActive (true);
+			additionalPlayer4.SetActive (true);
+			additionalPlayer5.SetActive (true);
+			additionalPlayer6.SetActive (true);
+
+		} else {
+			additionalPlayersParent.SetActive (false);
+			additionalPlayer1.SetActive (false);
+			additionalPlayer2.SetActive (false);
+			additionalPlayer3.SetActive (false);
+			additionalPlayer4.SetActive (false);
+			additionalPlayer5.SetActive (false);
+			additionalPlayer6.SetActive (false);
+			additionalPlayer1small.SetActive (false);
+			additionalPlayer2small.SetActive (false);
+
+		}
 
 
 	}
