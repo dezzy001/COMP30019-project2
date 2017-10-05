@@ -25,6 +25,7 @@ public class ItemData : MonoBehaviour {
 	public Item skin2;
 	public Item skin3;
 	public Item skin4;
+	public Item skin5;
 
 	//skin materials
 	public Material originalMaterial;
@@ -38,6 +39,8 @@ public class ItemData : MonoBehaviour {
 	public Material skin3CircleMaterial;
 	public Material skin4Material;
 	public Material skin4CircleMaterial;
+	public Material skin5Material;
+	public Material skin5CircleMaterial;
 
 	//Initial Player stats to increment
 	public float initialPlayerInvincibilityCooldown = -1;
@@ -64,11 +67,11 @@ public class ItemData : MonoBehaviour {
 		skill2 = new Item("Skill 2 - Saber","Throws a light saber from a galaxy far far away...",1000,4);
 
 		/*skins*/
-		skin1 = new Item("Skin 1 - Shadow Skin","You will be corrupted...",5000,0);
-		skin2 = new Item("Skin 2 - Toxic waste Skin","You will be toxic...",5000,0);
-		skin3 = new Item("Skin 3 - Japan pack Skin","You will be nippon...",5000,0);
+		skin1 = new Item("Skin 1 - Shadow Skin","You will be corrupted...",999,0);
+		skin2 = new Item("Skin 2 - Toxic waste Skin","Time to detox?",999,0);
+		skin3 = new Item("Skin 3 - Japan pack Skin","Japan!",5000,0);
 		skin4 = new Item("Skin 4 - Camo Skin","You will be camoflauged...",1,0);
-
+		skin5 = new Item("Skin 5 - Player's Ghost","You will vindicate them...",999,0);
 
 
 
@@ -259,6 +262,18 @@ public class ItemData : MonoBehaviour {
 		if (player != null) {
 			if(active == true){
 				applyMaterial (skin4Material,skin4CircleMaterial);
+			}else{
+				//applyMaterial (originalMaterial,originalCircleMaterial);
+			}
+		} 
+	}
+
+	public void skin5Effect(bool active){
+
+		//print ("Skill 2 active");
+		if (player != null) {
+			if(active == true){
+				applyMaterial (skin5Material,skin5CircleMaterial);
 			}else{
 				//applyMaterial (originalMaterial,originalCircleMaterial);
 			}

@@ -66,7 +66,7 @@ public class ItemGeneratorScript : MonoBehaviour {
 	public Item skin2;
 	public Item skin3;
 	public Item skin4;
-
+	public Item skin5;
 
 	//add sound to all the initialised buttons
 	public ClickSound clickSound;
@@ -110,6 +110,8 @@ public class ItemGeneratorScript : MonoBehaviour {
 		createNewItem (skinsShopGridPanel, skin3, 2, SKIN, "Japan Pack");
 		skin4 = itemData.skin4;
 		createNewItem (skinsShopGridPanel, skin4, 3, SKIN, "Camo");
+		skin5 = itemData.skin5;
+		createNewItem (skinsShopGridPanel, skin5, 4, SKIN, "Player's Ghost");
 
 
 

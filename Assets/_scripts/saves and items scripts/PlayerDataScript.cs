@@ -17,7 +17,7 @@ public class PlayerDataScript : MonoBehaviour {
 	//Total number of chips/skills/skins
 	public int CHIP_NUM = 4;
 	public int SKILL_NUM = 2;
-	public int SKIN_NUM = 4;
+	public int SKIN_NUM = 5;
 
 	public int[] chipsList;
 	public int[] skillsList;
@@ -63,6 +63,7 @@ public class PlayerDataScript : MonoBehaviour {
 	public Item skin2;
 	public Item skin3;
 	public Item skin4;
+	public Item skin5;
 
 	public static bool createOnlyOnce = false;
 	// Keep player data persistent
@@ -126,6 +127,7 @@ public class PlayerDataScript : MonoBehaviour {
 		skin2 = itemData.skin2;
 		skin3 = itemData.skin3;
 		skin4 = itemData.skin4;
+		skin5 = itemData.skin5;
 		//print (skin1);
 
 		//print (chip1.itemName + ", "+chip1.itemCost+ ", "+ chip1.hasEquipItem);
@@ -232,6 +234,10 @@ public class PlayerDataScript : MonoBehaviour {
 		}else if(skinsList[3] > 0 && hasEquipSkins[3]){//skin4
 			
 			itemData.skin4Effect(hasEquipSkins[3]);
+		}else if(skinsList[4] > 0 && hasEquipSkins[4]){//skin4
+
+			itemData.skin5Effect(hasEquipSkins[4]);
+
 		}else {
 			
 			itemData.skinOriginalEffect ();

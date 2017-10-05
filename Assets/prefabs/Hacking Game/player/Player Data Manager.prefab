@@ -155,6 +155,8 @@ MonoBehaviour:
   skin3CircleMaterial: {fileID: 2100000, guid: f5e84c00b57747d4d9d23e8bae7d9adb, type: 2}
   skin4Material: {fileID: 2100000, guid: fb5c8cc92e3e8e34d90e041ec95ddbe0, type: 2}
   skin4CircleMaterial: {fileID: 2100000, guid: cfdbd3441908f824a970bac3bfa23506, type: 2}
+  skin5Material: {fileID: 0}
+  skin5CircleMaterial: {fileID: 0}
   initialPlayerInvincibilityCooldown: -1
 --- !u!114 &114738611397757756
 MonoBehaviour:
@@ -169,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CHIP_NUM: 4
   SKILL_NUM: 2
-  SKIN_NUM: 4
+  SKIN_NUM: 5
   chipsList: 
   skillsList: 
   skinsList: 

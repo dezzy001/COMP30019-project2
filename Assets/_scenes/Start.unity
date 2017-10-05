@@ -832,6 +832,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114495739225303742, guid: f3d82069703244f4fa04a454ba53aa10,
+        type: 2}
+      propertyPath: skin5Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e83719feb209164c8f026769bf33dae, type: 2}
+    - target: {fileID: 114495739225303742, guid: f3d82069703244f4fa04a454ba53aa10,
+        type: 2}
+      propertyPath: skin5CircleMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 80aed6745bc07d845bb00571aacee49d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3d82069703244f4fa04a454ba53aa10, type: 2}
   m_IsPrefabParent: 0

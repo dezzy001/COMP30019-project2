@@ -1,37 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\camp scripts\InventoryGeneratorScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\saves and items scripts\PlayerDataScript.cs">
     <Files>
-      <File FileName="Assets\_scripts\camp scripts\ItemGeneratorScript.cs" Line="107" Column="26" />
-      <File FileName="Assets\_scripts\saves and items scripts\PlayerDataScript.cs" Line="235" Column="10" />
-      <File FileName="Assets\_scripts\saves and items scripts\ItemData.cs" Line="225" Column="1" />
-      <File FileName="Assets\_scripts\camp scripts\InventoryGeneratorScript.cs" Line="350" Column="35" />
+      <File FileName="Assets\_scripts\saves and items scripts\PlayerDataScript.cs" Line="238" Column="4" />
+      <File FileName="Assets\_scripts\saves and items scripts\ItemData.cs" Line="274" Column="24" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="COMP30019-project2" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="_scripts" expanded="True">
-                <Node name="camp scripts" expanded="True">
-                  <Node name="InventoryGeneratorScript.cs" selected="True" />
-                </Node>
-                <Node name="hacking game scripts" expanded="True">
-                  <Node name="Enemy Script" expanded="True" />
-                  <Node name="Player Script" expanded="True" />
-                </Node>
-                <Node name="saves and items scripts" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="COMP30019-project2" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -56,7 +56,7 @@ public class InventoryGeneratorScript : MonoBehaviour {
 	public Item skin2;
 	public Item skin3;
 	public Item skin4;
-
+	public Item skin5;
 
 
 	//chip capacity text
@@ -109,14 +109,15 @@ public class InventoryGeneratorScript : MonoBehaviour {
 		addInventory (skinsInventoryGridPanel, skin3, 2, SKIN, "Japan Pack");
 		skin4 = itemData.skin4;
 		addInventory (skinsInventoryGridPanel, skin4, 3, SKIN, "Camo");
-
+		skin5 = itemData.skin5;
+		addInventory (skinsInventoryGridPanel, skin5, 4, SKIN, "Player's Ghost");
 
 		//dont let any item content show when the shop button is pressed
 		inventoryButton.onClick.AddListener(()=>closeContent());
 
 	}
 
-	void closeContent(){
+	public void closeContent(){
 		closeAllItemContent ();
 	}
 
