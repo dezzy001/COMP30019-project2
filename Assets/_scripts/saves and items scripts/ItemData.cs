@@ -58,20 +58,20 @@ public class ItemData : MonoBehaviour {
 		//Initialise all items here and add the item to the shop:
 		/*chips*/
 		chip1 = new Item("Chip 1 - Invincibility","+0.5 sec extra invincibility cooldown when damaged",1000,1 );
-		chip2 = new Item("Chip 2 - Player +1","+1 additional Player which does 25% of the players damage",5000,2 );
-		chip3 = new Item("Chip 3 - Player +2","+2 additional Players which does 25% of the players damage",10000,3 );
+		chip2 = new Item("Chip 2 - Player +1","+1 additional Player which does 25% of the players damage",5000,3 );
+		chip3 = new Item("Chip 3 - Player +2","+2 additional Players which does 25% of the players damage",10000,4 );
 		chip4 = new Item("Chip 4 - Player +7","You are basically a god, +7 additional Players which does 25% of the players damage",99999,5 );
 
 		/*skills*/
-		skill1 = new Item("Skill 1 - Laser","Shoots a laser beam, lots of damage",1000,4 );
-		skill2 = new Item("Skill 2 - Saber","Throws a light saber from a galaxy far far away...",1000,4);
+		skill1 = new Item("Skill 1 - Laser","Shoots a laser beam, lots of damage",3500,4 );
+		skill2 = new Item("Skill 2 - Saber","Throws a light saber from a galaxy far far away...",2000,4);
 
 		/*skins*/
 		skin1 = new Item("Skin 1 - Shadow Skin","You will be corrupted...",999,0);
 		skin2 = new Item("Skin 2 - Toxic waste Skin","Time to detox?",999,0);
-		skin3 = new Item("Skin 3 - Japan pack Skin","Japan!",5000,0);
+		skin3 = new Item("Skin 3 - Japan pack Skin","Japan!",499,0);
 		skin4 = new Item("Skin 4 - Camo Skin","You will be camoflauged...",1,0);
-		skin5 = new Item("Skin 5 - Player's Ghost","You will vindicate them...",999,0);
+		skin5 = new Item("Skin 5 - Player's Ghost","You will vindicate them...",666,0);
 
 
 
