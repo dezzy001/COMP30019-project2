@@ -87,31 +87,32 @@ public class ItemGeneratorScript : MonoBehaviour {
 		//Initialise all items here and add the item to the shop:
 		/*chips*/
 		chip1 = itemData.chip1;
-		createNewItem(chipShopGridPanel, chip1, 0, CHIP,"chip 1");
+		chip1 = itemData.chip1;
+		createNewItem(chipShopGridPanel, chip1, chip1.itemIndex, CHIP,chip1.buttonName);
 		chip2 = itemData.chip2;
-		createNewItem(chipShopGridPanel,chip2, 1, CHIP ,"chip 2");
+		createNewItem(chipShopGridPanel,chip2, chip2.itemIndex, CHIP ,chip2.buttonName);
 		chip3 = itemData.chip3;
-		createNewItem(chipShopGridPanel,chip3, 2, CHIP ,"chip 3");
+		createNewItem(chipShopGridPanel, chip3, chip3.itemIndex, CHIP,chip3.buttonName);
 		chip4 = itemData.chip4;
-		createNewItem(chipShopGridPanel,chip4, 3, CHIP ,"chip 4");
+		createNewItem(chipShopGridPanel,chip4, chip4.itemIndex, CHIP ,chip4.buttonName);
 
 		/*skills*/
 		skill1 = itemData.skill1;
-		createNewItem(skillsShopGridPanel, skill1, 0, SKILL,"Laser");
+		createNewItem(skillsShopGridPanel, skill1, skill1.itemIndex, SKILL,skill1.buttonName);
 		skill2 = itemData.skill2;
-		createNewItem(skillsShopGridPanel, skill2, 1, SKILL ,"Saber");
+		createNewItem(skillsShopGridPanel, skill2, skill2.itemIndex, SKILL ,skill2.buttonName);
 
 		/*skins*/
 		skin1 = itemData.skin1;
-		createNewItem (skinsShopGridPanel, skin1, 0, SKIN, "Shadow");
+		createNewItem (skinsShopGridPanel, skin1, skin1.itemIndex, SKIN, skin1.buttonName);
 		skin2 = itemData.skin2;
-		createNewItem (skinsShopGridPanel, skin2, 1, SKIN, "Toxic Waste");
+		createNewItem (skinsShopGridPanel, skin2, skin2.itemIndex, SKIN, skin2.buttonName);
 		skin3 = itemData.skin3;
-		createNewItem (skinsShopGridPanel, skin3, 2, SKIN, "Japan Pack");
+		createNewItem (skinsShopGridPanel, skin3, skin3.itemIndex, SKIN, skin3.buttonName);
 		skin4 = itemData.skin4;
-		createNewItem (skinsShopGridPanel, skin4, 3, SKIN, "Camo");
+		createNewItem (skinsShopGridPanel, skin4, skin4.itemIndex, SKIN, skin4.buttonName);
 		skin5 = itemData.skin5;
-		createNewItem (skinsShopGridPanel, skin5, 4, SKIN, "Player's Ghost");
+		createNewItem (skinsShopGridPanel, skin5, skin5.itemIndex, SKIN, skin5.buttonName);
 
 
 

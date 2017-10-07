@@ -17,12 +17,20 @@ public class Item {
 	//how much capacity the item occupies
 	public int itemCapacity;
 
-	public Item(string itemName,string itemInformation,int itemCost,int itemCapacity){//, bool hasEquipItem
+	//generator script variables
+	public string buttonName;
+	public int itemIndex; // the order it will appear in the shop
+
+
+	public Item(string itemName,string itemInformation,int itemCost,int itemCapacity, string buttonName, int itemIndex ){//, bool hasEquipItem
 		this.itemName = itemName;
 		this.itemInformation = itemInformation;
 		this.itemCost = itemCost;
 
 		this.itemCapacity = itemCapacity;
+
+		this.buttonName = buttonName;
+		this.itemIndex = itemIndex;
 
 		//this.hasEquipItem = hasEquipItem;
 

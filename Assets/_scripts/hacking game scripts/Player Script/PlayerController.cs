@@ -341,14 +341,24 @@ public class PlayerController : MonoBehaviour {
 
 	//makes player go invincible by changing its tag to untagged for a specified time
 	public void additionalPlayer(){
-		if (allowOnePlayer == true) {
+		if (allowOnePlayer == true || allowTwoPlayer == true) {
 			additionalPlayersParent.SetActive (true);
-			additionalPlayer1small.SetActive (true);
 
-		}else if (allowTwoPlayer == true) {
-			additionalPlayersParent.SetActive (true);
-			additionalPlayer1small.SetActive (true);
-			additionalPlayer2small.SetActive (true);
+			if (allowOnePlayer == true) {
+				additionalPlayer1small.SetActive (true);
+
+			} else {
+				additionalPlayer1small.SetActive (false);
+
+			}
+
+			if (allowTwoPlayer == true) {
+				additionalPlayer2small.SetActive (true);
+			} else {
+				additionalPlayer2small.SetActive (false);
+			}
+
+
 		}else if (allowSevenPlayer == true) {
 			additionalPlayersParent.SetActive (true);
 			additionalPlayer1.SetActive (true);
@@ -357,6 +367,8 @@ public class PlayerController : MonoBehaviour {
 			additionalPlayer4.SetActive (true);
 			additionalPlayer5.SetActive (true);
 			additionalPlayer6.SetActive (true);
+			additionalPlayer1small.SetActive (false);
+			additionalPlayer2small.SetActive (false);
 
 		} else {
 			additionalPlayersParent.SetActive (false);
