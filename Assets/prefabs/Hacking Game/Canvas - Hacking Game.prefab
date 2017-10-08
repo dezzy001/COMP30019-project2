@@ -1433,6 +1433,7 @@ MonoBehaviour:
   pausePanel: {fileID: 1028267572118006}
   playerDeadPanel: {fileID: 1409266567150718}
   hackingCompletePanel: {fileID: 1947272215560568}
+  stopwatchPanel: {fileID: 1656384785426032}
   allowPauseKey: 1
 --- !u!114 &114269401670709342
 MonoBehaviour:
@@ -2100,6 +2101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hackingCompletePanel: {fileID: 1947272215560568}
   stopwatchText: {fileID: 114013634576110900}
+  stopwatchPanel: {fileID: 1656384785426032}
+  loadingPanel: {fileID: 1258550314224118}
 --- !u!114 &114761547578325990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3125,8 +3128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011444001, y: -0.000019072999}
-  m_SizeDelta: {x: 89, y: 30.043}
+  m_AnchoredPosition: {x: 0.000047684, y: -0.00012112}
+  m_SizeDelta: {x: 178, y: 60.086}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224981776855327860
 RectTransform:

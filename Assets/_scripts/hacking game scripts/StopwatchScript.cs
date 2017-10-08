@@ -8,7 +8,10 @@ public class StopwatchScript : MonoBehaviour {
 
 	public GameObject hackingCompletePanel;
 	public Text stopwatchText;
+	public GameObject stopwatchPanel;
 	public Stopwatch timer;
+
+	public GameObject loadingPanel;
 
 
 
@@ -21,10 +24,17 @@ public class StopwatchScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		stopwatchText.text = timer.Elapsed.ToString();
+		string splitStopwatchText = timer.Elapsed.ToString().Split('.')[0];
+
+
+		stopwatchText.text = splitStopwatchText;
 
 		if (hackingCompletePanel.activeSelf == true) {
 			timer.Stop();
+		}
+
+		if(loadingPanel.activeSelf == true){
+			stopwatchPanel.SetActive (false);
 		}
 	}
 }

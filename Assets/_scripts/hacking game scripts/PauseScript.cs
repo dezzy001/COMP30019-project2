@@ -8,6 +8,8 @@ public class PauseScript : MonoBehaviour {
 	public GameObject playerDeadPanel;
 	public GameObject hackingCompletePanel;
 
+	public GameObject stopwatchPanel;
+
 	private ArrayList allHackingGamePanels = new ArrayList();
 
 	//public SwitchToPanel switchToPanelScript;
@@ -24,6 +26,7 @@ public class PauseScript : MonoBehaviour {
 	void Start(){
 		//add all the panels in the scene here
 		allHackingGamePanels.Add (pausePanel);
+
 		//allHackingGamePanels.Add (playerDeadPanel);
 		//allHackingGamePanels.Add (hackingCompletePanel);
 
