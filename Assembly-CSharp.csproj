@@ -80,6 +80,7 @@
      <Compile Include="Assets\_scripts\hacking game scripts\FlashScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HackingCompletePanel.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HackingCompleteScript.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\HackingCompleteScriptTutorial.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HealthManager\HealthManager.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HealthManager\enemyDeathEvent.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\HealthManager\playerDeathEvent.cs" />

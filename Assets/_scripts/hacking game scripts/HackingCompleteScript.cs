@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 public class HackingCompleteScript : MonoBehaviour {
 
@@ -11,6 +13,9 @@ public class HackingCompleteScript : MonoBehaviour {
 
 	public PlayerDataScript playerDatascript;
 	public GameObject hackingCompletePanel;
+	public Button nextLevelButton;
+
+	public SceneManagement sceneManagementScript;
 
 	//have all the map numbers CONST here
 	private int TUTORIAL = 1;
@@ -26,6 +31,7 @@ public class HackingCompleteScript : MonoBehaviour {
 	private int MAP10 = 11;
 
 	public int currentMapNum;
+	string currSceneName;
 
 	// Use this for initialization
 	void Awake () {
@@ -47,7 +53,7 @@ public class HackingCompleteScript : MonoBehaviour {
 	void Start(){
 		hackingCompletePanel.SetActive (false);
 
-		string currSceneName = SceneManager.GetActiveScene().name;
+		currSceneName = SceneManager.GetActiveScene().name;
 
 		if (currSceneName == "_TutorialLevel") {
 			currentMapNum = TUTORIAL;
@@ -74,6 +80,29 @@ public class HackingCompleteScript : MonoBehaviour {
 		}
 
 
+		//create an on click listener for next level button
+		nextLevelButton.onClick.AddListener(()=>nextLevel());
+
+	}
+
+	public void nextLevel(){
+
+		Regex re = new Regex(@"([a-zA-Z]+)(\d+)");
+		Match result = re.Match (currSceneName);
+
+
+
+		string letterPart = result.Groups [1].Value;
+		int numberPart = int.Parse(result.Groups [2].Value) ;
+
+
+
+		numberPart++;
+
+		string nextSceneName = letterPart + numberPart.ToString();
+
+
+		sceneManagementScript.changeScene (nextSceneName);
 	}
 	
 	// Update is called once per frame

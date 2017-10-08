@@ -59,9 +59,9 @@ public class ItemData : MonoBehaviour {
 		/*chips*/
 		chip1 = new Item("Chip 1 - Invulnerablilty Cooldown","+0.5 sec extra invincibility cooldown when damaged",1000,1    
 			, "Cooldown", 0);
-		chip2 = new Item("Chip 2 - Player +1","+1 additional Player which does 25% of the players damage",5000,2   
+		chip2 = new Item("Chip 2 - Player +1","+1 additional Player which does 25% of the players damage",3500,2   
 			,"Player +1", 1 );
-		chip3 = new Item("Chip 3 - extra Player +1","+1 additional Player which does 25% of the players damage",8000,2 	
+		chip3 = new Item("Chip 3 - extra Player +1","+1 additional Player which does 25% of the players damage",4500,2 	
 			,"Player +1",2);
 		chip4 = new Item("Chip 4 - Player +7","You are basically a god, +7 additional Players which does 25% of the players damage",99999,5 	
 			,"Player +7",3);

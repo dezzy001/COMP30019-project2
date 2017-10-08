@@ -1202,8 +1202,29 @@ Prefab:
       objectReference: {fileID: 728756194}
     m_RemovedComponents:
     - {fileID: 114428170651911778, guid: 3dee8210eb929644cb377a6a8a9262d0, type: 2}
+    - {fileID: 114126743892732656, guid: 3dee8210eb929644cb377a6a8a9262d0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3dee8210eb929644cb377a6a8a9262d0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &257696737 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1578079419519870, guid: 3dee8210eb929644cb377a6a8a9262d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 257696736}
+--- !u!114 &257696738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 257696737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8100e28d83c2485428202419f3a781b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveLoadManager: {fileID: 0}
+  playerDatascript: {fileID: 0}
+  hackingCompletePanel: {fileID: 728756194}
+  currentMapNum: 0
 --- !u!1 &267838300
 GameObject:
   m_ObjectHideFlags: 0
