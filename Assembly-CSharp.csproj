@@ -96,6 +96,7 @@
      <Compile Include="Assets\_scripts\hacking game scripts\Player Script\projectile\Projectile.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Player Script\projectile\ProjectileController.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\SpawnAnimation.cs" />
+     <Compile Include="Assets\_scripts\hacking game scripts\StopwatchScript.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Wall\GreyWall.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Wall\WallGenGrey1.cs" />
      <Compile Include="Assets\_scripts\hacking game scripts\Wall\WallGenRandom1.cs" />

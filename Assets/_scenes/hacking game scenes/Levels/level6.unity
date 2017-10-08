@@ -691,6 +691,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1252289634271060, guid: 57938ef6d9ca7dd49b6896c55794be3b, type: 2}
+      propertyPath: m_TagString
+      value: EnemyUntouchable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57938ef6d9ca7dd49b6896c55794be3b, type: 2}
   m_IsPrefabParent: 0
