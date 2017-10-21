@@ -39,6 +39,11 @@ public class PlayerDataScript : MonoBehaviour {
 	//total limit on the amount of items it can equip
 	public int itemCapacity = 5;//have a default of 5 capacity
 
+	//check whether player has seen camp tutorial 
+	public bool hasDoneCampTutorial = false;
+	public bool hasDoneCampShopTutorial = false;
+	public bool hasDoneCampInventoryTutorial = false;
+
 	//check what items the player currently has and the how many quantity
 
 	//make sure there is only one instance of this class

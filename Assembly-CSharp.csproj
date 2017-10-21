@@ -56,6 +56,7 @@
      <Compile Include="Assets\_scripts\ShowCursor.cs" />
      <Compile Include="Assets\_scripts\SwitchToPanel.cs" />
      <Compile Include="Assets\_scripts\ToggleTime.cs" />
+     <Compile Include="Assets\_scripts\camp scripts\CampTutorialScript.cs" />
      <Compile Include="Assets\_scripts\camp scripts\CampUI.cs" />
      <Compile Include="Assets\_scripts\camp scripts\InventoryGeneratorScript.cs" />
      <Compile Include="Assets\_scripts\camp scripts\InventoryViewPanel.cs" />

@@ -1,12 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\StopwatchScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\camp scripts\CampTutorialScript.cs">
     <Files>
-      <File FileName="Assets\_scripts\hacking game scripts\StopwatchScript.cs" Line="32" Column="49" />
-      <File FileName="Assets\_scripts\hacking game scripts\HackingCompletePanel.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\HackingCompleteScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\PauseScript.cs" Line="32" Column="3" />
-      <File FileName="Assets\_scripts\SceneManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\camp scripts\CampTutorialScript.cs" Line="48" Column="52" />
+      <File FileName="Assets\_scripts\SceneManagement.cs" Line="50" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

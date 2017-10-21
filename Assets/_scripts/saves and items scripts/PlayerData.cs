@@ -28,6 +28,12 @@ public class PlayerData {
 	public int mapsCompleted;
 	public int currencyAmount;
 
+	//check whether player has seen camp tutorial 
+	public bool hasDoneCampTutorial;
+	public bool hasDoneCampShopTutorial;
+	public bool hasDoneCampInventoryTutorial;
+
+
 	//NOTE: whenever a constructor is changed all other constructors must also be changed
 
 	//all the data we are saving from the script 
@@ -40,6 +46,10 @@ public class PlayerData {
 		currencyAmount = playerDataScript.currencyAmount;
 
 		itemCapacity = playerDataScript.itemCapacity;
+
+		hasDoneCampTutorial = playerDataScript.hasDoneCampTutorial;
+		hasDoneCampShopTutorial = playerDataScript.hasDoneCampShopTutorial;
+		hasDoneCampInventoryTutorial = playerDataScript.hasDoneCampInventoryTutorial;
 
 		chips = new int[playerDataScript.CHIP_NUM];
 		skills = new int[playerDataScript.SKILL_NUM];

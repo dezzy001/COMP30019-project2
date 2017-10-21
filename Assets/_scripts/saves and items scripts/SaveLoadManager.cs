@@ -39,14 +39,8 @@ public class SaveLoadManager : MonoBehaviour {
 	//start a new game function
 	public void newSave(){
 
-
-		//PlayerDataScript data = new PlayerDataScript ();
-
-		/*THIS IS NOT HOW YOU DO IT*/
-
 		PlayerDataScript data = gameObject.AddComponent<PlayerDataScript> ();
 	
-
 		SavePlayer (data);
 
 		Destroy (data);
@@ -76,6 +70,16 @@ public class SaveLoadManager : MonoBehaviour {
 			playerDataScript.currencyAmount = loadedData.currencyAmount;
 
 			playerDataScript.itemCapacity = loadedData.itemCapacity;
+
+			playerDataScript.hasDoneCampTutorial = loadedData.hasDoneCampTutorial;
+			playerDataScript.hasDoneCampShopTutorial = loadedData.hasDoneCampShopTutorial;
+			playerDataScript.hasDoneCampInventoryTutorial = loadedData.hasDoneCampInventoryTutorial;
+
+
+
+
+
+
 
 
 			for(int i = 0; i < playerDataScript.CHIP_NUM ;i++){
