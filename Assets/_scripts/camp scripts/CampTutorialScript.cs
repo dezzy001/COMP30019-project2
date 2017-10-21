@@ -73,8 +73,8 @@ public class CampTutorialScript : MonoBehaviour {
 
 
 
-	public void runTutorial(){
-		//make tutorial information buttons not interactable
+	public void clickToTutorialPanel(GameObject panel){
+		SwitchToPanel.activatePanel (panel,allTutorialPanels);
 	}
 
 	public void closeTutorialPanels(){
