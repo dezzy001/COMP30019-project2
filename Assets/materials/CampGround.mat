@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Ground
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: CampGround
+  m_Shader: {fileID: 4800000, guid: 1aae769408d384dc49d50675cbf6a4c0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -77,7 +77,7 @@ Material:
     m_Colors:
     - _Color: {r: 0.7352941, g: 0.6239263, b: 0.49199826, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _PointLightColor: {r: 0.375, g: 0.34134242, b: 0.21231619, a: 1}
-    - _PointLightPosition: {r: 0, g: 10, b: 0, a: 1}
+    - _PointLightColor: {r: 0.29411763, g: 0.24490082, b: 0.056228373, a: 1}
+    - _PointLightPosition: {r: 0, g: 18.39, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnlitColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
