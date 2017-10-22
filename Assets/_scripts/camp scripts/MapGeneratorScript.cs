@@ -101,11 +101,11 @@ public class MapGeneratorScript : MonoBehaviour {
 			createNewMap ("Map 9", 9, "level9");
 		}
 
-		/*show map 10*/
-		if (mapsCompleted >= 10) {
-
-			createNewMap ("Map 10", 10, "level10");
-		}
+//		/*show map 10*/
+//		if (mapsCompleted >= 10) {
+//
+//			createNewMap ("Map 10", 10, "level10");
+//		}
 
 
 	}

@@ -17,6 +17,9 @@ public class HackingCompleteScript : MonoBehaviour {
 
 	public SceneManagement sceneManagementScript;
 
+	public int BASE_GOLD = 500;
+	public Text goldText;
+
 	//have all the map numbers CONST here
 	private int TUTORIAL = 1;
 	private int MAP1 = 2;
@@ -28,7 +31,7 @@ public class HackingCompleteScript : MonoBehaviour {
 	private int MAP7 = 8;
 	private int MAP8 = 9;
 	private int MAP9 = 10;
-	private int MAP10 = 11;
+
 
 	public int currentMapNum;
 	string currSceneName;
@@ -75,8 +78,6 @@ public class HackingCompleteScript : MonoBehaviour {
 			currentMapNum = MAP8;
 		}else if (currSceneName == "level9") {
 			currentMapNum = MAP9;
-		}else if (currSceneName == "level10") {
-			currentMapNum = MAP10;
 		}
 
 
@@ -116,8 +117,14 @@ public class HackingCompleteScript : MonoBehaviour {
 
 
 				playerDatascript.mapsCompleted++;
+
+
+
+				int goldReward = BASE_GOLD + (int)(BASE_GOLD*0.33f*currentMapNum*UnityEngine.Random.Range (50,100)/100);
 				//only get gold once for each level
-				playerDatascript.currencyAmount += 500;
+				playerDatascript.currencyAmount += goldReward;
+				goldText.text = "+ "+goldReward+" Gold";
+
 
 				//auto save for tutorial level only
 				string currSceneName = SceneManager.GetActiveScene ().name;

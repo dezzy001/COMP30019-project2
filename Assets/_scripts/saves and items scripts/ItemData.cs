@@ -57,9 +57,9 @@ public class ItemData : MonoBehaviour {
 		//Item (name, info, cost, capacity,   buttonName, itemIndex);
 		//Initialise all items here and add the item to the shop:
 		/*chips*/
-		chip1 = new Item("Chip 1 - Invulnerablilty Cooldown","+0.5 sec extra invincibility cooldown when damaged",1000,1    
+		chip1 = new Item("Chip 1 - Invulnerablilty Cooldown","+0.5 sec extra invincibility cooldown when damaged",1500,1    
 			, "Cooldown", 0);
-		chip2 = new Item("Chip 2 - Player +1","+1 additional Player which does 25% of the players damage",3500,2   
+		chip2 = new Item("Chip 2 - Player +1","+1 additional Player which does 25% of the players damage",4000,2   
 			,"Player +1", 1 );
 		chip3 = new Item("Chip 3 - extra Player +1","+1 additional Player which does 25% of the players damage",4500,2 	
 			,"Player +1",2);
@@ -67,21 +67,21 @@ public class ItemData : MonoBehaviour {
 			,"Player +7",3);
 
 		/*skills*/
-		skill1 = new Item("Skill 1 - Laser beam","Shoots a laser beam, lots of damage",3500,4
+		skill1 = new Item("Skill 1 - Laser beam","Shoots a laser beam, lots of damage",8000,4
 		,"Laser beam",0);
-		skill2 = new Item("Skill 2 - Saber launcher","Throws a light saber from a galaxy far far away...",2000,4
+		skill2 = new Item("Skill 2 - Saber launcher","Throws a light saber from a galaxy far far away...",4000,4
 		,"Saber launcher",1);
 
 		/*skins*/
-		skin1 = new Item("Skin 1 - Shadow Skin","You will be corrupted...",999,0
+		skin1 = new Item("Skin 1 - Shadow Skin","You will be corrupted...",3000,0
 			,"Shadow",0);
-		skin2 = new Item("Skin 2 - Toxic waste Skin","Time to detox?",999,0
+		skin2 = new Item("Skin 2 - Toxic waste Skin","Time to detox?",9999,0
 			,"Toxic waste",1);
-		skin3 = new Item("Skin 3 - Japan pack Skin","Japan!",499,0
+		skin3 = new Item("Skin 3 - Japan pack Skin","Japan!",5000,0
 			,"Japan pack",2);
 		skin4 = new Item("Skin 4 - Camo Skin","You will be camoflauged...",1,0
 			,"Camo",3);
-		skin5 = new Item("Skin 5 - Player's Ghost","You will vindicate them...",666,0
+		skin5 = new Item("Skin 5 - Player's Ghost","You will vindicate them...",33333,0
 			,"Player's Ghost",4);
 
 
