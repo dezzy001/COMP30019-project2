@@ -1,13 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\GameCompleteScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_scripts\hacking game scripts\Player Script\PlayerGoldCount.cs">
     <Files>
       <File FileName="Assets\Shaders\CelShader.shader" Line="1" Column="1" />
       <File FileName="Assets\Shaders\PhongShader.shader" Line="1" Column="1" />
-      <File FileName="Assets\_scripts\hacking game scripts\HackingCompleteScript.cs" Line="112" Column="3" />
-      <File FileName="Assets\_scripts\saves and items scripts\ItemData.cs" Line="82" Column="73" />
-      <File FileName="Assets\_scripts\camp scripts\MapGeneratorScript.cs" Line="99" Column="28" />
-      <File FileName="Assets\_scripts\hacking game scripts\GameCompleteScript.cs" Line="72" Column="28" />
+      <File FileName="Assets\_scripts\hacking game scripts\HackingCompleteScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\saves and items scripts\ItemData.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\camp scripts\MapGeneratorScript.cs" Line="33" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\GameCompleteScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\Enemy Script\Enemy3Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\SwitchToPanel.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\levels\triggers\triggerSpawnEnemy.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\camp scripts\CampUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\_scripts\camp scripts\InventoryGeneratorScript.cs" Line="74" Column="1" />
+      <File FileName="Assets\_scripts\camp scripts\ItemGeneratorScript.cs" Line="80" Column="1" />
+      <File FileName="Assets\_scripts\hacking game scripts\Player Script\PlayerGoldCount.cs" Line="23" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
