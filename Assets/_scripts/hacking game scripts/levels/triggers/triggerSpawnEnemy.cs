@@ -29,7 +29,6 @@ public class triggerSpawnEnemy : MonoBehaviour {
 
 	// Handle collisions
 	void OnTriggerEnter(Collider col){
-		print ("trigger");
 		if (col.gameObject.tag == tagPlayer){
 
 			triggerEvent.Invoke ();

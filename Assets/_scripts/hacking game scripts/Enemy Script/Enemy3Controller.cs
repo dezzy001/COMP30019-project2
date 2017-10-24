@@ -34,7 +34,6 @@ public class Enemy3Controller : MonoBehaviour {
 
 		// look at the player
 		this.transform.LookAt (player.transform);
-		print ("dont forget to take out lookAt() if you dont want it");
 
 		// ground boundaries
 		Renderer groundSizeRenderer = ground.GetComponent<Renderer>();

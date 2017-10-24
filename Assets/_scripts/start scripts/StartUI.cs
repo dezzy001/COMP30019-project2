@@ -42,8 +42,6 @@ public class StartUI : MonoBehaviour {
 
 	//buttons
 	public Button newGameButton;
-	//public Button yesButton;
-	//public Button noButton;
 
 
 	// Use this for initialization
@@ -62,14 +60,12 @@ public class StartUI : MonoBehaviour {
 
 
 				showPopUpPanel = false; // dont show the pop up panel
-				print("files does not exist OR tutorial map not complete");
 				continueButton.GetComponent<Button> ().interactable = false;
 				continueButton.GetComponent<Button> ().image.color = new Color(0.6f,0.6f,0.6f,0.6f);
 			}
 
 		} catch(Exception e) {
 			print ("Old save not compatible, please make new save from camp.");
-			// saveLoadManager.newSaveAndLoadIt ();
 		}
 
 		allStartUIPanels = new ArrayList ();
@@ -93,8 +89,6 @@ public class StartUI : MonoBehaviour {
 			newGameButton.onClick.AddListener(() => openAndClosePopUp( deleteSavePanel)) ;
 		}
 
-		//yesButton.onClick.AddListener() ;
-		//noButton.onClick.AddListener() ;
 
 	}
 

@@ -793,7 +793,13 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 360209265}
---- !u!1001 &456085050
+--- !u!114 &456085051 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114750635512602768, guid: f3d82069703244f4fa04a454ba53aa10,
+    type: 2}
+  m_PrefabInternal: {fileID: 566082050}
+  m_Script: {fileID: 11500000, guid: bd5e54aa5e6d03b4cbae8d17fa8a4b40, type: 3}
+--- !u!1001 &566082050
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -832,25 +838,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114495739225303742, guid: f3d82069703244f4fa04a454ba53aa10,
-        type: 2}
-      propertyPath: skin5Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 3e83719feb209164c8f026769bf33dae, type: 2}
-    - target: {fileID: 114495739225303742, guid: f3d82069703244f4fa04a454ba53aa10,
-        type: 2}
-      propertyPath: skin5CircleMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 80aed6745bc07d845bb00571aacee49d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3d82069703244f4fa04a454ba53aa10, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &456085051 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114750635512602768, guid: f3d82069703244f4fa04a454ba53aa10,
-    type: 2}
-  m_PrefabInternal: {fileID: 456085050}
-  m_Script: {fileID: 11500000, guid: bd5e54aa5e6d03b4cbae8d17fa8a4b40, type: 3}
 --- !u!1 &567617404
 GameObject:
   m_ObjectHideFlags: 0

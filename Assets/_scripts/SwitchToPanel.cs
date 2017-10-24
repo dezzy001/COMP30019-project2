@@ -36,7 +36,7 @@ public class SwitchToPanel : MonoBehaviour {
 			}
 		}
 		if(!foundAPanel){
-			Debug.Log("Did not find the specified panel, please check the parameter you entered...");
+			//Debug.Log("Did not find the specified panel, please check the parameter you entered...");
 		}
 
 	}

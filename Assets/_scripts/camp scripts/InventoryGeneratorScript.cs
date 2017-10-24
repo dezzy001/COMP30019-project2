@@ -268,7 +268,6 @@ public class InventoryGeneratorScript : MonoBehaviour {
 
 					//cannot equip if adding on the item capcity to current capcity exceeds player capacity
 					if(item.itemCapacity + currentPlayerCapacity >  playerDataScript.itemCapacity){
-						//print ("capacity exceeds...");
 						//show a message to the user saying that cannot equip since capcity exceeds player capacity
 						openPopUp(noCapacityPopUpPanel);
 
@@ -327,9 +326,7 @@ public class InventoryGeneratorScript : MonoBehaviour {
 						equipCount++;
 					}
 				}
-
-				print (equipCount);
-				
+					
 					
 				if(playerDataScript.hasEquipSkins[playerItemIndex] == true){//unequiping
 
@@ -343,11 +340,9 @@ public class InventoryGeneratorScript : MonoBehaviour {
 				} else {
 					//cannot equip if adding on the item capcity to current capcity exceeds player capacity
 					if (item.itemCapacity + currentPlayerCapacity > playerDataScript.itemCapacity) {
-						//print ("capacity exceeds...");
 						//show a message to the user saying that cannot equip since capcity exceeds player capacity
 						openPopUp(noCapacityPopUpPanel);
 					} else if(equipCount == 1){//if you currently have an equiiped skin then cant equip another
-						print("can only equip one skin");
 						openPopUp(onlyOneSkinPanel);
 
 					}else {
